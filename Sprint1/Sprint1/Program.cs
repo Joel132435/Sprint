@@ -10,7 +10,7 @@ namespace Sprint1
     {
         static void Main()
         {
-            double m, z, d, h, hf, ha, p, df, c, c1, c2 ,db ,deg ,b;
+            double m, z, d, h, hf, ha, p, df, c, db, deg, c1, c2 ,b;
 
             Console.WriteLine("Bitte Geben Sie das Modul an.");
 
