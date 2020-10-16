@@ -16,16 +16,19 @@ namespace Sprint1
 
             m = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine();
 
             Console.WriteLine("Bitte Geben Sie die Zähnezahl an.");
 
             z = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine();
 
             Console.WriteLine("Bitte Geben Sie den Teilkreisdurchmesser an.");
 
             d = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine();
 
             //Wird nicht gebraucht
 
@@ -46,7 +49,6 @@ namespace Sprint1
 
             c = m * 0.167;
 
-            Console.WriteLine();
 
             //Zahnhöhe
 
@@ -95,7 +97,6 @@ namespace Sprint1
             
             Console.ReadKey();
 
-          
         }
     }
 }
