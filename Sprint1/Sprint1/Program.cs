@@ -8,9 +8,9 @@ namespace Sprint1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            double m, z, d, h1, h2, h3, hf, ha, p, df ,c1 , c2 , c3 ,da ,b;
+            double m, z, d, h, hf, ha, p, df, c, c1, c2 ,db ,deg ,b;
 
             Console.WriteLine("Bitte Geben Sie das Modul an.");
 
@@ -26,35 +26,35 @@ namespace Sprint1
 
             d = Convert.ToDouble(Console.ReadLine());
 
+
             //Wird nicht gebraucht
+
 
             //Console.WriteLine("Bitte Geben Sie die Breite an.");
 
             //b = Convert.ToDouble(Console.ReadLine());
 
+
+            //Kopfspiel
+
             //c1 = m * 0.1;
 
             //c2 = m * 0.3;
 
-            //h1 = 2 * m + c1;
-
-            //h2 = 2 * m + c2;
-
 
             //Kopfspiel
-
-            c3 = m * 0.167;
+            c = m * 0.167;
 
             Console.WriteLine();
 
             //Zahnhöhe
-            h3 = 2 * m + c3;
+            h = 2 * m + c;
 
-            Console.WriteLine("Zahnhöhe ≈ " + h3);
+            Console.WriteLine("Zahnhöhe ≈ " + h);
             Console.WriteLine();
 
             //Zahnfußhöhe
-            hf = m + c3;
+            hf = m + c;
 
             Console.WriteLine("Zahnfußhöhe = " + hf);
             Console.WriteLine();
@@ -72,22 +72,24 @@ namespace Sprint1
             Console.WriteLine();
 
             //Fußkreisdurchmesser
-            df = d - 2 * (m + c3);
+            df = d - 2 * (m + c);
 
             Console.WriteLine("Fußkreisdurchmesser ≈ " + df);
             Console.WriteLine();
 
-            //Kopfkreisdurchmesser (Grundkreisdurchmesser ? )
-            da = d + 2 * m;
+            //Grundkreisdurchmesser
 
-            Console.WriteLine("Kopfkreisdurchmesser = " + da);
+            deg = (20 * (Math.PI)) / 180;
+
+            db = m * z * (Math.Cos(deg));
+
+            Console.WriteLine("Grundkreisdurchmesser = " + db);
             Console.WriteLine();
 
-
-
+            
             Console.ReadKey();
 
-
+          
         }
     }
 }
