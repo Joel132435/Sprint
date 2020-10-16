@@ -54,7 +54,7 @@ namespace Sprint1
 
             h = 2 * m + c;
 
-            Console.WriteLine("Zahnhöhe ≈ " + h);
+            Console.WriteLine("Zahnhöhe = " + h);
             Console.WriteLine();
 
             //Zahnfußhöhe
@@ -68,7 +68,7 @@ namespace Sprint1
 
             ha = m;
 
-            Console.WriteLine("Zahnkopfhöhe ≈ " + ha);
+            Console.WriteLine("Zahnkopfhöhe = " + ha);
             Console.WriteLine();
 
             //Teilung
@@ -82,7 +82,7 @@ namespace Sprint1
 
             df = d - 2 * (m + c);
 
-            Console.WriteLine("Fußkreisdurchmesser ≈ " + df);
+            Console.WriteLine("Fußkreisdurchmesser = " + df);
             Console.WriteLine();
 
             //Grundkreisdurchmesser
@@ -94,7 +94,7 @@ namespace Sprint1
             Console.WriteLine("Grundkreisdurchmesser = " + db);
             Console.WriteLine();
 
-            
+            Console.ReadLine();
             Console.ReadKey();
 
         }
