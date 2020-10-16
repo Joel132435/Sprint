@@ -49,7 +49,7 @@ namespace Sprint1
 
             df = d + 2 * (m + c3);
 
-            da = d - 2 * m ;
+            da = m * (z - 2) ;
 
             Console.WriteLine();
 
