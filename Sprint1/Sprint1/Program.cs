@@ -43,35 +43,41 @@ namespace Sprint1
 
 
             //Kopfspiel
+
             c = m * 0.167;
 
             Console.WriteLine();
 
             //Zahnhöhe
+
             h = 2 * m + c;
 
             Console.WriteLine("Zahnhöhe ≈ " + h);
             Console.WriteLine();
 
             //Zahnfußhöhe
+
             hf = m + c;
 
             Console.WriteLine("Zahnfußhöhe = " + hf);
             Console.WriteLine();
 
             //Zahnkopfhöhe
+
             ha = m;
 
             Console.WriteLine("Zahnkopfhöhe ≈ " + ha);
             Console.WriteLine();
 
             //Teilung
+
             p = Math.PI * m;
 
             Console.WriteLine("Teilung = " + p);
             Console.WriteLine();
 
             //Fußkreisdurchmesser
+
             df = d - 2 * (m + c);
 
             Console.WriteLine("Fußkreisdurchmesser ≈ " + df);
