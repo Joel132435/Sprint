@@ -94,7 +94,6 @@ namespace Sprint1
             Console.WriteLine("Grundkreisdurchmesser = " + db);
             Console.WriteLine();
 
-            Console.ReadLine();
             Console.ReadKey();
 
         }
