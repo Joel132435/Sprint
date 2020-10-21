@@ -10,8 +10,8 @@ namespace Sprint1
     {
         static void Main()
         {
-            double a, m, z, d, h, hf, ha, p, df, c, db, deg, x, y; //c1, c2, b,
-            int n;
+            double m, z, d, h, hf, ha, p, df, c, db, deg;
+            
             
 
             Console.WriteLine("Bitte Geben Sie das Modul an.");
@@ -29,79 +29,9 @@ namespace Sprint1
 
             Console.WriteLine();
 
-            //Kopfspiel
+            //Kopfspiel Unterprogramm
 
-            Console.WriteLine("Wollen Sie eine Kopfspiel angeben? (1 für JA und 2 für NEIN) ");
-            a = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine();
-
-            if (a < 2)
-            {
-                // x = unteres Kopfspiel / y = oberes Kopfspiel
-                x = 0.1 * m;
-                y = 0.3 * m;
-
-
-                n = 0;
-                                
-
-                // Abfrage des Kopfspiels
-
-                Console.WriteLine("Bitte geben Sie das Kopfspiel an");
-                c = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine();
-
-                // Abfrage ob das Kopfspiel zutreffen kann
-
-                while (n < 1)
-                {
-
-                    
-                    //Wenn das Kopfspiel zutrifft beendung der while-Schleife
-                    if ((c >= x) & (c <= y)) 
-                    {
-
-                        n += 1;
-
-                    }
-                    //Falls das Kopfspiel nicht zutrifft, Wert erneut abfragen
-                    else
-                    {
-
-                        Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bitte geben Sie das Kopfspiel an");
-                        c = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine();
-
-                        
-                    }
-
-                }
-
-            }
-            //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
-            else
-            {
-                c = m * 0.167;
-            }
-
-
-            //________________________________________________________________
-
-            //Folgenes wird nicht gebraucht
-
-
-            //Console.WriteLine("Bitte Geben Sie die Breite an.");
-
-            //b = Convert.ToDouble(Console.ReadLine());
-
-
-            //________________________________________________________________
-
+            c = Kopfspiel(m); 
 
             //Zahnhöhe
 
@@ -150,5 +80,105 @@ namespace Sprint1
             Console.ReadKey();
 
         }
+
+
+
+        static double Kopfspiel(double m)
+        {
+            double x, y, c, a;
+            int n, k ,q;
+
+            k = 0;
+
+            //do-while-Schleife 
+
+            do
+            {
+               
+                //Abfrage ob ein Kopfspiel angegeben werden soll
+
+                Console.WriteLine("Wollen Sie eine Kopfspiel angeben? 1 für JA und 2 für NEIN ");
+                a = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine();
+
+                if (a < 2)
+                {
+                    // x = unteres Kopfspiel / y = oberes Kopfspiel
+
+                    x = 0.1 * m;
+                    y = 0.3 * m;
+
+                    // Abfrage des Kopfspiels
+
+                    Console.WriteLine("Bitte geben Sie das Kopfspiel an");
+                    c = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine();
+
+                    // Abfrage ob das Kopfspiel zutreffen kann
+
+                    n = 0;
+                    q = 0;
+
+                    while (n < 1)
+                    {
+                        //Wert wird 3 mal erneut abgefragt (falls falsch) und dann wird Programm von vorne gestartet.
+
+                        if (q < 2)
+                        {
+
+                            //Wenn das Kopfspiel zutrifft beendung der while-Schleife
+
+                            if ((c >= x) & (c <= y))
+                            {
+                               
+                                n += 1;
+                                k += 1;
+
+                            }
+
+                            //Falls das Kopfspiel nicht zutrifft, Wert erneut abfragen
+
+                            else
+                            {
+
+                                Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");
+                                Console.WriteLine();
+                                Console.WriteLine("Bitte geben Sie das Kopfspiel an");
+                                c = Convert.ToDouble(Console.ReadLine());
+
+                                Console.WriteLine();
+
+                                q += 1;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");
+                            Console.WriteLine();
+
+                            n += 1;
+                           
+                        }
+                    }                   
+                }
+
+                //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
+
+                else
+                {
+
+                    c = m * 0.167;
+
+                    k += 1;
+
+                }
+
+            } while (k < 1);
+
+            return c;
+        }
+
     }
 }
