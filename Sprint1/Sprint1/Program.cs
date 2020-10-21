@@ -149,7 +149,7 @@ namespace Sprint1
 
                                 Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");
                                 Console.WriteLine();
-                                Console.WriteLine("Bitte geben Sie das Kopfspiel an");
+                                Console.WriteLine("Bitte geben Sie das Kopfspiel erneut an");
                                 c = Convert.ToDouble(Console.ReadLine());
 
                                 Console.WriteLine();
