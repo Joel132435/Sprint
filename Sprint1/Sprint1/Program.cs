@@ -10,7 +10,7 @@ namespace Sprint1
     {
         static void Main()
         {
-            double m, z, d, h, hf, ha, p, df, c, db, deg;
+            double m, z, d, h, hf, ha, p, df, c, db, deg ,w ;
             
             
 
@@ -31,7 +31,11 @@ namespace Sprint1
 
             //Kopfspiel Unterprogramm
 
-            c = Kopfspiel(m); 
+            c = Kopfspiel(m);
+
+            //Eingriffswinkel Unterporgramm
+
+            w = Eingriffswinkel();
 
             //Zahnhöhe
 
@@ -70,7 +74,7 @@ namespace Sprint1
 
             //Grundkreisdurchmesser
 
-            deg = (20 * (Math.PI)) / 180;
+            deg = (w * (Math.PI)) / 180;
 
             db = m * z * (Math.Cos(deg));
 
@@ -179,6 +183,108 @@ namespace Sprint1
 
             return c;
         }
+
+
+
+
+
+        static double Eingriffswinkel()
+        {
+            double a, x, y, w;
+            int k, n, q;
+
+            k = 0;
+
+            //do-while-Schleife 
+
+            do
+            {
+
+                //Abfrage ob ein Eingriffswinkel angegeben werden soll
+
+                Console.WriteLine("Wollen Sie eine Eingriffswinkel angeben? 1 für JA und 2 für NEIN ");
+                a = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine();
+
+                if (a < 2)
+                {
+                    // x = max Winkel / y = min Winkel
+
+                    y = 90;
+                    x = 0;
+
+                    // Abfrage des Eingriffwinkels
+
+                    Console.WriteLine("Bitte geben Sie den Eingriffswinkel an");
+                    w = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine();
+
+                    // Abfrage ob der Eingriffswinkel zutreffen kann
+
+                    n = 0;
+                    q = 0;
+
+                    while (n < 1)
+                    {
+                        //Wert wird 3 mal erneut abgefragt (falls falsch) ,dann wird Programm von vorne gestartet.
+
+                        if (q < 2)
+                        {
+
+                            //Wenn der Eingriffswinkel zutrifft beendung der while-Schleife
+
+                            if ((w > x) & (w < y))
+                            {
+
+                                n += 1;
+                                k += 1;
+
+                            }
+
+                            //Falls der Eingriffswinkel nicht zutreffen kann, Wert erneut abfragen
+
+                            else
+                            {
+
+                                Console.WriteLine("Der Angegebene Winkel ist nicht korrekt.");
+                                Console.WriteLine();
+                                Console.WriteLine("Bitte geben Sie den Eingriffswinkel erneut an");
+                                w = Convert.ToDouble(Console.ReadLine());
+
+                                Console.WriteLine();
+
+                                q += 1;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Sie haben den Winkel 3 mal falsch angegeben");
+                            Console.WriteLine();
+
+                            n += 1;
+
+                        }
+                    }
+                }
+
+                //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
+
+                else
+                {
+                    w = 20;
+
+                    k += 1;
+                }
+
+            } while (k < 1);
+
+            return w;
+        }
+
+
+
 
     }
 }
