@@ -269,7 +269,7 @@ namespace Sprint1
                     }
                 }
 
-                //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
+                //Falls mit NEIN genatwortet wird, wird mit dem norm Winkel gerechnet
 
                 else
                 {
