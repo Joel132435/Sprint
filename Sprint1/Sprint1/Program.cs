@@ -12,9 +12,9 @@ namespace Sprint1
         static void Main()
         {
 
-            double m, z, d, h, hf, ha, p, df, c, db, deg ,w ;
-            
-            
+            double m, z, d, h, hf, ha, p, df, c, db, deg, w;
+
+
 
             Console.WriteLine("Bitte Geben Sie das Modul an.");
             m = Convert.ToDouble(Console.ReadLine());
@@ -91,97 +91,21 @@ namespace Sprint1
 
         static double Kopfspiel(double m)
         {
-            double x, y, c, a;
-            int n, k ,q;
 
-            k = 0;
+            double x, y, l, c;
 
-            //do-while-Schleife 
+            //häufig verwendete Wert
 
-            do
-            {
-               
-                //Abfrage ob ein Kopfspiel angegeben werden soll
+            l = m * 0.167;
 
-                Console.WriteLine("Wollen Sie ein genaues Kopfspiel angeben ? 1 für JA und 2 für NEIN ");
-                a = Convert.ToDouble(Console.ReadLine());
+            // x = unteres Kopfspiel / y = oberes Kopfspiel
 
-                Console.WriteLine();
+            x = 0.1 * m;
+            y = 0.3 * m;
 
-                if (a < 2)
-                {
-                    // x = unteres Kopfspiel / y = oberes Kopfspiel
+            Console.WriteLine("KOPFSPIEL ANGABE");
 
-                    x = 0.1 * m;
-                    y = 0.3 * m;
-
-                    // Abfrage des Kopfspiels
-
-                    Console.WriteLine("Bitte geben Sie das Kopfspiel an");
-                    c = Convert.ToDouble(Console.ReadLine());
-
-                    Console.WriteLine();
-
-                    // Abfrage ob das Kopfspiel zutreffen kann
-
-                    n = 0;
-                    q = 0;
-
-                    while (n < 1)
-                    {
-                        //Wert wird 3 mal erneut abgefragt (falls falsch) und dann wird Programm von vorne gestartet.
-
-                        if (q < 2)
-                        {
-
-                            //Wenn das Kopfspiel zutrifft beendung der while-Schleife
-
-                            if ((c >= x) & (c <= y))
-                            {
-                               
-                                n += 1;
-                                k += 1;
-
-                            }
-
-                            //Falls das Kopfspiel nicht zutrifft, Wert erneut abfragen
-
-                            else
-                            {
-
-                                Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");
-                                Console.WriteLine();
-                                Console.WriteLine("Bitte geben Sie das Kopfspiel erneut an");
-                                c = Convert.ToDouble(Console.ReadLine());
-
-                                Console.WriteLine();
-
-                                q += 1;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");
-                            Console.WriteLine();
-
-                            n += 1;
-                           
-                        }
-                    }                   
-                }
-
-                //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
-
-                else
-                {
-
-                    c = m * 0.167;
-
-                    k += 1;
-
-                }
-
-            } while (k < 1);
+            c = Wertabfrage(x, y, l);
 
             return c;
         }
@@ -192,101 +116,149 @@ namespace Sprint1
 
         static double Eingriffswinkel()
         {
-            double a, x, y, w;
-            int k, n, q;
+            double x, y, l, w;
 
-            k = 0;
+            //norm Eingriffswinkel
 
-            //do-while-Schleife 
+            l = 20;
 
-            do
-            {
+            // x = min Winkel / y = max Winkel
 
-                //Abfrage ob ein Eingriffswinkel angegeben werden soll
+            x = 0;
+            y = 90;
 
-                Console.WriteLine("Wollen Sie einen Eingriffswinkel angeben und nicht von dem Norm Eingriffswinkel ausgehen? 1 für JA und 2 für NEIN ");
-                a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("EINGRIFFSWINKEL ANGABE");
 
-                Console.WriteLine();
-
-                if (a < 2)
-                {
-                    // x = max Winkel / y = min Winkel
-
-                    y = 90;
-                    x = 0;
-
-                    // Abfrage des Eingriffwinkels
-
-                    Console.WriteLine("Bitte geben Sie den Eingriffswinkel an");
-                    w = Convert.ToDouble(Console.ReadLine());
-
-                    Console.WriteLine();
-
-                    // Abfrage ob der Eingriffswinkel zutreffen kann
-
-                    n = 0;
-                    q = 0;
-
-                    while (n < 1)
-                    {
-                        //Wert wird 3 mal erneut abgefragt (falls falsch) ,dann wird Programm von vorne gestartet.
-
-                        if (q < 2)
-                        {
-
-                            //Wenn der Eingriffswinkel zutrifft beendung der while-Schleife
-
-                            if ((w > x) & (w < y))
-                            {
-
-                                n += 1;
-                                k += 1;
-
-                            }
-
-                            //Falls der Eingriffswinkel nicht zutreffen kann, Wert erneut abfragen
-
-                            else
-                            {
-
-                                Console.WriteLine("Der Angegebene Winkel ist nicht korrekt.");
-                                Console.WriteLine();
-                                Console.WriteLine("Bitte geben Sie den Eingriffswinkel erneut an");
-                                w = Convert.ToDouble(Console.ReadLine());
-
-                                Console.WriteLine();
-
-                                q += 1;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Sie haben den Winkel 3 mal falsch angegeben");
-                            Console.WriteLine();
-
-                            n += 1;
-
-                        }
-                    }
-                }
-
-                //Falls mit NEIN genatwortet wird, wird mit dem norm Winkel gerechnet
-
-                else
-                {
-                    w = 20;
-
-                    k += 1;
-                }
-
-            } while (k < 1);
+            w = Wertabfrage(x, y, l);
 
             return w;
         }
 
 
 
+        static double Wertabfrage(double x, double y, double l)
+        {
+            double c;
+            int n, k, q, s;
+            string a;
 
+            k = 0;
+            s = 0;
+
+            //do-while-Schleife 
+
+            do
+            {
+
+                //Abfrage ob ein Kopfspiel angegeben werden soll
+
+                Console.WriteLine("Wollen Sie einen Wert angeben ? Ja oder Nein ");
+                a = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine();
+
+
+
+                // Abfrage des Kopfspiels
+                switch (a)
+                {
+                    case "Ja":
+                    case "JA":
+                    case "ja":
+
+                        do
+                        {
+
+
+
+                            Console.WriteLine("Bitte geben Sie das Kopfspiel an");
+                            c = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine();
+
+                            // Abfrage ob das Kopfspiel zutreffen kann
+
+                            n = 0;
+                            q = 0;
+
+                            do
+                            {
+                                //Wert wird 3 mal erneut abgefragt (falls falsch) und dann wird Programm von vorne gestartet.
+
+                                if (q < 2)
+                                {
+
+                                    //Wenn das Kopfspiel zutrifft beendung der while-Schleife
+
+                                    if ((c >= x) & (c <= y))
+                                    {
+
+                                        n += 1;
+                                        k += 1;
+                                        s += 1;
+
+                                    }
+
+                                    //Falls das Kopfspiel nicht zutrifft, Wert erneut abfragen
+
+                                    else
+                                    {
+
+                                        Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");
+                                        Console.WriteLine();
+                                        Console.WriteLine("Bitte geben Sie das Kopfspiel erneut an");
+                                        c = Convert.ToDouble(Console.ReadLine());
+
+                                        Console.WriteLine();
+
+                                        q += 1;
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");
+                                    Console.WriteLine();
+
+
+                                    n += 1;
+                                    s += 1;
+
+                                }
+
+                            } while (n < 1);
+
+                        } while (s < 1);
+
+                        break;
+
+                    case "Nein":
+                    case "NEIN":
+                    case "nein":
+
+                        //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
+
+                        c = l;
+
+                        k += 1;
+
+                        break;
+
+                    default:
+
+                        //Falls man nicht ja oder nein schreibt
+
+                        c = 0;
+
+                        break;
+
+                }
+
+            } while (k < 1);
+
+            return c;
+
+
+
+        }
     }
 }
