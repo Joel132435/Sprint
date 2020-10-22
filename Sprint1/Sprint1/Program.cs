@@ -107,6 +107,8 @@ namespace Sprint1
 
             Console.WriteLine("KOPFSPIEL ANGABE");
 
+            //Unterprogramm zum Kopfspiel
+
             c = Wertabfrage(x, y, l);
 
             return c;
@@ -127,9 +129,11 @@ namespace Sprint1
             // x = min Winkel / y = max Winkel
 
             x = 0;
-            y = 90;
+            y = 90;           
 
             Console.WriteLine("EINGRIFFSWINKEL ANGABE");
+
+            //Unterprogramm zum Eingriffswinkel
 
             w = Wertabfrage(x, y, l);
 
@@ -141,14 +145,12 @@ namespace Sprint1
         static double Wertabfrage(double x, double y, double l)
         {
             double c;
-            int n, k, q, s;
+            int n, k, q;
             string a;
 
             k = 0;
-            s = 0;
-
-            //do-while-Schleife 
-
+            
+            //do-while-Schleife (Um nach 3 mal falsch eingegebenen Wert noch mal die Chance zu haben zu entscheiden ob man einen Wert angeben will))
             do
             {
 
@@ -160,77 +162,69 @@ namespace Sprint1
                 Console.WriteLine();
 
 
-
-                // Abfrage des Kopfspiels/Eingriffswinkels
+                // Switch abfrage ( Ja oder Nein )
                 switch (a)
                 {
                     case "Ja":
                     case "JA":
                     case "ja":
 
+                        // Abfrage des Kopfspiels/Eingriffswinkels
+
+                        Console.WriteLine("Bitte Wert eingeben");                            
+                        c = Convert.ToDouble(Console.ReadLine());
+                           
+                        Console.WriteLine();
+                                                    
+                        n = 0;                           
+                        q = 0;
+
+                        //while-do-Schleife (Um die Abfrage 3 mal wiederholen zu können und immer wieder die möglichkeit zu geben den Wert zu korrigieren)/ nicht unbedingt nötig (benutze ich nur damit ein "erneut" im abfrage text steht) 
                         do
-                        {
-
-
-
-                            Console.WriteLine("Bitte geben Sie das Kopfspiel an");
-                            c = Convert.ToDouble(Console.ReadLine());
-
-                            Console.WriteLine();
-
-                            // Abfrage ob das Kopfspiel/der Eingriffswinkel zutreffen kann
-
-                            n = 0;
-                            q = 0;
-
-                            do
+                        {                              
+                            //if-else-Schleife (damit der Wert 3 mal abgefragt wird falls falsch)  
+                            if (q < 2)
                             {
-                                //Wert wird 3 mal erneut abgefragt (falls falsch) und dann wird Programm von vorne gestartet.
 
-                                if (q < 2)
+                                // Abfrage ob das Kopfspiel/der Eingriffswinkel zutreffen kann
+                                // Wenn das Kopfspiel/der Eingriffswinkel zutrifft beendung der do-while-Schleife                  
+                                if ((c >= x) & (c <= y))
                                 {
-
-                                    //Wenn das Kopfspiel/der Eingriffswinkel zutrifft beendung der while-Schleife
-
-                                    if ((c >= x) & (c <= y))
-                                    {
-
-                                        n += 1;
-                                        k += 1;
-                                        s += 1;
-
-                                    }
-
-                                    //Falls das Kopfspiel/der Eingriffswinkel nicht zutrifft, Wert erneut abfragen
-
-                                    else
-                                    {
-
-                                        Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");
-                                        Console.WriteLine();
-                                        Console.WriteLine("Bitte geben Sie das Kopfspiel erneut an");
-                                        c = Convert.ToDouble(Console.ReadLine());
-
-                                        Console.WriteLine();
-
-                                        q += 1;
-                                    }
+                                        
+                                    n += 1;
+                                        
+                                    k += 1;
+                                        
                                 }
+                                //Falls das Kopfspiel/der Eingriffswinkel nicht zutrifft, Wert 3 mal erneut abfragen                              
                                 else
                                 {
-                                    Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");
+                                        
+                                    Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");                                        
                                     Console.WriteLine();
-
-
-                                    n += 1;
-                                    s += 1;
-
+                                        
+                                    Console.WriteLine("Bitte geben Sie den Wert erneut ein");                                        
+                                    c = Convert.ToDouble(Console.ReadLine());
+                                        
+                                    Console.WriteLine();
+                                        
+                                    q += 1;
                                 }
 
-                            } while (n < 1);
+                            }
+                            //wenn Wert 3 mal neu abgefragt wurde wird n und s = 1 gesesetz ,damit man neu entscheiden kann ob man einen Wert angeben will oder nicht
+                            else
+                            {
+                                           
+                                Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");                                    
+                                Console.WriteLine();
+                                   
+                                n += 1;
+                                    
+                            }
 
-                        } while (s < 1);
-
+                        } while (n < 1);
+                      
                         break;
 
                     case "Nein":
@@ -247,7 +241,7 @@ namespace Sprint1
 
                     default:
 
-                        //Falls man nicht ja oder nein schreibt
+                        //Falls man nicht JA oder NEIN schreibt
 
                         c = 0;
 
