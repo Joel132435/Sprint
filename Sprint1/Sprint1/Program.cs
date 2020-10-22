@@ -8,8 +8,10 @@ namespace Sprint1
 {
     class Program
     {
+
         static void Main()
         {
+
             double m, z, d, h, hf, ha, p, df, c, db, deg ,w ;
             
             
@@ -101,7 +103,7 @@ namespace Sprint1
                
                 //Abfrage ob ein Kopfspiel angegeben werden soll
 
-                Console.WriteLine("Wollen Sie eine Kopfspiel angeben? 1 für JA und 2 für NEIN ");
+                Console.WriteLine("Wollen Sie ein genaues Kopfspiel angeben ? 1 für JA und 2 für NEIN ");
                 a = Convert.ToDouble(Console.ReadLine());
 
                 Console.WriteLine();
@@ -202,7 +204,7 @@ namespace Sprint1
 
                 //Abfrage ob ein Eingriffswinkel angegeben werden soll
 
-                Console.WriteLine("Wollen Sie eine Eingriffswinkel angeben? 1 für JA und 2 für NEIN ");
+                Console.WriteLine("Wollen Sie einen Eingriffswinkel angeben und nicht von dem Norm Eingriffswinkel ausgehen? 1 für JA und 2 für NEIN ");
                 a = Convert.ToDouble(Console.ReadLine());
 
                 Console.WriteLine();
