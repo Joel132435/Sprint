@@ -105,7 +105,7 @@ namespace Sprint1
             x = 0.1 * m;
             y = 0.3 * m;
 
-            Console.WriteLine("KOPFSPIEL ANGABE");
+            Console.WriteLine("Kopfspiel Angabe ( häufig verwendeter Wert wenn Nein )");
 
             //Unterprogramm zum Kopfspiel
 
@@ -131,7 +131,7 @@ namespace Sprint1
             x = 0;
             y = 90;           
 
-            Console.WriteLine("EINGRIFFSWINKEL ANGABE");
+            Console.WriteLine("Eingriffswinkel Angabe ( Norm Winkel wenn Nein )");
 
             //Unterprogramm zum Eingriffswinkel
 
