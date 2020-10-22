@@ -150,7 +150,7 @@ namespace Sprint1
             do
             {
 
-                //Abfrage ob ein Kopfspiel angegeben werden soll
+                //Abfrage ob ein Kopfspiel/Eingriffswinkel angegeben werden soll
 
                 Console.WriteLine("Wollen Sie einen Wert angeben ? Ja oder Nein ");
                 a = Convert.ToString(Console.ReadLine());
@@ -159,7 +159,7 @@ namespace Sprint1
 
 
 
-                // Abfrage des Kopfspiels
+                // Abfrage des Kopfspiels/Eingriffswinkels
                 switch (a)
                 {
                     case "Ja":
@@ -176,7 +176,7 @@ namespace Sprint1
 
                             Console.WriteLine();
 
-                            // Abfrage ob das Kopfspiel zutreffen kann
+                            // Abfrage ob das Kopfspiel/der Eingriffswinkel zutreffen kann
 
                             n = 0;
                             q = 0;
@@ -188,7 +188,7 @@ namespace Sprint1
                                 if (q < 2)
                                 {
 
-                                    //Wenn das Kopfspiel zutrifft beendung der while-Schleife
+                                    //Wenn das Kopfspiel/der Eingriffswinkel zutrifft beendung der while-Schleife
 
                                     if ((c >= x) & (c <= y))
                                     {
@@ -199,7 +199,7 @@ namespace Sprint1
 
                                     }
 
-                                    //Falls das Kopfspiel nicht zutrifft, Wert erneut abfragen
+                                    //Falls das Kopfspiel/der Eingriffswinkel nicht zutrifft, Wert erneut abfragen
 
                                     else
                                     {
