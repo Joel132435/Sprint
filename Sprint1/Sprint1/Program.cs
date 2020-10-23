@@ -105,7 +105,9 @@ namespace Sprint1
             x = 0.1 * m;
             y = 0.3 * m;
 
-            Console.WriteLine("Kopfspiel Angabe ( häufig verwendeter Wert wenn Nein )");
+            //Abfrage ob ein Kopfspiel Angegeben werden soll
+
+            Console.WriteLine("Wollen Sie ein Kopfspiel angeben ? Wenn Sie mit Nein antworten wird ein häufig verwendetes Kopfspiel benutzt");
 
             //Unterprogramm zum Kopfspiel
 
@@ -129,9 +131,11 @@ namespace Sprint1
             // x = min Winkel / y = max Winkel
 
             x = 0;
-            y = 90;           
+            y = 90;        
+            
+            //Abfrage ob ein Eingriffswinkel Angegeben werden soll
 
-            Console.WriteLine("Eingriffswinkel Angabe ( Norm Winkel wenn Nein )");
+            Console.WriteLine("Wollen Sie den Eingriffswinkel angeben? Wenn Sie mit Nein antworten wird der norm Winkel benutzt.");
 
             //Unterprogramm zum Eingriffswinkel
 
@@ -154,9 +158,9 @@ namespace Sprint1
             do
             {
 
-                //Abfrage ob ein Kopfspiel/Eingriffswinkel angegeben werden soll
+                // Ja / Nein Abfrage
 
-                Console.WriteLine("Wollen Sie einen Wert angeben ? Ja oder Nein ");
+                Console.WriteLine("Bitte mit Ja oder Nein antworten");
                 a = Convert.ToString(Console.ReadLine());
 
                 Console.WriteLine();
@@ -216,9 +220,9 @@ namespace Sprint1
                             else
                             {
                                            
-                                Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");                                    
-                                Console.WriteLine();
-                                   
+                                Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");
+                                Console.WriteLine("Sind Sie sicher das Sie einen Wert angeben wollen?");
+                                                                   
                                 n += 1;
                                     
                             }
