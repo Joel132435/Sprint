@@ -1,0 +1,78 @@
+﻿<Window x:Class="Sprint1_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sprint1_GUI"
+        mc:Ignorable="d"
+        Title="Zahnradberechnung" Height="450" Width="800">
+
+    <Grid Background="Gray" >
+        <Label Margin="270,-13,278,389" FontSize="24" FontWeight="Bold"
+            
+            >Zahnradberechnung</Label>
+
+        <StackPanel Margin="100,30,509,0"  VerticalAlignment="Top">
+
+
+            <Label HorizontalAlignment="Left" Width="200" Height="50" FontWeight="Bold" FontSize="20">Benötigte Größen:</Label>
+
+            <Label  Width="150" FontWeight="Bold" FontSize="14">Modul:</Label>
+
+            <TextBox x:Name="txtBox_Modul"  Width="150"/>
+
+            <Label  Width="150" FontWeight="Bold" FontSize="14">Zähnezahl:</Label>
+
+            <TextBox x:Name="txtBox_Zähnezahl"  Width="150" />
+
+            <Label   Width="150" FontWeight="Bold" FontSize="14">Teilkreisdurchmesser:</Label>
+
+            <TextBox  x:Name="txtBox_Teilkreisdurchmesser"  Width="150"/>
+
+            <Label  Width="150" FontWeight="Bold" FontSize="14">Kopfspiel:</Label>
+
+            <TextBox  x:Name="txtBox_Kopfspiel"  Width="150">0</TextBox>
+
+            <Label  Width="150" FontWeight="Bold" FontSize="14">Eingriffswinkel:</Label>
+
+            <TextBox x:Name="txtBox_Eingriffswinkel"  Width="150" >20</TextBox>
+
+            
+
+
+                <Button
+          
+                Width="150" Height="40"
+          
+                Click="Button_Click"
+          
+                Margin="0,30,0,0 " FontWeight="Bold" FontSize="18"
+      
+                >Berechnen
+
+            </Button>
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Margin="0,30,148,10" Width="204">
+
+            <Label FontSize="20" FontWeight="Bold">Berechnete Größen:</Label>
+            <Label FontWeight="Bold" FontSize="14" >Zahnhöhe:</Label>
+            <Label x:Name="erg_Zahnhöhe" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Height="28" Width="150" ></Label>
+            <Label FontWeight="Bold" FontSize="14">Zahnfußhöhe:</Label>
+            <Label x:Name="erg_Zahnfußhöhe" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Height="28" Width="150" ></Label>
+            <Label FontWeight="Bold" FontSize="14">Zahnkopfhöhe:</Label>
+            <Label x:Name="erg_Zahnkopfhöhe" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Height="28" Width="150" ></Label>
+            <Label FontWeight="Bold" FontSize="14">Teilung:</Label>
+            <Label x:Name="erg_Teilung" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Height="28" Width="150" ></Label>
+            <Label FontWeight="Bold" FontSize="14">Fußkreisdurchmesser:</Label>
+            <Label x:Name="erg_Fußkreisdurchmesser" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Height="28" Width="150" ></Label>
+            <Label FontWeight="Bold" FontSize="14">Grundkreisdurchmesser:</Label>
+            <Label x:Name="erg_Grundkreisdurchmesser" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Height="28" Width="150" ></Label>
+
+        </StackPanel>
+
+
+    </Grid>
+
+
+</Window>
