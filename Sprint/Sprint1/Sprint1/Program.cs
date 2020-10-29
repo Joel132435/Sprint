@@ -94,16 +94,16 @@ namespace Sprint1
         static double Kopfspiel(double m)
         {
 
-            double x, y, l, c;
+            double min, max, l, c;
 
             //häufig verwendete Wert
 
             l = m * 0.167;
 
-            // x = unteres Kopfspiel / y = oberes Kopfspiel
+            // min = unteres Kopfspiel / max = oberes Kopfspiel
 
-            x = 0.1 * m;
-            y = 0.3 * m;
+            min = 0.1 * m;
+            max = 0.3 * m;
 
             //Abfrage ob ein Kopfspiel Angegeben werden soll
 
@@ -111,7 +111,7 @@ namespace Sprint1
 
             //Unterprogramm zum Kopfspiel
 
-            c = Wertabfrage(x, y, l);
+            c = Wertabfrage(min, max, l);
 
             return c;
         }
@@ -122,16 +122,16 @@ namespace Sprint1
 
         static double Eingriffswinkel()
         {
-            double x, y, l, w;
+            double min, max, l, w;
 
             //norm Eingriffswinkel
 
             l = 20;
 
-            // x = min Winkel / y = max Winkel
+            // min = min Winkel / max = max Winkel
 
-            x = 0;
-            y = 90;        
+            min = 0;
+            max = 90;        
             
             //Abfrage ob ein Eingriffswinkel Angegeben werden soll
 
@@ -139,14 +139,14 @@ namespace Sprint1
 
             //Unterprogramm zum Eingriffswinkel
 
-            w = Wertabfrage(x, y, l);
+            w = Wertabfrage(min, max, l);
 
             return w;
         }
 
 
 
-        static double Wertabfrage(double x, double y, double l)
+        static double Wertabfrage(double min, double max, double l)
         {
             double res;
             int n, k, q;
@@ -192,7 +192,7 @@ namespace Sprint1
 
                                 // Abfrage ob das Kopfspiel/der Eingriffswinkel zutreffen kann
                                 // Wenn das Kopfspiel/der Eingriffswinkel zutrifft beendung der do-while-Schleife                  
-                                if ((res >= x) & (res <= y))
+                                if ((res >= min) & (res <= max))
                                 {
                                         
                                     n += 1;
