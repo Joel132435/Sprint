@@ -148,7 +148,7 @@ namespace Sprint1
 
         static double Wertabfrage(double x, double y, double l)
         {
-            double c;
+            double res;
             int n, k, q;
             string a;
 
@@ -176,7 +176,7 @@ namespace Sprint1
                         // Abfrage des Kopfspiels/Eingriffswinkels
 
                         Console.WriteLine("Bitte Wert eingeben");                            
-                        c = Convert.ToDouble(Console.ReadLine());
+                        res = Convert.ToDouble(Console.ReadLine());
                            
                         Console.WriteLine();
                                                     
@@ -192,7 +192,7 @@ namespace Sprint1
 
                                 // Abfrage ob das Kopfspiel/der Eingriffswinkel zutreffen kann
                                 // Wenn das Kopfspiel/der Eingriffswinkel zutrifft beendung der do-while-Schleife                  
-                                if ((c >= x) & (c <= y))
+                                if ((res >= x) & (res <= y))
                                 {
                                         
                                     n += 1;
@@ -208,7 +208,7 @@ namespace Sprint1
                                     Console.WriteLine();
                                         
                                     Console.WriteLine("Bitte geben Sie den Wert erneut ein");                                        
-                                    c = Convert.ToDouble(Console.ReadLine());
+                                    res = Convert.ToDouble(Console.ReadLine());
                                         
                                     Console.WriteLine();
                                         
@@ -237,7 +237,7 @@ namespace Sprint1
 
                         //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
 
-                        c = l;
+                        res = l;
 
                         k += 1;
 
@@ -247,7 +247,7 @@ namespace Sprint1
 
                         //Falls man nicht JA oder NEIN schreibt
 
-                        c = 0;
+                        res = 0;
 
                         break;
 
@@ -255,7 +255,7 @@ namespace Sprint1
 
             } while (k < 1);
 
-            return c;
+            return res;
 
 
 
