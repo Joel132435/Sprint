@@ -53,6 +53,7 @@
             </Button>
 
         </StackPanel>
+        
         <StackPanel HorizontalAlignment="Right" Margin="0,30,148,10" Width="204">
 
             <Label FontSize="20" FontWeight="Bold">Berechnete Größen:</Label>
