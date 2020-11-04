@@ -108,9 +108,9 @@ namespace Sprint1
             //Abfrage ob ein Kopfspiel Angegeben werden soll
 
             Console.WriteLine("Wollen Sie ein Kopfspiel angeben?");
-            Console.WriteLine("min Wert: " + min +  " max Wert: " + max);
+            Console.WriteLine("min Wert : " + min  +  "  max Wert : " + max);
             Console.WriteLine("Wenn Sie mit Nein antworten wird ein häufig verwendetes Kopfspiel benutzt");
-            Console.WriteLine("Häufiges Kopfspiel:" + l);
+            Console.WriteLine("Häufiges Kopfspiel : " + l);
             Console.WriteLine("");
 
             //Unterprogramm zum Kopfspiel
@@ -140,9 +140,9 @@ namespace Sprint1
             //Abfrage ob ein Eingriffswinkel Angegeben werden soll
 
             Console.WriteLine("Wollen Sie den Eingriffswinkel angeben?");
-            Console.WriteLine("min Winkel " + min + "max Winkel: " + max);
-            Console.WriteLine(" Wenn Sie mit Nein antworten wird der norm Winkel benutzt");
-            Console.WriteLine("Norm Eingriffswinkel: " +l);
+            Console.WriteLine("min Winkel : " + min  + "  max Winkel : " + max);
+            Console.WriteLine("Wenn Sie mit Nein antworten wird der norm Winkel benutzt");
+            Console.WriteLine("Norm Eingriffswinkel : " +l);
             Console.WriteLine("");
 
             //Unterprogramm zum Eingriffswinkel
