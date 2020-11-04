@@ -107,7 +107,7 @@ namespace Sprint1
 
             //Abfrage ob ein Kopfspiel Angegeben werden soll
 
-            Console.WriteLine("Wollen Sie ein Kopfspiel angeben ? Wenn Sie mit Nein antworten wird ein häufig verwendetes Kopfspiel benutzt");
+            Console.WriteLine("Wollen Sie ein Kopfspiel angeben? Wenn Sie mit Nein antworten wird ein häufig verwendetes Kopfspiel benutzt");
 
             //Unterprogramm zum Kopfspiel
 
@@ -183,15 +183,15 @@ namespace Sprint1
                         n = 0;                           
                         q = 0;
 
-                        //while-do-Schleife (Um die Abfrage 3 mal wiederholen zu können und immer wieder die möglichkeit zu geben den Wert zu korrigieren)/ nicht unbedingt nötig (benutze ich nur damit ein "erneut" im abfrage text steht) 
+                        //while-do-Schleife (Um die Abfrage 3 mal wiederholen zu können und immer wieder die Möglichkeit zu geben den Wert zu korrigieren)/ nicht unbedingt nötig (benutzt man nur damit ein "erneut" im abfrage text steht) 
                         do
                         {                              
-                            //if-else-Schleife (damit der Wert 3 mal abgefragt wird falls falsch)  
+                            //if-else-Schleife (damit der Wert 3 mal abgefragt wird wenn falsch)  
                             if (q < 2)
                             {
 
-                                // Abfrage ob das Kopfspiel/der Eingriffswinkel zutreffen kann
-                                // Wenn das Kopfspiel/der Eingriffswinkel zutrifft beendung der do-while-Schleife                  
+                                //Abfrage, ob das Kopfspiel/der Eingriffswinkel zutreffen kann
+                                //Wenn das Kopfspiel/der Eingriffswinkel zutrifft: Beendung der do-while-Schleife                  
                                 if ((res >= min) & (res <= max))
                                 {
                                         
@@ -200,11 +200,11 @@ namespace Sprint1
                                     k += 1;
                                         
                                 }
-                                //Falls das Kopfspiel/der Eingriffswinkel nicht zutrifft, Wert 3 mal erneut abfragen                              
+                                //Falls das Kopfspiel/der Eingriffswinkel nicht zutrifft, soll der Wert 3 mal erneut abgefragt werden                              
                                 else
                                 {
                                         
-                                    Console.WriteLine("Der Angegebene Wert ist nicht korrekt.");                                        
+                                    Console.WriteLine("Der Angegebene Wert ist nicht korrekt!");                                        
                                     Console.WriteLine();
                                         
                                     Console.WriteLine("Bitte geben Sie den Wert erneut ein");                                        
@@ -216,12 +216,12 @@ namespace Sprint1
                                 }
 
                             }
-                            //wenn Wert 3 mal neu abgefragt wurde wird n und s = 1 gesesetz ,damit man neu entscheiden kann ob man einen Wert angeben will oder nicht
+                            //Wenn der Wert 3 mal neu abgefragt wurde, wird n und s = 1 gesetzt ,damit man neu entscheiden kann, ob man einen Wert angeben will oder nicht
                             else
                             {
                                            
-                                Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben");
-                                Console.WriteLine("Sind Sie sicher das Sie einen Wert angeben wollen?");
+                                Console.WriteLine("Sie haben den Wert 3 mal falsch angegeben!");
+                                Console.WriteLine("Sind Sie sicher dass Sie einen Wert angeben wollen?");
                                                                    
                                 n += 1;
                                     
@@ -235,7 +235,7 @@ namespace Sprint1
                     case "NEIN":
                     case "nein":
 
-                        //Falls mit NEIN genatwortet wird, wird mit dem häufig verwendeten Wert gerechnet
+                        //Falls mit NEIN geantwortet wird, wird mit dem häufig verwendeten Wert gerechnet
 
                         res = l;
 
