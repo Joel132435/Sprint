@@ -14,13 +14,6 @@ namespace Sprint1
 
             double m, z, d, h, hf, ha, p, df, c, db, deg, w;
 
-
-
-            Console.WriteLine("Bitte Geben Sie das Modul an.");
-            m = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine();
-
             Console.WriteLine("Bitte Geben Sie die Zähnezahl an.");
             z = Convert.ToDouble(Console.ReadLine());
 
@@ -29,6 +22,13 @@ namespace Sprint1
             Console.WriteLine("Bitte Geben Sie den Teilkreisdurchmesser an.");
             d = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine();
+
+            //Modul
+
+            m = d / z;
+
+            Console.WriteLine("Modul = " + m);
             Console.WriteLine();
 
             //Kopfspiel Unterprogramm
