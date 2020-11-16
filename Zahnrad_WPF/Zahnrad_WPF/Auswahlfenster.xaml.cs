@@ -19,8 +19,17 @@ namespace Zahnrad_WPF
     /// </summary>
     public partial class Auswahlfenster : Window
     {
+       
+
+        private void Label_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
+        {
+
+        }
+
         public Auswahlfenster()
         {
+           
+            
             InitializeComponent();
         }
     }

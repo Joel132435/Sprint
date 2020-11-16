@@ -113,5 +113,11 @@
   <ItemGroup>
     <Resource Include="cogwheel_icon-icons.com_70237.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Zahnrad Hintergrund.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
