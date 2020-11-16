@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zahnrad_WPF"
         mc:Ignorable="d"
-        Title="Zahnradberechnung" Height="450" Width="800">
+        Title="Zahnradberechnung" Height="450" Width="800" SizeToContent="WidthAndHeight" Icon="cogwheel_icon-icons.com_70237.png">
 
     <!--Background Farbe-->
     <Window.Background>
@@ -29,9 +29,8 @@
 
             <!-- Stackpanel für Bilder -->
             <StackPanel Grid.Column="0" Margin="0,0,0,0" HorizontalAlignment="Right" Width="338">
-
-                <Image Height="199" Source="original.jpg" Margin="-9,0,10,0"/>
-                <Image Height="195" Source="sintered-structural-components-for-gearboxes.jpg" Margin="0,0,10,0" />
+                <Image Height="199" Source="original.jpg" Margin="-9,0,9.6,0"/>
+                <Image Height="195" Source="sintered-structural-components-for-gearboxes.jpg" Margin="0,0,9.6,0" />
 
             </StackPanel>
 
@@ -63,7 +62,7 @@
 
                 </Grid.RowDefinitions>
 
-                <TextBlock  Grid.Row="0" Foreground="White" FontSize="28" Margin="30,0,78,22" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Herzlich Willkommen</TextBlock>
+                <TextBlock  Grid.Row="0" Foreground="White" FontSize="28" Margin="30,0,78,22" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2" TextDecorations="Underline">Herzlich Willkommen</TextBlock>
                 <TextBlock Grid.Row="1" Foreground="White" FontSize="16" Margin="5,0,0,0" Height="33" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="365" > Vielen Dank,</TextBlock>
                 <TextBlock Grid.Row="2" Foreground="White" FontSize="16" Margin="5,0,0,0" Height="33" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="365">dass Sie sich für das Programm der Gruppe E_HSP</TextBlock>
                 <TextBlock Grid.Row="3" Foreground="White" FontSize="16" Margin="5,0,0,0" Height="33" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="365">entschieden haben.</TextBlock>
@@ -93,6 +92,7 @@
 
 
         </StackPanel>
+        <Image HorizontalAlignment="Left" Height="19" Margin="-10,-29,0,0" VerticalAlignment="Top" Width="18" Source="cogwheel_icon-icons.com_70237.png" Stretch="None"/>
 
     </Grid>
 
