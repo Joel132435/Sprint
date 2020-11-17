@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zahnrad_WPF"
         mc:Ignorable="d"
-        Title="Zahnradberechnung" Height="450" Width="800" SizeToContent="WidthAndHeight" Icon="cogwheel_icon-icons.com_70237.png">
+        Title="Zahnradberechnung" MaxHeight="450" MinHeight="450" Height="450" MaxWidth="800" MinWidth="800" Width="800" SizeToContent="WidthAndHeight" Icon="cogwheel_icon-icons.com_70237.png">
 
     <!--Background Farbe-->
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF28354C" Offset="0.155"/>
+            <GradientStop Color="#FF4444A4" Offset="0.155"/>
             <GradientStop Color="#FF7493CC" Offset="1"/>
 
         </LinearGradientBrush>

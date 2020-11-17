@@ -70,6 +70,7 @@
     <Compile Include="Auswahlfenster.xaml.cs">
       <DependentUpon>Auswahlfenster.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GeradverzahnungBerechnung.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,9 +103,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="0000FF30.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="original.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Zahnrad Hintergrund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Startseite Stirnrad.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
