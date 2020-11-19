@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SchrägverzahnungBerechnung.cs" />
     <Page Include="Auswahlfenster.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,6 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Startseite Stirnrad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Stira_schraeg_links.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

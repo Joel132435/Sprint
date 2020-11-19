@@ -7,14 +7,16 @@ using System.Windows;
 
 namespace Zahnrad_WPF
 {
-    class GeradverzahnungBerechnung
+    class SchrägverzahnungBerechnung
     {
+
         //Eigenschaften
         public double Zähnezahl { get; set; }
-        public double Teilkreisdurchmesser { get; set; }        
+        public double Teilkreisdurchmesser { get; set; }
         public double Modul { get; set; }
         public double Kopfspiel { get; set; }
         public double Eingriffswinkel { get; set; }
+        public double Schrägungswinkel { get; set; }
 
 
 
@@ -38,7 +40,7 @@ namespace Zahnrad_WPF
                     return;
                 }
             } while (n < 1);
-           
+
         }
 
         internal void TestderZähnezahlEingabe(string ZähnezahlEingabe)
@@ -121,14 +123,40 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    
+
                     Kopfspiel = Modul * 0.167;
                     MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche Eingabe");
                     return;
                 }
 
-               
+
             } while (n < 1);
+        }
+
+        internal void TestderSchrägungswinkelEingabe(string SchrägungswinkelEingabe)
+        {
+            double KontrollierterSchrägungswinkel;
+            int n;
+            n = 0;
+            do
+            {
+
+                if (double.TryParse(SchrägungswinkelEingabe, out KontrollierterSchrägungswinkel))
+                {
+                    n++;
+                    Schrägungswinkel = KontrollierterSchrägungswinkel;
+                }
+                else
+                {
+
+                    MessageBox.Show("Falsche Schrägungswinkel Eingabe bitte Zahl eingeben");
+                    return;
+                }
+
+
+            } while (n < 1);
+
+
         }
 
 
@@ -168,7 +196,27 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel" , MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            } while (n < 1);
+        }
+
+        internal void KontrolleWertebereichSchrägungswinkel()
+        {
+            int n;
+            n = 0;
+            do
+            {
+
+                if (Schrägungswinkel > 0 && Schrägungswinkel <= 90)
+                {
+                    n++;
+
+                }
+                else
+                {
+                    MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Schrägungswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             } while (n < 1);
@@ -176,7 +224,14 @@ namespace Zahnrad_WPF
 
         //Methoden zur berechnung
 
+        internal double StirnschnittModulBerechnen()
+        {
+            double StirnschnittModul;
 
+            StirnschnittModul = Modul / Math.Cos(Schrägungswinkel) ;
+
+            return StirnschnittModul;
+        }
 
 
         internal double ZahnhöheBerechen()
@@ -228,7 +283,7 @@ namespace Zahnrad_WPF
         {
             double deg, GrundkreisdurchmesserAusgabe;
             deg = (Eingriffswinkel * (Math.PI)) / 180;
-            GrundkreisdurchmesserAusgabe = Modul * Zähnezahl * (Math.Cos(deg));
+            GrundkreisdurchmesserAusgabe = (Modul / Math.Cos(Schrägungswinkel)) * Zähnezahl * (Math.Cos(deg));
             return GrundkreisdurchmesserAusgabe;
         }
 
@@ -243,7 +298,7 @@ namespace Zahnrad_WPF
             return KopfkreisdurchmesserAusgabe;
         }
 
-        
+
         internal double GewichtBerechnen()
         {
             return 0;
@@ -253,5 +308,7 @@ namespace Zahnrad_WPF
         {
             return 0;
         }
+
+
     }
 }

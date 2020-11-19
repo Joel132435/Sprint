@@ -26,7 +26,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Border Margin="20"  BorderThickness="1" BorderBrush="White"  CornerRadius="10">
+        <Border Margin="20"  BorderThickness="2" BorderBrush="White"  CornerRadius="10">
             <!-- Anordnung Elemente Gitterspalte 1 -->
             <Grid Grid.Column="0" >
 
@@ -147,7 +147,7 @@
 
                         <RowDefinition Height="10"/>
 
-                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
 
                         <RowDefinition Height="10"/>
 
@@ -161,11 +161,6 @@
 
                         <RowDefinition/>
 
-                        <RowDefinition/>
-
-
-
-
                     </Grid.RowDefinitions>
 
 
@@ -173,7 +168,7 @@
                     <Border Margin="150,0,150,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="GhostWhite" BorderThickness="1" CornerRadius="10">
 
 
-                        <Label Content="Ergebnisse" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="GhostWhite"/>
+                        <Label Content="Ergebnisse" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Foreground="GhostWhite"/>
 
 
                     </Border>
@@ -183,7 +178,7 @@
                     <StackPanel  Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
-                        <Label Content="Zahnhöhe :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Zahnhöhe :" Margin="120,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Zahnhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
@@ -196,7 +191,7 @@
                     <StackPanel  Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
-                        <Label Content="Zahnfußhöhe :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Zahnfußhöhe :" Margin="90,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Zahnfußhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
@@ -209,7 +204,7 @@
                     <StackPanel  Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
-                        <Label Content="Zahnkopfhöhe :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Zahnkopfhöhe :" Margin="80,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Zahnkopfhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
@@ -222,7 +217,7 @@
                     <StackPanel  Grid.Row="6" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
-                        <Label Content="Teilung :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Teilung :" Margin="145,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Teilung" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
@@ -234,34 +229,22 @@
 
                     <StackPanel  Grid.Row="7" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
-
-                        <Label Content="Fußkreisdurchmesser :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
-
-
-                        <Label x:Name="lbl_Fußkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
-
-
-                    </StackPanel>
-
-
-
-                    <StackPanel  Grid.Row="8" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-
-
-                        <Label Content="Grundkreisdurchmesser :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Grundkreisdurchmesser :" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Grundkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
 
 
+
                     </StackPanel>
+                  
 
 
 
                     <StackPanel  Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
-                        <Label Content="Kopfkreisdurchmesser :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Kopfkreisdurchmesser :" Margin="10,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Kopfkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
@@ -273,11 +256,10 @@
 
                     <StackPanel  Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
+                        <Label Content="Fußkreisdurchmesser :" Margin="20,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
-                        <Label Content="Zahnfußfestigkeit :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
-
-                        <Label x:Name="lbl_Zahnfußfestigkeit" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Fußkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
 
 
                     </StackPanel>
@@ -286,21 +268,7 @@
 
                     <StackPanel  Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
-
-                        <Label Content="Zahnflankenfestigkeit :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
-
-
-                        <Label x:Name="lbl_Zahnflankenfestigkeit" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
-
-
-                    </StackPanel>
-
-
-
-                    <StackPanel  Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-
-
-                        <Label Content="Gewicht :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Gewicht :" Margin="135,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Gewicht" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
@@ -310,21 +278,20 @@
 
 
 
-                    <StackPanel  Grid.Row="7" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <StackPanel  Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
-
-                        <Label Content="Preis :" Margin="10,0,0,0" FontSize="17" Foreground="GhostWhite" HorizontalAlignment="Left"/>
+                        <Label Content="Preis :" Margin="164,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
                         <Label x:Name="lbl_Preis" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
 
-
                     </StackPanel>
+                 
 
                     <!-- Anzeige Button Programm Schließen-->
-                    <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1"  VerticalAlignment="Center">
+                    <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
-                        <Button x:Name="Schließen" Margin=" 5 5 5 5" Click="btn_Schließen_Click" Height="27" Width="130">Programm schließen</Button>
+                        <Button x:Name="Schließen" Margin=" 5 5 5 5" Click="btn_Schließen_Click" Height="35" Width="130">Programm schließen</Button>
 
 
                     </StackPanel>
@@ -345,11 +312,11 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="1" CornerRadius="10">
+                    <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
                         <Grid Grid.Column="0" >
                             <!-- Zeilendefinierung für Eingabe-->
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="40"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50"/>
@@ -357,77 +324,72 @@
                                 <RowDefinition Height="50"/>
                             </Grid.RowDefinitions>
 
-                            <Label Foreground="White" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
+                            <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
 
                             <!-- Eingabefeld 1 -->
                             <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
 
-                                <Label Margin="100 5 1 5" Foreground="White" Content="Modul:" FontSize="17" />
-                                <TextBox x:Name="txt_GeVeModul" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="    " FontSize="17"/>
+                                <Label Margin="135 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
+                                <TextBox x:Name="txt_GeVeModul" Height="25" Margin="3 5 1 5" Width="40" FontSize="17"  />
+                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm   " FontSize="17"/>
 
 
+                           
+                                <Label Margin="132 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                           
+                                <TextBox x:Name="txt_GeVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                           
+                                <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
 
-                                <Label Margin="240 5 1 5" Foreground="White" Content="Breite:" FontSize="17" />
-                                <TextBox x:Name="txt_GeVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
-
-                            </StackPanel>
+                        </StackPanel>
 
                             <!--Eingabefeld 2 -->
                             <StackPanel HorizontalAlignment="left" Grid.Row="2" Orientation="Horizontal">
 
-                                <Label Margin="100 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="17"/>
+                                <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
                                 <TextBox x:Name="txt_GeVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
                                 <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
-                                <Label Margin="205 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="17" />
-                                <TextBox x:Name="txt_GeVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                           
+                                <Label Margin="192 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+                           
+                                <TextBox x:Name="txt_GeVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+                           
                                 <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
 
 
-                            </StackPanel>
+                        </StackPanel>
 
 
                             <!-- Eingabefeld 3 -->
                             <StackPanel HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
 
-                                <Label Margin="100 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="17" />
+                                <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
                                 <TextBox x:Name="txt_GeVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
                                 <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
-
-
-                                <Label Margin="125 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="17" />
-                                <TextBox x:Name="txt_GeVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
-
-
-                            </StackPanel>
-
-                            <!-- Eingabefeld 4 -->
-                            <StackPanel HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
-
-                                <Label Margin="100 5 1 5" Foreground="White" Content="Profilverschiebung:" FontSize="17" />
-                                <TextBox x:Name="txt_GeVeProfilverschiebung" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
-
-
-
+                           
                                 <!-- Material Combobox-->
-                                <ComboBox Margin=" 145 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" >
+                            
+                                <ComboBox Margin=" 160 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" >
+                                
                                     <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
-                                    <ListBoxItem x:Name="cb_34Cr4" Content="34Cr4"/>
-                                    <ListBoxItem x:Name="cb_20MnCr5" Content="20MnCr5"/>
-                                    <ListBoxItem x:Name="cb_46Cr2" Content="46Cr2"/>
-                                    <ListBoxItem x:Name="cb_34CrMo4" Content="34CrMo4"/>
-                                    <ListBoxItem x:Name="cb_16MnCR5HH" Content="16 MnCR 5 HH"/>
+                                
+                                    <ListBoxItem x:Name="cb_Ge34Cr4" Content="34Cr4"/>
+                                
+                                    <ListBoxItem x:Name="cb_Ge20MnCr5" Content="20MnCr5"/>
+                                
+                                    <ListBoxItem x:Name="cb_Ge46Cr2" Content="46Cr2"/>
+                               
+                                    <ListBoxItem x:Name="cb_Ge34CrMo4" Content="34CrMo4"/>
+                                
+                                    <ListBoxItem x:Name="cb_Ge16MnCR5HH" Content="16 MnCR 5 HH"/>
+                           
                                 </ComboBox>
 
 
-                            </StackPanel>
-
+                        </StackPanel>
 
 
                         </Grid>
@@ -436,25 +398,141 @@
                     <!-- Hier Endet das Eingabefenster -->
 
                     <!-- Rand Für das Bild-->
-                    <Border Grid.Column="1" BorderBrush="White" BorderThickness="1" Margin="20" CornerRadius="10" Height="160"  >
+                    <Border Grid.Column="1" BorderBrush="White" BorderThickness="2" Margin="20" CornerRadius="10" Height="160"  >
 
                         <Image Source="Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
                     </Border>
                     <!-- Ab hier endet das Bild-->
-                    <Button x:Name="btn_GeVe_Berechnen" Margin="380,242,268,38" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                    <Button x:Name="btn_GeVe_Berechnen" Margin="326,245,322,35" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
               
 
             </Grid>
             <!-- Ende des Eingabefeldes Geradverzahnung -->
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+            <!--Eingabefeld für Schrägverzahnung -->
+            <Grid  x:Name="grd_Schrägverzahnung"  Grid.Column="0" Visibility="Hidden" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
+                    <Grid Grid.Column="0" >
+                        <!-- Zeilendefinierung für Eingabe-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
+
+                        <!-- Eingabefeld 1 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
+
+                            <Label Margin="135 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
+                            <TextBox x:Name="txt_SrVeModul" Height="25" Margin="3 5 1 5" Width="40" FontSize="17"  />
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm   " FontSize="17"/>
+
+
+
+                            <Label Margin="132 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+
+                            <TextBox x:Name="txt_SrVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
+
+
+                        </StackPanel>
+
+                        <!--Eingabefeld 2 -->
+                        <StackPanel HorizontalAlignment="left" Grid.Row="2" Orientation="Horizontal">
+
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
+                            <TextBox x:Name="txt_SrVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                            <Label Margin="192 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+
+                            <TextBox x:Name="txt_SrVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+
+
+                        </StackPanel>
+
+
+                        <!-- Eingabefeld 3 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
+
+                            <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
+                            <TextBox x:Name="txt_SrVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                            <!-- Material Combobox-->
+
+                            <ComboBox Margin=" 160 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" >
+
+                                <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
+
+                                <ListBoxItem x:Name="cb_Sr34Cr4" Content="34Cr4"/>
+
+                                <ListBoxItem x:Name="cb_Sr20MnCr5" Content="20MnCr5"/>
+
+                                <ListBoxItem x:Name="cb_Sr46Cr2" Content="46Cr2"/>
+
+                                <ListBoxItem x:Name="cb_Sr34CrMo4" Content="34CrMo4"/>
+
+                                <ListBoxItem x:Name="cb_Sr16MnCR5HH" Content="16 MnCR 5 HH"/>
+
+                            </ComboBox>
+
+
+                        </StackPanel>
+
+                        <!--Eingabefeld 3 -->
+                        <StackPanel HorizontalAlignment="left" Grid.Row="4" Orientation="Horizontal">
+
+                            <Label Margin="35 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <TextBox x:Name="txt_SrVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="17"/>
+
+
+                            
+
+                        </StackPanel>
+
+
+                    </Grid>
+
+                </Border>
+                <!-- Hier Endet das Eingabefenster -->
+
+                <!-- Rand Für das Bild-->
+                <Border Grid.Column="1" BorderBrush="White" BorderThickness="2" Margin="20" CornerRadius="10" Height="160"  >
+
+                    <Image Source="Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
+                </Border>
+                <!-- Ab hier endet das Bild-->
+                <Button x:Name="btn_SrVe_Berechnen" Margin="326,245,322,35" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_SrVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+
+
+            </Grid>
+            <!-- Ende des Eingabefeldes Geradverzahnung -->
+
+
+
+
+
+
+
 
         </Grid>
         <!-- Ende des Gesamten Eingabe/Ausgabefelds -->

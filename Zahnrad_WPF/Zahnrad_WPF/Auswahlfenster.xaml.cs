@@ -32,14 +32,14 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Visible;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
 
-            txt_GeVeModul.Clear();
-            txt_GeVeBreite.Clear();
+            txt_GeVeModul.Clear();           
             txt_GeVeZaehnezahl.Clear();
             txt_GeVeEingriffswinkel.Clear();
             txt_GeVeTeilkreisdurchmesser.Clear();
             txt_GeVeKopfspiel.Clear();
-            txt_GeVeProfilverschiebung.Clear();
+           
 
         }
 
@@ -48,6 +48,7 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
 
         }
 
@@ -56,7 +57,15 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
+            grd_Schrägverzahnung.Visibility = Visibility.Visible;
 
+            txt_SrVeEingriffswinkel.Clear();
+            txt_SrVeKopfspiel.Clear();
+            txt_SrVeModul.Clear();
+            txt_SrVeSchrägungswinkel.Clear();
+            txt_SrVeTeilkreisdurchmesser.Clear();
+            txt_SrVeZaehnezahl.Clear();
+            
         }
 
         internal void trv_DoppelschraegverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
@@ -64,6 +73,7 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
         }
 
         internal void trv_GeradverzahnungKegelraeder_Selected(object sender, RoutedEventArgs e)
@@ -71,14 +81,14 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Visible;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
 
             txt_GeVeModul.Clear();
-            txt_GeVeBreite.Clear();
             txt_GeVeZaehnezahl.Clear();
             txt_GeVeEingriffswinkel.Clear();
             txt_GeVeTeilkreisdurchmesser.Clear();
             txt_GeVeKopfspiel.Clear();
-            txt_GeVeProfilverschiebung.Clear();
+            
         }
 
         internal void trv_PfeilverzahnungKegelraeder_Selected(object sender, RoutedEventArgs e)
@@ -86,6 +96,7 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
 
         }
 
@@ -94,14 +105,14 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Visible;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
 
             txt_GeVeModul.Clear();
-            txt_GeVeBreite.Clear();
             txt_GeVeZaehnezahl.Clear();
             txt_GeVeEingriffswinkel.Clear();
             txt_GeVeTeilkreisdurchmesser.Clear();
             txt_GeVeKopfspiel.Clear();
-            txt_GeVeProfilverschiebung.Clear();
+            
         }
 
         internal void trv_BogenverzahnungSchnecke_Selected(object sender, RoutedEventArgs e)
@@ -109,6 +120,7 @@ namespace Zahnrad_WPF
             grd_Aufforderung.Visibility = Visibility.Hidden;
             grd_Ergebnisse.Visibility = Visibility.Visible;
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
+            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
 
         }
 
@@ -143,48 +155,92 @@ namespace Zahnrad_WPF
         private void btn_GeVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
-            GeradverzahnungBerechnung geradZahn1 = new GeradverzahnungBerechnung();
+            GeradverzahnungBerechnung GZahn = new GeradverzahnungBerechnung();
 
 
 
 
 
-            string ModulEingabe, ZähnezahlEingabe, TeilkreisdurchmesserEingabe, BreiteEingabe, EIngriffswinkelEingabe, KopfspielEingabe;
+            string ModulEingabe, ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe;
 
             ModulEingabe = txt_GeVeModul.Text;
             ZähnezahlEingabe = txt_GeVeZaehnezahl.Text;
-            TeilkreisdurchmesserEingabe = txt_GeVeTeilkreisdurchmesser.Text;
-            BreiteEingabe = txt_GeVeBreite.Text;
-            EIngriffswinkelEingabe = txt_GeVeEingriffswinkel.Text;
+            TeilkreisdurchmesserEingabe = txt_GeVeTeilkreisdurchmesser.Text;           
+            EingriffswinkelEingabe = txt_GeVeEingriffswinkel.Text;
             KopfspielEingabe = txt_GeVeKopfspiel.Text;
 
-            geradZahn1.TestderModulEingabe(ModulEingabe);
-            geradZahn1.TestderZähnezahlEingabe(ZähnezahlEingabe);
-            geradZahn1.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);
-            geradZahn1.TestderBreiteEingabe(BreiteEingabe);
-            geradZahn1.TestderEingriffswinkelEingabe(EIngriffswinkelEingabe);
-            geradZahn1.TestderKopfspielEingabe(KopfspielEingabe);
+            GZahn.TestderModulEingabe(ModulEingabe);
+            GZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
+            GZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);           
+            GZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe);
+            GZahn.TestderKopfspielEingabe(KopfspielEingabe);
+            GZahn.KontrolleWertebereichEingriffswinkel();
+            GZahn.KontrolleWertebereichKopfspiel();
 
-            geradZahn1.KontrolleWertebereichEingriffswinkel();
-            geradZahn1.KontrolleWertebereichKopfspiel();
+            lbl_Zahnhöhe.Content = GZahn.ZahnhöheBerechen();
+            lbl_Zahnfußhöhe.Content = GZahn.ZahnfußhöheBerechnen();
+            lbl_Zahnkopfhöhe.Content = GZahn.ZahnkopfhöheBerechnen();
+            lbl_Teilung.Content = GZahn.TeilungBerechnen();
+            lbl_Fußkreisdurchmesser.Content = GZahn.FußkreisdurchmesserBerechnen();
+            lbl_Grundkreisdurchmesser.Content = GZahn.GrundkreisdurchmesserBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();         
+            lbl_Gewicht.Content = GZahn.GewichtBerechnen();
+            lbl_Preis.Content = GZahn.PreisBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();
 
 
-            lbl_Zahnhöhe.Content = geradZahn1.ZahnhöheBerechen();
-            lbl_Zahnfußhöhe.Content = geradZahn1.ZahnfußhöheBerechnen();
-            lbl_Zahnkopfhöhe.Content = geradZahn1.ZahnkopfhöheBerechnen();
-            lbl_Teilung.Content = geradZahn1.TeilungBerechnen();
-            lbl_Fußkreisdurchmesser.Content = geradZahn1.FußkreisdurchmesserBerechnen();
-            lbl_Grundkreisdurchmesser.Content = geradZahn1.GrundkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = geradZahn1.KopfkreisdurchmesserBerechnen();
-            lbl_Zahnfußfestigkeit.Content = geradZahn1.ZahnfußfestigkeitBerechnen();
-            lbl_Zahnflankenfestigkeit.Content = geradZahn1.ZahnflankenfestigkeitBerechnen();
-            lbl_Gewicht.Content = geradZahn1.GewichtBerechnen();
-            lbl_Preis.Content = geradZahn1.PreisBerechnen();
+
+
+        }
+
+        private void btn_SrVe_berechnung_Click(object sender, RoutedEventArgs e)
+        {
+
+            SchrägverzahnungBerechnung SZahn = new SchrägverzahnungBerechnung();
+
+
+
+
+
+            string ModulEingabe, ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, Schrägungswinkeleingabe;
+
+            ModulEingabe = txt_SrVeModul.Text;
+            ZähnezahlEingabe = txt_SrVeZaehnezahl.Text;
+            TeilkreisdurchmesserEingabe = txt_SrVeTeilkreisdurchmesser.Text;
+            EingriffswinkelEingabe = txt_SrVeEingriffswinkel.Text;
+            KopfspielEingabe = txt_SrVeKopfspiel.Text;
+            Schrägungswinkeleingabe = txt_SrVeSchrägungswinkel.Text;
+
+            SZahn.TestderSchrägungswinkelEingabe(Schrägungswinkeleingabe);
+            SZahn.TestderModulEingabe(ModulEingabe);
+            SZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
+            SZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);
+            SZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe);
+            SZahn.TestderKopfspielEingabe(KopfspielEingabe);
+            SZahn.KontrolleWertebereichEingriffswinkel();
+            SZahn.KontrolleWertebereichKopfspiel();
+            SZahn.KontrolleWertebereichSchrägungswinkel();
+
+
+
+            lbl_Zahnhöhe.Content = SZahn.ZahnhöheBerechen();
+            lbl_Zahnfußhöhe.Content = SZahn.ZahnfußhöheBerechnen();
+            lbl_Zahnkopfhöhe.Content = SZahn.ZahnkopfhöheBerechnen();
+            lbl_Teilung.Content = SZahn.TeilungBerechnen();
+            lbl_Fußkreisdurchmesser.Content = SZahn.FußkreisdurchmesserBerechnen();
+            lbl_Grundkreisdurchmesser.Content = SZahn.GrundkreisdurchmesserBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
+            lbl_Gewicht.Content = SZahn.GewichtBerechnen();
+            lbl_Preis.Content = SZahn.PreisBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
+
+
 
 
 
 
 
         }
+        
     }
 }
