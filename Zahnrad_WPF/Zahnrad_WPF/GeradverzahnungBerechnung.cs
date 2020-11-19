@@ -18,7 +18,7 @@ namespace Zahnrad_WPF
 
 
 
-        //Methoden zur kontrolle der eingaben auf zahlen
+        //Methoden zur Kontrolle 
         internal void TestderModulEingabe(string ModulEingabe)
         {
             double KontrolliertesModul;
@@ -174,9 +174,8 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
-        //Methoden zur berechnung
-
-
+               
+        //Methoden zur Berechnung
 
 
         internal double ZahnhöheBerechen()
