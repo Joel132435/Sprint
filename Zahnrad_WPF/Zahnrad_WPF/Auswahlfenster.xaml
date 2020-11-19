@@ -34,15 +34,15 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150"/>
-                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
 
                 <!-- Bild eingefügt in der ersten Spalte -->
-                <Image Margin="10" Width="200" Height="150" Grid.Row="0" Source="kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" OpacityMask="#FF100E0E" ></Image>
+                <Image Margin="32,-12,32,32" Grid.Row="0" Source="kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" OpacityMask="#FF100E0E" Grid.RowSpan="2" RenderTransformOrigin="0.52,0.4" />
 
-                <Label Grid.Row="1" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center">Verzeichnis</Label>
+                <Label Grid.Row="1" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center">Verzeichnis</Label>
 
                 <!-- Erzeugung des Treeviewes -->
                 <TreeView   Width="300" Height="300" FontSize="18" x:Name="trv_Profile" Margin="5" Grid.Row="2" BorderBrush="#FFC7CBD2" >
@@ -338,7 +338,7 @@
 
             <!--Eingabefeld für Geradverzahnung -->
             <Grid  x:Name="grd_Geradverzahnung"  Grid.Column="0" Visibility="Hidden" >
-                <Grid>
+                
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="200"/>
@@ -431,6 +431,7 @@
 
 
                         </Grid>
+                        
                     </Border>
                     <!-- Hier Endet das Eingabefenster -->
 
@@ -441,14 +442,22 @@
                     </Border>
                     <!-- Ab hier endet das Bild-->
                     <Button x:Name="btn_GeVe_Berechnen" Margin="380,242,268,38" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
-
-                </Grid>
-                <!-- Ende des Bereichs Eingabe und Bild -->
+              
 
             </Grid>
-            <!-- Ende des Gesamten Eingabe/Ausgabefelds -->
+            <!-- Ende des Eingabefeldes Geradverzahnung -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
         </Grid>
+        <!-- Ende des Gesamten Eingabe/Ausgabefelds -->
 
 
     </Grid>

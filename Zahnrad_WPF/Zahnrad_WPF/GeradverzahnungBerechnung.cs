@@ -142,8 +142,8 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Ihr Kopfspiel wurde auf 0,167 gesetzt da falsche Eingabe");
-                    Kopfspiel = 0.167;
+                    MessageBox.Show("Ihr Kopfspiel wurde auf "  + Kopfspiel + " gesetzt da falsche Eingabe");
+                    Kopfspiel = Modul * 0.167;
                     return;
                 }
             } while (n < 1);
