@@ -397,19 +397,15 @@
 
                             <!-- Material Combobox-->
 
-                            <ComboBox Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_GeVeMaterial"  Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
-                                <ListBoxItem x:Name="cb_Ge34Cr4" Content="34Cr4"/>
+                                <ListBoxItem  Content="Stahl"/>
 
-                                <ListBoxItem x:Name="cb_Ge20MnCr5" Content="20MnCr5"/>
+                                <ListBoxItem  Content="Kunstoff"/>
 
-                                <ListBoxItem x:Name="cb_Ge46Cr2" Content="46Cr2"/>
-
-                                <ListBoxItem x:Name="cb_Ge34CrMo4" Content="34CrMo4"/>
-
-                                <ListBoxItem x:Name="cb_Ge16MnCR5HH" Content="16 MnCR 5 HH"/>
+                                <ListBoxItem  Content="Gusseisen"/>
 
                             </ComboBox>
 
@@ -534,19 +530,15 @@
 
                             <!--Material Combobox -->
 
-                            <ComboBox Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_SrVeMaterial" Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
-                                <ListBoxItem x:Name="cb_Sr34Cr4" Content="34Cr4"/>
+                                <ListBoxItem  Content="Stahl"/>
 
-                                <ListBoxItem x:Name="cb_Sr20MnCr5" Content="20MnCr5"/>
+                                <ListBoxItem  Content="Kunstoff"/>
 
-                                <ListBoxItem x:Name="cb_Sr46Cr2" Content="46Cr2"/>
-
-                                <ListBoxItem x:Name="cb_Sr34CrMo4" Content="34CrMo4"/>
-
-                                <ListBoxItem x:Name="cb_Sr16MnCR5HH" Content="16 MnCR 5 HH"/>
+                                <ListBoxItem  Content="Gusseisen"/>
 
                             </ComboBox>
 

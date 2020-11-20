@@ -262,12 +262,33 @@ namespace Zahnrad_WPF
             lbl_Teilung.Content = GZahn.TeilungBerechnen();
             lbl_Fußkreisdurchmesser.Content = GZahn.FußkreisdurchmesserBerechnen();
             lbl_Grundkreisdurchmesser.Content = GZahn.GrundkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();         
-            lbl_Gewicht.Content = GZahn.GewichtBerechnen();
-            lbl_Preis.Content = GZahn.PreisBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();                   
             lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();
 
+           
+                if (cb_GeVeMaterial.SelectedIndex == 1)
+                {
 
+                    lbl_Gewicht.Content = GZahn.GewichtStahlBerechnen();
+                    lbl_Preis.Content = GZahn.PreisStahlBerechnen();
+
+                }
+                if (cb_GeVeMaterial.SelectedIndex == 2)
+                {
+
+                    lbl_Gewicht.Content = GZahn.GewichtKunstoffBerechnen();
+                    lbl_Preis.Content = GZahn.PreisKunstoffBerechnen();
+
+                }
+                if (cb_GeVeMaterial.SelectedIndex == 3)
+                {
+
+                    lbl_Gewicht.Content = GZahn.GewichtGusseisenBerechnen();
+                    lbl_Preis.Content = GZahn.PreisGusseisenBerechnen();
+
+                }
+
+            
 
 
         }
@@ -301,25 +322,39 @@ namespace Zahnrad_WPF
             SZahn.KontrolleWertebereichSchrägungswinkel();
 
 
-
             lbl_Zahnhöhe.Content = SZahn.ZahnhöheBerechen();
             lbl_Zahnfußhöhe.Content = SZahn.ZahnfußhöheBerechnen();
             lbl_Zahnkopfhöhe.Content = SZahn.ZahnkopfhöheBerechnen();
             lbl_Teilung.Content = SZahn.TeilungBerechnen();
             lbl_Fußkreisdurchmesser.Content = SZahn.FußkreisdurchmesserBerechnen();
             lbl_Grundkreisdurchmesser.Content = SZahn.GrundkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
-            lbl_Gewicht.Content = SZahn.GewichtBerechnen();
-            lbl_Preis.Content = SZahn.PreisBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();          
             lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
 
+            if (cb_SrVeMaterial.SelectedIndex == 1)
+            {
 
+                lbl_Gewicht.Content = SZahn.GewichtStahlBerechnen();
+                lbl_Preis.Content = SZahn.PreisStahlBerechnen();
 
+            }
+            if (cb_SrVeMaterial.SelectedIndex == 2)
+            {
 
+                lbl_Gewicht.Content = SZahn.GewichtKunstoffBerechnen();
+                lbl_Preis.Content = SZahn.PreisKunstoffBerechnen();
 
+            }
+            if (cb_SrVeMaterial.SelectedIndex == 3)
+            {
 
+                lbl_Gewicht.Content = SZahn.GewichtGusseisenBerechnen();
+                lbl_Preis.Content = SZahn.PreisGusseisenBerechnen();
 
+            }
         }
-        
+
+      
+       
     }
 }
