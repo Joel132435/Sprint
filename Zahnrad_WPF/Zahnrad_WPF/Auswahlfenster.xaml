@@ -329,17 +329,23 @@
                             <!-- Eingabefeld 1 -->
                             <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
 
-                                <Label Margin="135 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
-                                <TextBox x:Name="txt_GeVeModul" Height="25" Margin="3 5 1 5" Width="40" FontSize="17"  />
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm   " FontSize="17"/>
+               
+                                <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
+                           
+                                <TextBox x:Name="txt_GeVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                           
+                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
+
+                            
+                                <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+
                            
-                                <Label Margin="132 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                                <TextBox x:Name="txt_GeVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
                            
-                                <TextBox x:Name="txt_GeVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
-                           
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
+                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
                         </StackPanel>
@@ -347,52 +353,72 @@
                             <!--Eingabefeld 2 -->
                             <StackPanel HorizontalAlignment="left" Grid.Row="2" Orientation="Horizontal">
 
-                                <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
-                                <TextBox x:Name="txt_GeVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                              
+                                <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
+                      
+                                <TextBox x:Name="txt_GeVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
+                        
                                 <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
-                           
-                                <Label Margin="192 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
-                           
-                                <TextBox x:Name="txt_GeVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
-                           
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+                            
+                                <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                     
+                                <TextBox x:Name="txt_GeVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            
+                                <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
 
-
-                        </StackPanel>
+                                                     
+                            </StackPanel>
 
 
                             <!-- Eingabefeld 3 -->
                             <StackPanel HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
 
-                                <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
-                                <TextBox x:Name="txt_GeVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
-                                <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
-
-                           
-                                <!-- Material Combobox-->
                             
-                                <ComboBox Margin=" 160 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" >
-                                
-                                    <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
-                                
-                                    <ListBoxItem x:Name="cb_Ge34Cr4" Content="34Cr4"/>
-                                
-                                    <ListBoxItem x:Name="cb_Ge20MnCr5" Content="20MnCr5"/>
-                                
-                                    <ListBoxItem x:Name="cb_Ge46Cr2" Content="46Cr2"/>
-                               
-                                    <ListBoxItem x:Name="cb_Ge34CrMo4" Content="34CrMo4"/>
-                                
-                                    <ListBoxItem x:Name="cb_Ge16MnCR5HH" Content="16 MnCR 5 HH"/>
-                           
-                                </ComboBox>
+                                <Label Margin="113 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+
+                            
+                                <TextBox x:Name="txt_GeVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+                            
+                                <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+
+
+                        
+                            </StackPanel>
+
+                        <!-- Eingabefeld 4 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
+
+
+                            
+
+
+
+                            <!-- Material Combobox-->
+
+                            <ComboBox Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+
+                                <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
+
+                                <ListBoxItem x:Name="cb_Ge34Cr4" Content="34Cr4"/>
+
+                                <ListBoxItem x:Name="cb_Ge20MnCr5" Content="20MnCr5"/>
+
+                                <ListBoxItem x:Name="cb_Ge46Cr2" Content="46Cr2"/>
+
+                                <ListBoxItem x:Name="cb_Ge34CrMo4" Content="34CrMo4"/>
+
+                                <ListBoxItem x:Name="cb_Ge16MnCR5HH" Content="16 MnCR 5 HH"/>
+
+                            </ComboBox>
+
 
 
                         </StackPanel>
 
 
-                        </Grid>
+                    </Grid>
                         
                     </Border>
                     <!-- Hier Endet das Eingabefenster -->
@@ -408,6 +434,11 @@
 
             </Grid>
             <!-- Ende des Eingabefeldes Geradverzahnung -->
+            
+            
+            
+            
+            
 
             <!--Eingabefeld für Schrägverzahnung -->
             <Grid  x:Name="grd_Schrägverzahnung"  Grid.Column="0" Visibility="Hidden" >
@@ -428,6 +459,7 @@
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
+                            
                         </Grid.RowDefinitions>
 
                         <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
@@ -435,17 +467,19 @@
                         <!-- Eingabefeld 1 -->
                         <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
 
-                            <Label Margin="135 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
-                            <TextBox x:Name="txt_SrVeModul" Height="25" Margin="3 5 1 5" Width="40" FontSize="17"  />
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm   " FontSize="17"/>
+                           
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
+                           
+                            <TextBox x:Name="txt_SrVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                           
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
+                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
-                            <Label Margin="132 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <TextBox x:Name="txt_SrVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
-                            <TextBox x:Name="txt_SrVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
-
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
                         </StackPanel>
@@ -453,16 +487,20 @@
                         <!--Eingabefeld 2 -->
                         <StackPanel HorizontalAlignment="left" Grid.Row="2" Orientation="Horizontal">
 
-                            <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
-                            <TextBox x:Name="txt_SrVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            
+                            <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
+                            
+                            <TextBox x:Name="txt_SrVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
+                            
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
+                            
+                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
-                            <Label Margin="192 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+                            <TextBox x:Name="txt_SrVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
-                            <TextBox x:Name="txt_SrVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
 
 
                         </StackPanel>
@@ -471,14 +509,32 @@
                         <!-- Eingabefeld 3 -->
                         <StackPanel HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
 
-                            <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
-                            <TextBox x:Name="txt_SrVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+                            <Label Margin="113 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+
+                            <TextBox x:Name="txt_SrVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+                            
+                            
+
+                            <Label Margin="147 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+
+                            <TextBox x:Name="txt_SrVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="17"/>
 
 
-                            <!-- Material Combobox-->
+                        </StackPanel>
 
-                            <ComboBox Margin=" 160 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" >
+                        <!--Eingabefeld 3 -->
+                        <StackPanel HorizontalAlignment="left" Grid.Row="4" Orientation="Horizontal">
+                            
+                            
+                            
+
+                            <!--Material Combobox -->
+
+                            <ComboBox Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
@@ -495,17 +551,10 @@
                             </ComboBox>
 
 
-                        </StackPanel>
-
-                        <!--Eingabefeld 3 -->
-                        <StackPanel HorizontalAlignment="left" Grid.Row="4" Orientation="Horizontal">
-
-                            <Label Margin="35 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
-                            <TextBox x:Name="txt_SrVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="17"/>
 
 
-                            
+
+
 
                         </StackPanel>
 
