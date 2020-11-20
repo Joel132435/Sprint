@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PfeilverzahnungBerechnung.cs" />
     <Compile Include="SchrägverzahnungBerechnung.cs" />
     <Page Include="Auswahlfenster.xaml">
       <SubType>Designer</SubType>
@@ -123,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Stira_schraeg_links.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

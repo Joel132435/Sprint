@@ -568,6 +568,138 @@
             </Grid>
             <!-- Ende des Eingabefeldes Geradverzahnung -->
 
+            <!--Eingabefeld für Schrägverzahnung -->
+            <Grid  x:Name="grd_Pfeilverzahnung"  Grid.Column="0" Visibility="Hidden" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
+                    <Grid Grid.Column="0" >
+                        <!-- Zeilendefinierung für Eingabe-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+
+                        </Grid.RowDefinitions>
+
+                        <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
+
+                        <!-- Eingabefeld 1 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
+
+
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
+
+                            <TextBox x:Name="txt_PfVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+
+                            <TextBox x:Name="txt_PfVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                        </StackPanel>
+
+                        <!--Eingabefeld 2 -->
+                        <StackPanel HorizontalAlignment="left" Grid.Row="2" Orientation="Horizontal">
+
+
+                            <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
+
+                            <TextBox x:Name="txt_PfVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+
+                            <TextBox x:Name="txt_PfVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
+
+
+
+                        </StackPanel>
+
+
+                        <!-- Eingabefeld 3 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
+
+                            <Label Margin="113 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+
+                            <TextBox x:Name="txt_PfVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+
+
+
+                            <Label Margin="147 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+
+                            <TextBox x:Name="txt_PfVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="17"/>
+
+
+                        </StackPanel>
+
+                        <!--Eingabefeld 3 -->
+                        <StackPanel HorizontalAlignment="left" Grid.Row="4" Orientation="Horizontal">
+
+
+
+
+                            <!--Material Combobox -->
+
+                            <ComboBox x:Name="cb_PfVeMaterial" Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+
+                                <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
+
+                                <ListBoxItem  Content="Stahl"/>
+
+                                <ListBoxItem  Content="Kunstoff"/>
+
+                                <ListBoxItem  Content="Gusseisen"/>
+
+                            </ComboBox>
+
+
+
+
+
+
+
+                        </StackPanel>
+
+
+                    </Grid>
+
+                </Border>
+                <!-- Hier Endet das Eingabefenster -->
+
+                <!-- Rand Für das Bild-->
+                <Border Grid.Column="1" BorderBrush="White" BorderThickness="2" Margin="20" CornerRadius="10" Height="160"  >
+
+                    <Image Margin="8" Source="unnamed.jpg" Stretch="Fill"/>
+                </Border>
+                <!-- Ab hier endet das Bild-->
+                <Button x:Name="btn_PfVe_Berechnen" Margin="326,245,322,35" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_PfVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+
+
+            </Grid>
+            <!-- Ende des Eingabefeldes Geradverzahnung -->
+
 
 
 

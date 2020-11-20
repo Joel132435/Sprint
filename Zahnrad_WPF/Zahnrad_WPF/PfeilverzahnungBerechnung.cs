@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Zahnrad_WPF
 {
-    class SchrägverzahnungBerechnung
+    class PfeilverzahnungBerechnung
     {
 
         //Eigenschaften
@@ -274,12 +274,12 @@ namespace Zahnrad_WPF
 
         internal double GrundkreisdurchmesserBerechnen()
         {
-            double degE,degS, GrundkreisdurchmesserAusgabe;
+            double degE, degS, GrundkreisdurchmesserAusgabe;
 
             degE = (Eingriffswinkel * (Math.PI)) / 180;
             degS = (Schrägungswinkel * (Math.PI)) / 180;
 
-            GrundkreisdurchmesserAusgabe = Zähnezahl * ( ( Math.Cos(degE) * (Teilkreisdurchmesser / Zähnezahl)) / Math.Cos(degS));
+            GrundkreisdurchmesserAusgabe = Zähnezahl * ((Math.Cos(degE) * (Teilkreisdurchmesser / Zähnezahl)) / Math.Cos(degS));
             return GrundkreisdurchmesserAusgabe;
         }
 
@@ -299,9 +299,9 @@ namespace Zahnrad_WPF
 
         internal double GewichtStahlBerechnen()
         {
-            
-            
-            
+
+
+
             return 0;
         }
 
@@ -335,7 +335,5 @@ namespace Zahnrad_WPF
         {
             return 0;
         }
-
-
     }
 }
