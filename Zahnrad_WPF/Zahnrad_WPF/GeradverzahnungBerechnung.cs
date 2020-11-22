@@ -242,7 +242,16 @@ namespace Zahnrad_WPF
             return KopfkreisdurchmesserAusgabe;
         }
 
-        
+        internal double VolumenBerechnen()
+        {
+            double VolumenAusgabe;
+
+            VolumenAusgabe = Math.Pow(Teilkreisdurchmesser + 2 * (Teilkreisdurchmesser / Zähnezahl) / 2, 2) * Breite;
+
+            return VolumenAusgabe;
+        }
+
+
         //Stahl
 
         internal double GewichtStahlBerechnen()

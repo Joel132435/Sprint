@@ -29,8 +29,7 @@ namespace Zahnrad_WPF
 
         internal void trv_GeradverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;           
             grd_Geradverzahnung.Visibility = Visibility.Visible;
             grd_Schrägverzahnung.Visibility = Visibility.Hidden;
             grd_Pfeilverzahnung.Visibility = Visibility.Hidden;
@@ -53,8 +52,7 @@ namespace Zahnrad_WPF
 
         internal void trv_PfeilverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;           
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
             grd_Schrägverzahnung.Visibility = Visibility.Hidden;
             grd_Pfeilverzahnung.Visibility = Visibility.Visible;
@@ -76,8 +74,7 @@ namespace Zahnrad_WPF
 
         internal void trv_SchraegverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;          
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
             grd_Schrägverzahnung.Visibility = Visibility.Visible;
             grd_Pfeilverzahnung.Visibility = Visibility.Hidden;
@@ -95,34 +92,11 @@ namespace Zahnrad_WPF
             txt_SrVeZaehnezahl.Clear();
             txt_SrVeTeilkreisdurchmesser.Clear();
 
-        }
-
-        internal void trv_DoppelschraegverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
-        {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
-            grd_Geradverzahnung.Visibility = Visibility.Hidden;
-            grd_Schrägverzahnung.Visibility = Visibility.Hidden;
-            grd_Pfeilverzahnung.Visibility = Visibility.Hidden;
-
-            txt_GeVeBreite.Clear();
-            txt_GeVeZaehnezahl.Clear();
-            txt_GeVeEingriffswinkel.Clear();
-            txt_GeVeTeilkreisdurchmesser.Clear();
-            txt_GeVeKopfspiel.Clear();
-
-            txt_SrVeEingriffswinkel.Clear();
-            txt_SrVeKopfspiel.Clear();
-            txt_SrVeBreite.Clear();
-            txt_SrVeSchrägungswinkel.Clear();
-            txt_SrVeZaehnezahl.Clear();
-            txt_SrVeTeilkreisdurchmesser.Clear();
-        }
+        }      
 
         internal void trv_GeradverzahnungKegelraeder_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;            
             grd_Geradverzahnung.Visibility = Visibility.Visible;
             grd_Schrägverzahnung.Visibility = Visibility.Hidden;
             grd_Pfeilverzahnung.Visibility = Visibility.Hidden;
@@ -144,8 +118,7 @@ namespace Zahnrad_WPF
 
         internal void trv_PfeilverzahnungKegelraeder_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;          
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
             grd_Schrägverzahnung.Visibility = Visibility.Hidden;
             grd_Pfeilverzahnung.Visibility = Visibility.Visible;
@@ -167,8 +140,7 @@ namespace Zahnrad_WPF
 
         internal void trv_GeradverzahnungSchnecke_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;           
             grd_Geradverzahnung.Visibility = Visibility.Visible;
             grd_Schrägverzahnung.Visibility = Visibility.Hidden;
             grd_Pfeilverzahnung.Visibility = Visibility.Hidden;
@@ -190,8 +162,7 @@ namespace Zahnrad_WPF
 
         internal void trv_BogenverzahnungSchnecke_Selected(object sender, RoutedEventArgs e)
         {
-            grd_Aufforderung.Visibility = Visibility.Hidden;
-            grd_Ergebnisse.Visibility = Visibility.Visible;
+            grd_Aufforderung.Visibility = Visibility.Hidden;            
             grd_Geradverzahnung.Visibility = Visibility.Hidden;
             grd_Schrägverzahnung.Visibility = Visibility.Hidden;
             grd_Pfeilverzahnung.Visibility = Visibility.Hidden;
@@ -272,7 +243,7 @@ namespace Zahnrad_WPF
             lbl_Grundkreisdurchmesser.Content = GZahn.GrundkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();                   
             lbl_Kopfkreisdurchmesser.Content = GZahn.KopfkreisdurchmesserBerechnen();
-
+            lbl_Volumen.Content = GZahn.VolumenBerechnen();
            
                 if (cb_GeVeMaterial.SelectedIndex == 1)
                 {
@@ -296,8 +267,8 @@ namespace Zahnrad_WPF
 
                 }
 
-            
 
+            grd_Ergebnisse.Visibility = Visibility.Visible;
 
         }
 
@@ -338,6 +309,8 @@ namespace Zahnrad_WPF
             lbl_Grundkreisdurchmesser.Content = SZahn.GrundkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();          
             lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
+            lbl_Volumen.Content = SZahn.VolumenBerechnen();
+
 
             if (cb_SrVeMaterial.SelectedIndex == 1)
             {
@@ -360,6 +333,8 @@ namespace Zahnrad_WPF
                 lbl_Preis.Content = SZahn.PreisGusseisenBerechnen();
 
             }
+
+            grd_Ergebnisse.Visibility = Visibility.Visible;
         }
 
         private void btn_PfVe_berechnung_Click(object sender, RoutedEventArgs e)
@@ -399,6 +374,8 @@ namespace Zahnrad_WPF
             lbl_Grundkreisdurchmesser.Content = PZahn.GrundkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = PZahn.KopfkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = PZahn.KopfkreisdurchmesserBerechnen();
+            lbl_Volumen.Content = PZahn.VolumenBerechnen();
+
 
             if (cb_PfVeMaterial.SelectedIndex == 1)
             {
@@ -421,6 +398,8 @@ namespace Zahnrad_WPF
                 lbl_Preis.Content = PZahn.PreisGusseisenBerechnen();
 
             }
+
+            grd_Ergebnisse.Visibility = Visibility.Visible;
         }
 
 
