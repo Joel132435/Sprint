@@ -57,35 +57,20 @@
 
 
 
-                    <TreeViewItem x:Name="trv_Stirnraeder" Foreground="White" Header="Stirnräder" Selected="trv_Stirnraeder_Selected">
-
-
-                        <TreeViewItem x:Name="trv_GeradverzahnungStirnraeder" Foreground="White" Header="Geradverzahnung" Selected="trv_GeradverzahnungStirnraeder_Selected"/>
+                    <TreeViewItem x:Name="trv_Stirnraeder" Foreground="White" Header="Stirnräder" >
 
                         <TreeViewItem x:Name="trv_PfeilverzahnungStirnraeder" Foreground="White" Header="Pfeilverzahnung" Selected="trv_PfeilverzahnungStirnraeder_Selected"/>
 
                         <TreeViewItem x:Name="trv_SchraegverzahnungStirnraeder" Foreground="White" Header="Schrägverzahnung" Selected="trv_SchraegverzahnungStirnraeder_Selected"></TreeViewItem>
 
-                    </TreeViewItem>
+                        <TreeViewItem x:Name="trv_GeradverzahnungStirnraeder" Foreground="White" Header="Geradverzahnung" >
 
 
+                            <TreeViewItem x:Name="trv_GeradverzahnunginnenStirnraeder" Foreground="White" Header="innenverzahnng" Selected="trv_GeradverzahnunginnenStirnraeder_Selected"/>
 
+                            <TreeViewItem x:Name="trv_GeradverzahnungaußenStirnraeder" Foreground="White" Header="außenverzahnung" Selected="trv_GeradverzahnungaußenStirnraeder_Selected"/>
 
-
-                    <TreeViewItem x:Name="trv_Kegelraeder" Foreground="White"  Header="Kegelräder" Selected="trv_Kegelraeder_Selected">
-
-                        <TreeViewItem x:Name="trv_GeradverzahnungKegelraeder" Foreground="White" Header="Geradverzahnung" Selected="trv_GeradverzahnungKegelraeder_Selected"/>
-
-                        <TreeViewItem x:Name="trv_PfeilverzahnungKegelraeder" Foreground="White" Header="Pfeilverzahnung" Selected="trv_PfeilverzahnungKegelraeder_Selected"/>
-
-
-                    </TreeViewItem>
-
-                    <TreeViewItem x:Name="trv_Schnecke" Foreground="White"  Header="Schnecke" Selected="trv_Schnecke_Selected">
-
-                        <TreeViewItem x:Name="trv_GeradverzahnungSchnecke" Foreground="White" Header="Geradverzahnung" Selected="trv_GeradverzahnungSchnecke_Selected"/>
-
-                        <TreeViewItem x:Name="trv_BogenverzahnungSchnecke" Foreground="White" Header="Bogenverzahnung" Selected="trv_BogenverzahnungSchnecke_Selected"/>
+                        </TreeViewItem>
 
 
                     </TreeViewItem>
@@ -329,16 +314,16 @@
 
             </Border>
 
-            <!--Eingabefeld für Geradverzahnung -->
-            <Grid  x:Name="grd_Geradverzahnung"  Grid.Column="0" Visibility="Hidden" >
+            <!--Eingabefeld für Geradverzahnung außen -->
+            <Grid  x:Name="grd_Geradverzahnungaußen"  Grid.Column="0" Visibility="Hidden" >
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="250"/>
                 </Grid.ColumnDefinitions>
 
 
-                <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
+                <Border Margin="10" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
                     <Grid Grid.Column="0" >
                         <!-- Zeilendefinierung für Eingabe-->
                         <Grid.RowDefinitions>
@@ -358,7 +343,7 @@
 
                             <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
 
-                            <TextBox x:Name="txt_GeVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            <TextBox x:Name="txt_GeaVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
@@ -368,7 +353,7 @@
                             <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
 
-                            <TextBox x:Name="txt_GeVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            <TextBox x:Name="txt_GeaVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
 
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
@@ -382,14 +367,14 @@
 
                             <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
 
-                            <TextBox x:Name="txt_GeVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
+                            <TextBox x:Name="txt_GeaVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
 
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
                             <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
-                            <TextBox x:Name="txt_GeVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+                            <TextBox x:Name="txt_GeaVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
                             <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
 
@@ -404,7 +389,7 @@
                             <Label Margin="113 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
 
 
-                            <TextBox x:Name="txt_GeVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+                            <TextBox x:Name="txt_GeaVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
 
 
                             <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
@@ -423,7 +408,7 @@
 
                             <!-- Material Combobox-->
 
-                            <ComboBox x:Name="cb_GeVeMaterial"  Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_GeaVeMaterial"  Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
@@ -445,17 +430,138 @@
                 </Border>
                 <!-- Hier Endet das Eingabefenster -->
 
-                <!-- Rand Für das Bild-->
-                <Border Grid.Column="1" BorderBrush="White" BorderThickness="2" Margin="20" CornerRadius="10" Height="160"  >
 
-                    <Image Source="Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
-                </Border>
-                <!-- Ab hier endet das Bild-->
-                <Button x:Name="btn_GeVe_Berechnen" Margin="326,245,322,35" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_GeaVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeaVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
-            <!-- Ende des Eingabefeldes Geradverzahnung -->
+            <!-- Ende des Eingabefeldes Geradverzahnung außen -->
+
+
+
+
+            <!--Eingabefeld für Geradverzahnung innen -->
+            <Grid  x:Name="grd_Geradverzahnunginnen"  Grid.Column="0" Visibility="Hidden" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="250"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Border Margin="10" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
+                    <Grid Grid.Column="0" >
+                        <!-- Zeilendefinierung für Eingabe-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
+
+                        <!-- Eingabefeld 1 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
+
+
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
+
+                            <TextBox x:Name="txt_GeiVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+
+
+                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+
+
+                            <TextBox x:Name="txt_GeiVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                        </StackPanel>
+
+                        <!--Eingabefeld 2 -->
+                        <StackPanel HorizontalAlignment="left" Grid.Row="2" Orientation="Horizontal">
+
+
+                            <Label Margin="10 5 1 5" Foreground="White" Content="Teilkreisdurchmesser:" FontSize="20" />
+
+                            <TextBox x:Name="txt_GeiVeTeilkreisdurchmesser" Height="25" Margin="3 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
+
+                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+
+                            <TextBox x:Name="txt_GeiVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="°" FontSize="20"/>
+
+
+                        </StackPanel>
+
+
+                        <!-- Eingabefeld 3 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
+
+
+                            <Label Margin="113 5 1 5" Foreground="White" Content="Kopfspiel:" FontSize="20" />
+
+
+                            <TextBox x:Name="txt_GeiVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+
+
+
+                        </StackPanel>
+
+                        <!-- Eingabefeld 4 -->
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
+
+
+
+
+
+
+                            <!-- Material Combobox-->
+
+                            <ComboBox x:Name="cb_GeiVeMaterial"  Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+
+                                <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
+
+                                <ListBoxItem  Content="Stahl"/>
+
+                                <ListBoxItem  Content="Kunstoff"/>
+
+                                <ListBoxItem  Content="Gusseisen"/>
+
+                            </ComboBox>
+
+
+
+                        </StackPanel>
+
+
+                    </Grid>
+
+                </Border>
+                <!-- Hier Endet das Eingabefenster -->
+
+
+                <Button x:Name="btn_GeiVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeiVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+
+
+            </Grid>
+            <!-- Ende des Eingabefeldes Geradverzahnung innen -->
 
 
 
@@ -467,11 +573,11 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="250"/>
                 </Grid.ColumnDefinitions>
 
 
-                <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
+                <Border Margin="10" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
                     <Grid Grid.Column="0" >
                         <!-- Zeilendefinierung für Eingabe-->
                         <Grid.RowDefinitions>
@@ -569,11 +675,6 @@
                             </ComboBox>
 
 
-
-
-
-
-
                         </StackPanel>
 
 
@@ -582,13 +683,8 @@
                 </Border>
                 <!-- Hier Endet das Eingabefenster -->
 
-                <!-- Rand Für das Bild-->
-                <Border Grid.Column="1" BorderBrush="White" BorderThickness="2" Margin="20" CornerRadius="10" Height="160"  >
 
-                    <Image Source="Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
-                </Border>
-                <!-- Ab hier endet das Bild-->
-                <Button x:Name="btn_SrVe_Berechnen" Margin="326,245,322,35" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_SrVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_SrVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_SrVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
@@ -599,11 +695,11 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="250"/>
                 </Grid.ColumnDefinitions>
 
 
-                <Border Margin="20" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
+                <Border Margin="10" Grid.Column="0" BorderBrush="White" BorderThickness="2" CornerRadius="10">
                     <Grid Grid.Column="0" >
                         <!-- Zeilendefinierung für Eingabe-->
                         <Grid.RowDefinitions>
@@ -701,11 +797,6 @@
                             </ComboBox>
 
 
-
-
-
-
-
                         </StackPanel>
 
 
@@ -714,18 +805,46 @@
                 </Border>
                 <!-- Hier Endet das Eingabefenster -->
 
-                <!-- Rand Für das Bild-->
-                <Border Grid.Column="1" BorderBrush="White" BorderThickness="2" Margin="20" CornerRadius="10" Height="160"  >
 
-                    <Image Margin="8" Source="unnamed.jpg" Stretch="Fill"/>
-                </Border>
-                <!-- Ab hier endet das Bild-->
-                <Button x:Name="btn_PfVe_Berechnen" Margin="326,245,322,35" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_PfVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_PfVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_PfVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
             <!-- Ende des Eingabefeldes Pfeilverzahnung -->
 
+            <!-- Grid Für das Bilder-->
+            <Grid Grid.Column="1" Height="160" Margin="726,20,20,-20" >
+
+                <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10" x:Name="brd_StirnradGeradverzahnungaußenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
+
+                    <Image Source="Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
+                </Border>
+
+                <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradGeradverzahnunginnenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
+
+                    <Image Margin="8" Source="Gerdverzahnunginnen.jpg" Stretch="Fill"/>
+                </Border>
+
+
+                <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"   x:Name="brd_StirnradSchrägverzahnungBild" Visibility="Hidden" Margin="-41,-41,-15,-18"  >
+
+                    <Image Source="Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
+                </Border>
+
+
+                <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradPfeilverzahnungBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
+
+                    <Image Margin="8" Source="unnamed.jpg" Stretch="Fill"/>
+                </Border>
+
+
+
+
+
+
+
+            </Grid>
+            <!-- Ab hier endet Grid für Bilder-->
 
 
 

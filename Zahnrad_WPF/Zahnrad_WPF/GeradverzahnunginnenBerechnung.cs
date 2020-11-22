@@ -7,11 +7,12 @@ using System.Windows;
 
 namespace Zahnrad_WPF
 {
-    class GeradverzahnungBerechnung
+    class GeradverzahnunginnenBerechnung
     {
+
         //Eigenschaften
         public double Zähnezahl { get; set; }
-        public double Teilkreisdurchmesser { get; set; }        
+        public double Teilkreisdurchmesser { get; set; }
         public double Kopfspiel { get; set; }
         public double Eingriffswinkel { get; set; }
         public double Breite { get; set; }
@@ -121,13 +122,13 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    
-                    Kopfspiel = (Teilkreisdurchmesser/Zähnezahl) * 0.167;
+
+                    Kopfspiel = (Teilkreisdurchmesser / Zähnezahl) * 0.167;
                     MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe");
                     return;
                 }
 
-               
+
             } while (n < 1);
         }
 
@@ -168,13 +169,13 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * (Teilkreisdurchmesser / Zähnezahl) + " - " + 0.3 * (Teilkreisdurchmesser / Zähnezahl) + ") !", "Kopfspiel" , MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * (Teilkreisdurchmesser / Zähnezahl) + " - " + 0.3 * (Teilkreisdurchmesser / Zähnezahl) + ") !", "Kopfspiel", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             } while (n < 1);
         }
 
-               
+
         //Methoden zur Berechnung
 
 
@@ -218,7 +219,7 @@ namespace Zahnrad_WPF
         {
             double FußkreisdurchmesserAusgabe;
 
-            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - (2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel));
+            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser + 2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel);
 
             return FußkreisdurchmesserAusgabe;
         }
@@ -236,7 +237,7 @@ namespace Zahnrad_WPF
             double KopfkreisdurchmesserAusgabe;
 
 
-            KopfkreisdurchmesserAusgabe = Teilkreisdurchmesser + 2 * (Teilkreisdurchmesser / Zähnezahl);
+            KopfkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * (Teilkreisdurchmesser / Zähnezahl);
 
 
             return KopfkreisdurchmesserAusgabe;
@@ -256,17 +257,17 @@ namespace Zahnrad_WPF
 
         internal double GewichtStahlBerechnen()
         {
-            
 
-            
+
+
 
             return 0;
         }
 
         internal double PreisStahlBerechnen()
         {
-            
-            
+
+
 
             return 0;
         }
@@ -276,14 +277,14 @@ namespace Zahnrad_WPF
 
         internal double GewichtKunstoffBerechnen()
         {
-            
 
-            return 0; 
+
+            return 0;
         }
 
         internal double PreisKunstoffBerechnen()
         {
-           
+
 
             return 0;
         }
@@ -293,16 +294,17 @@ namespace Zahnrad_WPF
 
         internal double GewichtGusseisenBerechnen()
         {
-            
+
             return 0;
         }
 
         internal double PreisGusseisenBerechnen()
         {
-            
+
 
             return 0;
         }
+
 
     }
 }

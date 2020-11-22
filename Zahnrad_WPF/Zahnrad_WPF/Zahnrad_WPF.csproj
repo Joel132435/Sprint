@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GeradverzahnunginnenBerechnung.cs" />
     <Compile Include="PfeilverzahnungBerechnung.cs" />
     <Compile Include="SchrägverzahnungBerechnung.cs" />
     <Page Include="Auswahlfenster.xaml">
@@ -72,7 +73,7 @@
     <Compile Include="Auswahlfenster.xaml.cs">
       <DependentUpon>Auswahlfenster.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GeradverzahnungBerechnung.cs" />
+    <Compile Include="GeradverzahnungaußenBerechnung.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -127,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="22430-010140015-Kegelrad-Bevel-gear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Gerdverzahnunginnen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
