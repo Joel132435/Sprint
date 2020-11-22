@@ -592,9 +592,9 @@
 
 
             </Grid>
-            <!-- Ende des Eingabefeldes Geradverzahnung -->
+            <!-- Ende des Eingabefeldes Schrägverzahnung -->
 
-            <!--Eingabefeld für Schrägverzahnung -->
+            <!--Eingabefeld für Pfeilverzahnung -->
             <Grid  x:Name="grd_Pfeilverzahnung"  Grid.Column="0" Visibility="Hidden" >
 
                 <Grid.ColumnDefinitions>
@@ -724,7 +724,7 @@
 
 
             </Grid>
-            <!-- Ende des Eingabefeldes Geradverzahnung -->
+            <!-- Ende des Eingabefeldes Pfeilverzahnung -->
 
 
 
