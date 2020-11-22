@@ -211,25 +211,28 @@ namespace Zahnrad_WPF
             lbl_Kopfkreisdurchmesser.Content = GaZahn.KopfkreisdurchmesserBerechnen();
             lbl_Volumen.Content = GaZahn.VolumenBerechnen();
 
+            //Stahl
             if (cb_GeaVeMaterial.SelectedIndex == 1)
             {
 
-                lbl_Gewicht.Content = GaZahn.GewichtStahlBerechnen();
-                lbl_Preis.Content = GaZahn.PreisStahlBerechnen();
+                lbl_Gewicht.Content = GaZahn.VolumenBerechnen() * 0.00000785;
+                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.00000785) * 1.5;
 
             }
+            //Kunstoff
             if (cb_GeaVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = GaZahn.GewichtKunstoffBerechnen();
-                lbl_Preis.Content = GaZahn.PreisKunstoffBerechnen();
+                lbl_Gewicht.Content = GaZahn.VolumenBerechnen() * 0.000000002300;
+                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.000000002300) * 1;
 
             }
+            //Gusseisen
             if (cb_GeaVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = GaZahn.GewichtGusseisenBerechnen();
-                lbl_Preis.Content = GaZahn.PreisGusseisenBerechnen();
+                lbl_Gewicht.Content = GaZahn.VolumenBerechnen() * 0.0000072;
+                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.0000072) * 1.5;
 
             }
 
@@ -273,25 +276,28 @@ namespace Zahnrad_WPF
             lbl_Kopfkreisdurchmesser.Content = GiZahn.KopfkreisdurchmesserBerechnen();
             lbl_Volumen.Content = GiZahn.VolumenBerechnen();
 
-            if (cb_GeaVeMaterial.SelectedIndex == 1)
+            //Stahl
+            if (cb_GeiVeMaterial.SelectedIndex == 1)
             {
 
-                lbl_Gewicht.Content = GiZahn.GewichtStahlBerechnen();
-                lbl_Preis.Content = GiZahn.PreisStahlBerechnen();
+                lbl_Gewicht.Content = GiZahn.VolumenBerechnen() * 0.00000785;
+                lbl_Preis.Content = (GiZahn.VolumenBerechnen() * 0.00000785) * 1.5;
 
             }
-            if (cb_GeaVeMaterial.SelectedIndex == 2)
+            //Kunstoff
+            if (cb_GeiVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = GiZahn.GewichtKunstoffBerechnen();
-                lbl_Preis.Content = GiZahn.PreisKunstoffBerechnen();
+                lbl_Gewicht.Content = GiZahn.VolumenBerechnen() * 0.000000002300;
+                lbl_Preis.Content = (GiZahn.VolumenBerechnen() * 0.000000002300) * 1;
 
             }
-            if (cb_GeaVeMaterial.SelectedIndex == 3)
+            //Gusseisen
+            if (cb_GeiVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = GiZahn.GewichtGusseisenBerechnen();
-                lbl_Preis.Content = GiZahn.PreisGusseisenBerechnen();
+                lbl_Gewicht.Content = GiZahn.VolumenBerechnen() * 0.0000072;
+                lbl_Preis.Content = (GiZahn.VolumenBerechnen() * 0.0000072) * 1.5;
 
             }
 
@@ -340,26 +346,28 @@ namespace Zahnrad_WPF
             lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
             lbl_Volumen.Content = SZahn.VolumenBerechnen();
 
-
+            //Stahl
             if (cb_SrVeMaterial.SelectedIndex == 1)
             {
-
-                lbl_Gewicht.Content = SZahn.GewichtStahlBerechnen();
-                lbl_Preis.Content = SZahn.PreisStahlBerechnen();
+                
+                lbl_Gewicht.Content = SZahn.VolumenBerechnen() * 0.00000785;
+                lbl_Preis.Content = (SZahn.VolumenBerechnen() * 0.00000785) * 1.5;
 
             }
+            //Kunstoff
             if (cb_SrVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = SZahn.GewichtKunstoffBerechnen();
-                lbl_Preis.Content = SZahn.PreisKunstoffBerechnen();
+                lbl_Gewicht.Content = SZahn.VolumenBerechnen() * 0.000000002300;
+                lbl_Preis.Content = (SZahn.VolumenBerechnen() * 0.000000002300) * 1;
 
             }
+            //Gusseisen
             if (cb_SrVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = SZahn.GewichtGusseisenBerechnen();
-                lbl_Preis.Content = SZahn.PreisGusseisenBerechnen();
+                lbl_Gewicht.Content = SZahn.VolumenBerechnen() * 0.0000072;
+                lbl_Preis.Content = (SZahn.VolumenBerechnen() * 0.0000072) * 1.5;
 
             }
 
@@ -377,12 +385,12 @@ namespace Zahnrad_WPF
 
             string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, Schrägungswinkeleingabe, BreiteEingabe;
 
-            BreiteEingabe = txt_SrVeBreite.Text;
-            ZähnezahlEingabe = txt_SrVeZaehnezahl.Text;
-            TeilkreisdurchmesserEingabe = txt_SrVeTeilkreisdurchmesser.Text;
-            EingriffswinkelEingabe = txt_SrVeEingriffswinkel.Text;
-            KopfspielEingabe = txt_SrVeKopfspiel.Text;
-            Schrägungswinkeleingabe = txt_SrVeSchrägungswinkel.Text;
+            BreiteEingabe = txt_PfVeBreite.Text;
+            ZähnezahlEingabe = txt_PfVeZaehnezahl.Text;
+            TeilkreisdurchmesserEingabe = txt_PfVeTeilkreisdurchmesser.Text;
+            EingriffswinkelEingabe = txt_PfVeEingriffswinkel.Text;
+            KopfspielEingabe = txt_PfVeKopfspiel.Text;
+            Schrägungswinkeleingabe = txt_PfVeSchrägungswinkel.Text;
 
             PZahn.TestderSchrägungswinkelEingabe(Schrägungswinkeleingabe);
             PZahn.TestderBreiteEingabe(BreiteEingabe);
@@ -406,25 +414,28 @@ namespace Zahnrad_WPF
             lbl_Volumen.Content = PZahn.VolumenBerechnen();
 
 
+            //Stahl
             if (cb_PfVeMaterial.SelectedIndex == 1)
             {
 
-                lbl_Gewicht.Content = PZahn.GewichtStahlBerechnen();
-                lbl_Preis.Content = PZahn.PreisStahlBerechnen();
+                lbl_Gewicht.Content = PZahn.VolumenBerechnen() * 0.00000785;
+                lbl_Preis.Content = (PZahn.VolumenBerechnen() * 0.00000785) * 1.5;
 
             }
+            //Kunstoff
             if (cb_PfVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = PZahn.GewichtKunstoffBerechnen();
-                lbl_Preis.Content = PZahn.PreisKunstoffBerechnen();
+                lbl_Gewicht.Content = PZahn.VolumenBerechnen() * 0.000000002300;
+                lbl_Preis.Content = (PZahn.VolumenBerechnen() * 0.000000002300) * 1;
 
             }
+            //Gusseisen
             if (cb_PfVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = PZahn.GewichtGusseisenBerechnen();
-                lbl_Preis.Content = PZahn.PreisGusseisenBerechnen();
+                lbl_Gewicht.Content = PZahn.VolumenBerechnen() * 0.0000072;
+                lbl_Preis.Content = (PZahn.VolumenBerechnen() * 0.0000072) * 1.5;
 
             }
 

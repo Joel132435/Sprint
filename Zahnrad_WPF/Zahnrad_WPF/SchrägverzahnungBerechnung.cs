@@ -302,48 +302,7 @@ namespace Zahnrad_WPF
 
             return VolumenAusgabe;
         }
-
-
-        //Stahl
-
-        internal double GewichtStahlBerechnen()
-        {
-            
-            
-            
-            return 0;
-        }
-
-        internal double PreisStahlBerechnen()
-        {
-            return 0;
-        }
-
-
-        //Kunstoff
-
-        internal double GewichtKunstoffBerechnen()
-        {
-            return 0;
-        }
-
-        internal double PreisKunstoffBerechnen()
-        {
-            return 0;
-        }
-
-
-        //Gusseisen
-
-        internal double GewichtGusseisenBerechnen()
-        {
-            return 0;
-        }
-
-        internal double PreisGusseisenBerechnen()
-        {
-            return 0;
-        }
+     
 
 
     }
