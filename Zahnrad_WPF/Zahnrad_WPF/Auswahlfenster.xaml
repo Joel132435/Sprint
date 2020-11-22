@@ -66,9 +66,9 @@
                         <TreeViewItem x:Name="trv_GeradverzahnungStirnraeder" Foreground="White" Header="Geradverzahnung" >
 
 
-                            <TreeViewItem x:Name="trv_GeradverzahnunginnenStirnraeder" Foreground="White" Header="innenverzahnng" Selected="trv_GeradverzahnunginnenStirnraeder_Selected"/>
+                            <TreeViewItem x:Name="trv_GeradverzahnunginnenStirnraeder" Foreground="White" Header="Innenverzahnung" Selected="trv_GeradverzahnunginnenStirnraeder_Selected"/>
 
-                            <TreeViewItem x:Name="trv_GeradverzahnungaußenStirnraeder" Foreground="White" Header="außenverzahnung" Selected="trv_GeradverzahnungaußenStirnraeder_Selected"/>
+                            <TreeViewItem x:Name="trv_GeradverzahnungaußenStirnraeder" Foreground="White" Header="Außenverzahnung" Selected="trv_GeradverzahnungaußenStirnraeder_Selected"/>
 
                         </TreeViewItem>
 
@@ -350,7 +350,7 @@
 
 
 
-                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
 
                             <TextBox x:Name="txt_GeaVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
@@ -372,7 +372,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_GeaVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -476,7 +476,7 @@
 
 
 
-                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
 
                             <TextBox x:Name="txt_GeiVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
@@ -498,7 +498,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_GeiVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -603,7 +603,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
                             <TextBox x:Name="txt_SrVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -623,7 +623,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_SrVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -645,7 +645,7 @@
 
 
 
-                            <Label Margin="147 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <Label Margin="137 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
 
                             <TextBox x:Name="txt_SrVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -725,7 +725,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="226 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
                             <TextBox x:Name="txt_PfVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -745,7 +745,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="150 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_PfVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -767,7 +767,7 @@
 
 
 
-                            <Label Margin="147 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <Label Margin="137 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
 
                             <TextBox x:Name="txt_PfVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -811,6 +811,7 @@
 
             </Grid>
             <!-- Ende des Eingabefeldes Pfeilverzahnung -->
+           
 
             <!-- Grid Für das Bilder-->
             <Grid Grid.Column="1" Height="160" Margin="726,20,20,-20" >
@@ -838,18 +839,8 @@
                 </Border>
 
 
-
-
-
-
-
             </Grid>
             <!-- Ab hier endet Grid für Bilder-->
-
-
-
-
-
 
 
         </Grid>
