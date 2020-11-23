@@ -107,8 +107,8 @@
 
             </Grid.RowDefinitions>
 
-
-            <Border x:Name="grd_Ergebnisse" Visibility="Hidden" BorderBrush="White" Grid.Row="1"    BorderThickness="2" CornerRadius="10" Margin="10" >
+            <!--Anfang Ergebniss Ausgabe -->
+            <Border x:Name="grd_Ergebnisse" Visibility="Visible" BorderBrush="White" Grid.Row="1"    BorderThickness="2" CornerRadius="10" Margin="10" >
 
 
                 <Grid x:Name="grd_ErgebnisFenster" >
@@ -164,7 +164,7 @@
                         <Label Content="Zahnhöhe :" Margin="120,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Zahnhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Zahnhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -179,7 +179,7 @@
                         <Label Content="Zahnfußhöhe :" Margin="90,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Zahnfußhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Zahnfußhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -194,7 +194,7 @@
                         <Label Content="Zahnkopfhöhe :" Margin="80,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Zahnkopfhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Zahnkopfhöhe" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -209,7 +209,7 @@
                         <Label Content="Teilung :" Margin="145,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Teilung" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Teilung" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -223,7 +223,7 @@
                         <Label Content="Grundkreisdurchmesser :" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Grundkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Grundkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -240,7 +240,7 @@
                         <Label Content="Kopfkreisdurchmesser :" Margin="10,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Kopfkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Kopfkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -254,7 +254,7 @@
                         <Label Content="Fußkreisdurchmesser :" Margin="20,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Fußkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Fußkreisdurchmesser" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -268,7 +268,7 @@
                         <Label Content="Volumen :" Margin="127,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Volumen" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Volumen" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="mm^3" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
@@ -282,14 +282,14 @@
                         <Label Content="Gewicht :" Margin="135,0,0,0" FontSize="20" Foreground="GhostWhite" HorizontalAlignment="Left"/>
 
 
-                        <Label x:Name="lbl_Gewicht" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Gewicht" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="kg" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
                     </StackPanel>
 
 
-                    <!-- Anzeige Button Programm Schließen-->
+                    
                     <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
@@ -298,13 +298,14 @@
                         <Label Content="Preis :" Margin="164,0,0,0" FontSize="20" Foreground="GhostWhite" />
 
 
-                        <Label x:Name="lbl_Preis" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80"/>
+                        <Label x:Name="lbl_Preis" Background="GhostWhite" Foreground="Black" Margin="0 1 0 5" Width="80" FontSize="17"/>
 
                         <Label Content="€" Margin="0,0,0,0" FontSize="20" Foreground="GhostWhite"/>
 
 
                     </StackPanel>
 
+                    <!-- Anzeige Button Programm Schließen-->
                     <Button x:Name="Schließen" HorizontalAlignment="Left" Margin="389,6,0,10" Click="btn_Schließen_Click" Height="35" Width="130" Content="Programm schließen" Grid.ColumnSpan="2" Grid.Row="7"/>
 
 
@@ -313,6 +314,8 @@
 
 
             </Border>
+            <!--Ende Ergebniss Ausgabe -->
+            
 
             <!--Eingabefeld für Geradverzahnung außen -->
             <Grid  x:Name="grd_Geradverzahnungaußen"  Grid.Column="0" Visibility="Hidden" >

@@ -185,7 +185,7 @@ namespace Zahnrad_WPF
 
             ZahnhöheAusgabe = 2 * (Teilkreisdurchmesser / Zähnezahl) + Kopfspiel;
 
-            return ZahnhöheAusgabe;
+            return Math.Round(ZahnhöheAusgabe, 3);
         }
 
         internal double ZahnfußhöheBerechnen()
@@ -194,7 +194,7 @@ namespace Zahnrad_WPF
 
             ZahnfußhöheAusgabe = (Teilkreisdurchmesser / Zähnezahl) + Kopfspiel;
 
-            return ZahnfußhöheAusgabe;
+            return Math.Round(ZahnfußhöheAusgabe, 3);
         }
 
         internal double ZahnkopfhöheBerechnen()
@@ -203,7 +203,7 @@ namespace Zahnrad_WPF
 
             ZahnkopfhöheAusgabe = (Teilkreisdurchmesser / Zähnezahl);
 
-            return ZahnkopfhöheAusgabe;
+            return Math.Round(ZahnkopfhöheAusgabe, 3);
         }
 
         internal double TeilungBerechnen()
@@ -212,7 +212,7 @@ namespace Zahnrad_WPF
 
             TeilungAusgabe = Math.PI * (Teilkreisdurchmesser / Zähnezahl);
 
-            return TeilungAusgabe;
+            return Math.Round(TeilungAusgabe, 3);
         }
 
         internal double FußkreisdurchmesserBerechnen()
@@ -221,7 +221,7 @@ namespace Zahnrad_WPF
 
             FußkreisdurchmesserAusgabe = Teilkreisdurchmesser + 2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel);
 
-            return FußkreisdurchmesserAusgabe;
+            return Math.Round(FußkreisdurchmesserAusgabe, 3);
         }
 
         internal double GrundkreisdurchmesserBerechnen()
@@ -229,7 +229,7 @@ namespace Zahnrad_WPF
             double deg, GrundkreisdurchmesserAusgabe;
             deg = (Eingriffswinkel * (Math.PI)) / 180;
             GrundkreisdurchmesserAusgabe = (Teilkreisdurchmesser / Zähnezahl) * Zähnezahl * (Math.Cos(deg));
-            return GrundkreisdurchmesserAusgabe;
+            return Math.Round(GrundkreisdurchmesserAusgabe, 3);
         }
 
         internal double KopfkreisdurchmesserBerechnen()
@@ -240,7 +240,7 @@ namespace Zahnrad_WPF
             KopfkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * (Teilkreisdurchmesser / Zähnezahl);
 
 
-            return KopfkreisdurchmesserAusgabe;
+            return Math.Round(KopfkreisdurchmesserAusgabe, 3);
         }
 
         internal double VolumenBerechnen()
@@ -249,7 +249,7 @@ namespace Zahnrad_WPF
 
             VolumenAusgabe = Math.Pow(Teilkreisdurchmesser + 2 * (Teilkreisdurchmesser / Zähnezahl) / 2, 2) * Breite;
 
-            return VolumenAusgabe;
+            return Math.Round(VolumenAusgabe, 2);
         }
 
 
