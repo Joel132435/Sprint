@@ -102,7 +102,7 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche Eingabe");
+                    MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche/keine Eingabe");
                     Eingriffswinkel = 20;
                     return;
 
@@ -127,7 +127,7 @@ namespace Zahnrad_WPF
                 {
 
                     Kopfspiel = (Teilkreisdurchmesser / Zähnezahl) * 0.167;
-                    MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche Eingabe");
+                    MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe");
                     return;
                 }
 
@@ -267,7 +267,7 @@ namespace Zahnrad_WPF
         {
             double FußkreisdurchmesserAusgabe;
 
-            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - (2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel));
+            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel);
 
             return FußkreisdurchmesserAusgabe;
         }

@@ -218,7 +218,7 @@ namespace Zahnrad_WPF
         {
             double FußkreisdurchmesserAusgabe;
 
-            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - (2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel));
+            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel);
 
             return FußkreisdurchmesserAusgabe;
         }

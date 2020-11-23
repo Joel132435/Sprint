@@ -57,7 +57,7 @@
 
 
 
-                    <TreeViewItem x:Name="trv_Stirnraeder" Foreground="White" Header="Stirnräder" >
+                    <TreeViewItem x:Name="trv_Stirnraeder" Foreground="White" Header="Stirnräder" FontSize="22">
 
                         <TreeViewItem x:Name="trv_PfeilverzahnungStirnraeder" Foreground="White" Header="Pfeilverzahnung" Selected="trv_PfeilverzahnungStirnraeder_Selected"/>
 
@@ -416,7 +416,7 @@
 
                                 <ListBoxItem  Content="Kunstoff"/>
 
-                                <ListBoxItem  Content="Gusseisen"/>
+                                <ListBoxItem  Content="Messing"/>
 
                             </ComboBox>
 
@@ -542,7 +542,7 @@
 
                                 <ListBoxItem  Content="Kunstoff"/>
 
-                                <ListBoxItem  Content="Gusseisen"/>
+                                <ListBoxItem  Content="Messing"/>
 
                             </ComboBox>
 
@@ -670,7 +670,7 @@
 
                                 <ListBoxItem  Content="Kunstoff"/>
 
-                                <ListBoxItem  Content="Gusseisen"/>
+                                <ListBoxItem  Content="Messing"/>
 
                             </ComboBox>
 
@@ -792,7 +792,7 @@
 
                                 <ListBoxItem  Content="Kunstoff"/>
 
-                                <ListBoxItem  Content="Gusseisen"/>
+                                <ListBoxItem  Content="Messing"/>
 
                             </ComboBox>
 

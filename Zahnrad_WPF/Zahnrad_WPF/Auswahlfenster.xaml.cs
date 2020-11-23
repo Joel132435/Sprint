@@ -26,7 +26,7 @@ namespace Zahnrad_WPF
             
             InitializeComponent();
         }
-
+        //Geradverzahnung innen Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
         internal void trv_GeradverzahnunginnenStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
             grd_Aufforderung.Visibility = Visibility.Hidden;
@@ -61,7 +61,7 @@ namespace Zahnrad_WPF
 
 
         }
-
+        //Geradverzahnung außen Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
         internal void trv_GeradverzahnungaußenStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
             grd_Aufforderung.Visibility = Visibility.Hidden;
@@ -96,7 +96,7 @@ namespace Zahnrad_WPF
 
 
         }
-
+        //Pfeilverzahnung Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
         internal void trv_PfeilverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
             grd_Aufforderung.Visibility = Visibility.Hidden;
@@ -130,7 +130,7 @@ namespace Zahnrad_WPF
             txt_SrVeTeilkreisdurchmesser.Clear();
 
         }
-
+        //Schrägverzahnung Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
         internal void trv_SchraegverzahnungStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
             grd_Aufforderung.Visibility = Visibility.Hidden;
@@ -168,14 +168,14 @@ namespace Zahnrad_WPF
   
 
        
-      
+      //Programm beenden
         private void btn_Schließen_Click(object sender, RoutedEventArgs e)
         {
 
             if (MessageBox.Show("Soll das Programm beendet werden?", "Programmende", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
                 System.Environment.Exit(0);
         }
-
+        //Geradverzahnung außen Berechnen
         private void btn_GeaVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
@@ -193,6 +193,8 @@ namespace Zahnrad_WPF
             EingriffswinkelEingabe = txt_GeaVeEingriffswinkel.Text;
             KopfspielEingabe = txt_GeaVeKopfspiel.Text;
 
+            //Kontrollen/Tests der Eingaben
+
             GaZahn.TestderBreiteEingabe(BreiteEingabe);
             GaZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
             GaZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);
@@ -201,13 +203,14 @@ namespace Zahnrad_WPF
             GaZahn.KontrolleWertebereichEingriffswinkel();
             GaZahn.KontrolleWertebereichKopfspiel();
 
+            //Ergebnis Ausgabe
+
             lbl_Zahnhöhe.Content = GaZahn.ZahnhöheBerechen();
             lbl_Zahnfußhöhe.Content = GaZahn.ZahnfußhöheBerechnen();
             lbl_Zahnkopfhöhe.Content = GaZahn.ZahnkopfhöheBerechnen();
             lbl_Teilung.Content = GaZahn.TeilungBerechnen();
             lbl_Fußkreisdurchmesser.Content = GaZahn.FußkreisdurchmesserBerechnen();
             lbl_Grundkreisdurchmesser.Content = GaZahn.GrundkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = GaZahn.KopfkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = GaZahn.KopfkreisdurchmesserBerechnen();
             lbl_Volumen.Content = GaZahn.VolumenBerechnen();
 
@@ -219,20 +222,20 @@ namespace Zahnrad_WPF
                 lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.00000785) * 1.5;
 
             }
-            //Kunstoff
+            //Kunststoff
             if (cb_GeaVeMaterial.SelectedIndex == 2)
             {
 
                 lbl_Gewicht.Content = GaZahn.VolumenBerechnen() * 0.000000002300;
-                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.000000002300) * 1;
+                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.000000002300) * 0.4;
 
             }
-            //Gusseisen
+            //Messing
             if (cb_GeaVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = GaZahn.VolumenBerechnen() * 0.0000072;
-                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.0000072) * 1.5;
+                lbl_Gewicht.Content = GaZahn.VolumenBerechnen() * 0.0000083;
+                lbl_Preis.Content = (GaZahn.VolumenBerechnen() * 0.0000083) * 3.35;
 
             }
 
@@ -240,7 +243,7 @@ namespace Zahnrad_WPF
             grd_Ergebnisse.Visibility = Visibility.Visible;
 
         }
-
+        //Geradverzahnung innen Berechnen
         private void btn_GeiVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
@@ -258,6 +261,8 @@ namespace Zahnrad_WPF
             EingriffswinkelEingabe = txt_GeiVeEingriffswinkel.Text;
             KopfspielEingabe = txt_GeiVeKopfspiel.Text;
 
+            //Kontrollen/Tests der Eingaben
+
             GiZahn.TestderBreiteEingabe(BreiteEingabe);
             GiZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
             GiZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);
@@ -266,13 +271,14 @@ namespace Zahnrad_WPF
             GiZahn.KontrolleWertebereichEingriffswinkel();
             GiZahn.KontrolleWertebereichKopfspiel();
 
+            //Ergebnis Ausgabe
+
             lbl_Zahnhöhe.Content = GiZahn.ZahnhöheBerechen();
             lbl_Zahnfußhöhe.Content = GiZahn.ZahnfußhöheBerechnen();
             lbl_Zahnkopfhöhe.Content = GiZahn.ZahnkopfhöheBerechnen();
             lbl_Teilung.Content = GiZahn.TeilungBerechnen();
             lbl_Fußkreisdurchmesser.Content = GiZahn.FußkreisdurchmesserBerechnen();
             lbl_Grundkreisdurchmesser.Content = GiZahn.GrundkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = GiZahn.KopfkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = GiZahn.KopfkreisdurchmesserBerechnen();
             lbl_Volumen.Content = GiZahn.VolumenBerechnen();
 
@@ -306,7 +312,7 @@ namespace Zahnrad_WPF
 
         }
 
-
+        //Schrägverzahnung Berechnen
         private void btn_SrVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
@@ -325,6 +331,8 @@ namespace Zahnrad_WPF
             KopfspielEingabe = txt_SrVeKopfspiel.Text;
             Schrägungswinkeleingabe = txt_SrVeSchrägungswinkel.Text;
 
+            //Kontrollen/Tests der Eingaben
+
             SZahn.TestderSchrägungswinkelEingabe(Schrägungswinkeleingabe);
             SZahn.TestderBreiteEingabe(BreiteEingabe);
             SZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
@@ -335,6 +343,7 @@ namespace Zahnrad_WPF
             SZahn.KontrolleWertebereichKopfspiel();
             SZahn.KontrolleWertebereichSchrägungswinkel();
 
+            //Ergebnis Ausgabe
 
             lbl_Zahnhöhe.Content = SZahn.ZahnhöheBerechen();
             lbl_Zahnfußhöhe.Content = SZahn.ZahnfußhöheBerechnen();
@@ -343,7 +352,6 @@ namespace Zahnrad_WPF
             lbl_Fußkreisdurchmesser.Content = SZahn.FußkreisdurchmesserBerechnen();
             lbl_Grundkreisdurchmesser.Content = SZahn.GrundkreisdurchmesserBerechnen();
             lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();          
-            lbl_Kopfkreisdurchmesser.Content = SZahn.KopfkreisdurchmesserBerechnen();
             lbl_Volumen.Content = SZahn.VolumenBerechnen();
 
             //Stahl
@@ -373,7 +381,7 @@ namespace Zahnrad_WPF
 
             grd_Ergebnisse.Visibility = Visibility.Visible;
         }
-
+        //Pfeilverzahnung Berechnen
         private void btn_PfVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
@@ -392,6 +400,8 @@ namespace Zahnrad_WPF
             KopfspielEingabe = txt_PfVeKopfspiel.Text;
             Schrägungswinkeleingabe = txt_PfVeSchrägungswinkel.Text;
 
+            //Kontrollen/Tests der Eingaben
+
             PZahn.TestderSchrägungswinkelEingabe(Schrägungswinkeleingabe);
             PZahn.TestderBreiteEingabe(BreiteEingabe);
             PZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
@@ -402,6 +412,7 @@ namespace Zahnrad_WPF
             PZahn.KontrolleWertebereichKopfspiel();
             PZahn.KontrolleWertebereichSchrägungswinkel();
 
+            //Ergebnis Ausgabe
 
             lbl_Zahnhöhe.Content = PZahn.ZahnhöheBerechen();
             lbl_Zahnfußhöhe.Content = PZahn.ZahnfußhöheBerechnen();
@@ -409,8 +420,7 @@ namespace Zahnrad_WPF
             lbl_Teilung.Content = PZahn.TeilungBerechnen();
             lbl_Fußkreisdurchmesser.Content = PZahn.FußkreisdurchmesserBerechnen();
             lbl_Grundkreisdurchmesser.Content = PZahn.GrundkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = PZahn.KopfkreisdurchmesserBerechnen();
-            lbl_Kopfkreisdurchmesser.Content = PZahn.KopfkreisdurchmesserBerechnen();
+            lbl_Kopfkreisdurchmesser.Content = PZahn.KopfkreisdurchmesserBerechnen();     
             lbl_Volumen.Content = PZahn.VolumenBerechnen();
 
 
