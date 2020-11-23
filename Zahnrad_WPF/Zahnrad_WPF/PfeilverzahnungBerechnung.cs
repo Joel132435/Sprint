@@ -161,7 +161,6 @@ namespace Zahnrad_WPF
 
         }
 
-
         internal void KontrolleWertebereichEingriffswinkel()
         {
 
@@ -203,7 +202,7 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
-
+        
         internal void KontrolleWertebereichSchrägungswinkel()
         {
             int n;

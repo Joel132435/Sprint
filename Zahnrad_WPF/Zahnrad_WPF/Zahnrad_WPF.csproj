@@ -135,5 +135,8 @@
   <ItemGroup>
     <Resource Include="Gerdverzahnunginnen.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="12321312313.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

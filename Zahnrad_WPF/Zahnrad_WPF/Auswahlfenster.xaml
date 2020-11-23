@@ -392,7 +392,7 @@
                             <TextBox x:Name="txt_GeaVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
 
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
 
@@ -414,7 +414,7 @@
 
                                 <ListBoxItem  Content="Stahl"/>
 
-                                <ListBoxItem  Content="Kunstoff"/>
+                                <ListBoxItem  Content="Kunststoff"/>
 
                                 <ListBoxItem  Content="Messing"/>
 
@@ -518,7 +518,7 @@
                             <TextBox x:Name="txt_GeiVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
 
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
 
@@ -540,7 +540,7 @@
 
                                 <ListBoxItem  Content="Stahl"/>
 
-                                <ListBoxItem  Content="Kunstoff"/>
+                                <ListBoxItem  Content="Kunststoff"/>
 
                                 <ListBoxItem  Content="Messing"/>
 
@@ -641,11 +641,11 @@
 
                             <TextBox x:Name="txt_SrVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
 
-                            <Label Margin="137 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <Label Margin="108 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
 
                             <TextBox x:Name="txt_SrVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -668,7 +668,7 @@
 
                                 <ListBoxItem  Content="Stahl"/>
 
-                                <ListBoxItem  Content="Kunstoff"/>
+                                <ListBoxItem  Content="Kunststoff"/>
 
                                 <ListBoxItem  Content="Messing"/>
 
@@ -763,11 +763,11 @@
 
                             <TextBox x:Name="txt_PfVeKopfspiel" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
 
-                            <Label Margin="137 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <Label Margin="108 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
 
                             <TextBox x:Name="txt_PfVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -790,7 +790,7 @@
 
                                 <ListBoxItem  Content="Stahl"/>
 
-                                <ListBoxItem  Content="Kunstoff"/>
+                                <ListBoxItem  Content="Kunststoff"/>
 
                                 <ListBoxItem  Content="Messing"/>
 
@@ -823,7 +823,7 @@
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradGeradverzahnunginnenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Margin="8" Source="Gerdverzahnunginnen.jpg" Stretch="Fill"/>
+                    <Image Margin="25,8,25,8" Source="12321312313.png" Stretch="Fill"/>
                 </Border>
 
 
