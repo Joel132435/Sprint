@@ -20,6 +20,7 @@ namespace Zahnrad_WPF
 
         //Methoden zur Kontrolle 
 
+        //Test der Zähnezahleingabe
 
         internal void TestderZähnezahlEingabe(string ZähnezahlEingabe)
         {
@@ -41,6 +42,7 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
+        //Test der Breiteneingabe
 
         internal void TestderBreiteEingabe(string BreiteEingabe)
         {
@@ -62,6 +64,7 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
+        //Test der Teilkreisdurchmessereingabe
 
         internal void TestdesTeilkreisdurchmessersEingabe(string TeilkreisdurchmesserEingabe)
         {
@@ -83,7 +86,7 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
-
+        //Test der Eingriffswinkeleingabe
         internal void TestderEingriffswinkelEingabe(string EingriffswinkelEingabe)
         {
             double KontrollierterEigriffswinkel;
@@ -106,6 +109,7 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
+        //Test der Kopfspieleingabe
 
         internal void TestderKopfspielEingabe(string KopfspielEingabe)
         {
@@ -132,6 +136,7 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
+        //Kontrolle des Wertebereiches für Eingriffswinkel
 
         internal void KontrolleWertebereichEingriffswinkel()
         {
@@ -154,6 +159,7 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
+        //Kontrolle des Wertebereiches für Kopfspiel
 
         internal void KontrolleWertebereichKopfspiel()
         {
@@ -178,6 +184,7 @@ namespace Zahnrad_WPF
 
         //Methoden zur Berechnung
 
+        //Berechnung Zahnhöhe
 
         internal double ZahnhöheBerechen()
         {
@@ -187,6 +194,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(ZahnhöheAusgabe, 3);
         }
+        //Berechnung Zahnfußhöhe
 
         internal double ZahnfußhöheBerechnen()
         {
@@ -196,6 +204,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(ZahnfußhöheAusgabe, 3);
         }
+        //Berechnung Zahnkopfhöhe
 
         internal double ZahnkopfhöheBerechnen()
         {
@@ -205,6 +214,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(ZahnkopfhöheAusgabe, 3);
         }
+        //Berechnung Teilung
 
         internal double TeilungBerechnen()
         {
@@ -214,6 +224,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(TeilungAusgabe, 3);
         }
+        //Berechnung Fußkreisdurchmesser
 
         internal double FußkreisdurchmesserBerechnen()
         {
@@ -223,6 +234,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(FußkreisdurchmesserAusgabe, 3);
         }
+        //Berechnung Grundkreisdurchmesser
 
         internal double GrundkreisdurchmesserBerechnen()
         {
@@ -231,6 +243,7 @@ namespace Zahnrad_WPF
             GrundkreisdurchmesserAusgabe = (Teilkreisdurchmesser / Zähnezahl) * Zähnezahl * (Math.Cos(deg));
             return Math.Round(GrundkreisdurchmesserAusgabe, 3);
         }
+        //Berechnung Kopfkreisdurchmesser
 
         internal double KopfkreisdurchmesserBerechnen()
         {
@@ -242,6 +255,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(KopfkreisdurchmesserAusgabe, 3);
         }
+        //Berechnung Volumen
 
         internal double VolumenBerechnen()
         {
