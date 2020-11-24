@@ -261,7 +261,7 @@ namespace Zahnrad_WPF
         {
             double VolumenAusgabe;
 
-            VolumenAusgabe = Math.Pow(Teilkreisdurchmesser + 2 * (Teilkreisdurchmesser / Zähnezahl) / 2, 2) * Breite;
+            VolumenAusgabe = Math.Pow(Teilkreisdurchmesser - 2 * (Teilkreisdurchmesser / Zähnezahl) / 2, 2) * Breite;
 
             return Math.Round(VolumenAusgabe, 2);
         }
