@@ -23,7 +23,7 @@ namespace Zahnrad_WPF
 
         //Methoden zur Kontrolle 
 
-
+        //Test der ZähnezahlEingabe
         internal void TestderZähnezahlEingabe(string ZähnezahlEingabe)
         {
             double KontrollierteZähnezahl;
@@ -45,6 +45,7 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
+        //Test der BreitenEingabe
         internal void TestderBreiteEingabe(string BreiteEingabe)
         {
             double KontrollierteBreite;
@@ -66,6 +67,7 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
+        //Test der TeilkreisdurchmesserEingabe
         internal void TestdesTeilkreisdurchmessersEingabe(string TeilkreisdurchmesserEingabe)
         {
             double KontrollierterTeilkreisdurchmesser;
@@ -87,6 +89,7 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
+        //Test der EingriffswinkelEingabe
         internal void TestderEingriffswinkelEingabe(string EingriffswinkelEingabe)
         {
             double KontrollierterEigriffswinkel;
@@ -110,6 +113,7 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
+        //Test der KopfspielEingabe
         internal void TestderKopfspielEingabe(string KopfspielEingabe)
         {
             double KontrolliertesKopfspiel;
@@ -134,6 +138,8 @@ namespace Zahnrad_WPF
 
             } while (n < 1);
         }
+
+        // Test der SchrägungswinkelEingabe
 
         internal void TestderSchrägungswinkelEingabe(string SchrägungswinkelEingabe)
         {
@@ -161,6 +167,8 @@ namespace Zahnrad_WPF
 
         }
 
+        //Kontrolle des Wertebereiches für Eingriffswinkel
+
         internal void KontrolleWertebereichEingriffswinkel()
         {
 
@@ -183,6 +191,7 @@ namespace Zahnrad_WPF
             } while (n < 1);
         }
 
+        //Kontrolle des Wertebereiches für Kopfspiel
         internal void KontrolleWertebereichKopfspiel()
         {
             int n;
@@ -202,7 +211,8 @@ namespace Zahnrad_WPF
                 }
             } while (n < 1);
         }
-        
+
+        // Kolltrolle des WertebereichSchrägungswinkel
         internal void KontrolleWertebereichSchrägungswinkel()
         {
             int n;
@@ -225,7 +235,7 @@ namespace Zahnrad_WPF
 
         //Methoden zur Berechnung
 
-
+        //Berechnung Zahnhöhe
         internal double ZahnhöheBerechen()
         {
             double ZahnhöheAusgabe;
@@ -234,7 +244,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(ZahnhöheAusgabe, 3);
         }
-
+        //Berechnung Zahnfußhöhe
         internal double ZahnfußhöheBerechnen()
         {
             double ZahnfußhöheAusgabe;
@@ -243,7 +253,7 @@ namespace Zahnrad_WPF
 
             return Math.Round(ZahnfußhöheAusgabe, 3);
         }
-
+        //Berechnung Zahnkopfhöhe
         internal double ZahnkopfhöheBerechnen()
         {
             double ZahnkopfhöheAusgabe;
@@ -252,6 +262,8 @@ namespace Zahnrad_WPF
 
             return Math.Round(ZahnkopfhöheAusgabe, 3);
         }
+       
+        //Berechnung Teilung
 
         internal double TeilungBerechnen()
         {
@@ -262,6 +274,8 @@ namespace Zahnrad_WPF
             return Math.Round(TeilungAusgabe, 3);
         }
 
+        //Berechnung Fußkreisdurchmesser
+
         internal double FußkreisdurchmesserBerechnen()
         {
             double FußkreisdurchmesserAusgabe;
@@ -270,6 +284,8 @@ namespace Zahnrad_WPF
 
             return Math.Round(FußkreisdurchmesserAusgabe, 3);
         }
+
+        //Berechnung Grundkreisdurchmesser
 
         internal double GrundkreisdurchmesserBerechnen()
         {
@@ -282,6 +298,8 @@ namespace Zahnrad_WPF
             return Math.Round(GrundkreisdurchmesserAusgabe, 3);
         }
 
+        //Berechnung Kopfkreisdurchmesser
+
         internal double KopfkreisdurchmesserBerechnen()
         {
             double KopfkreisdurchmesserAusgabe;
@@ -292,6 +310,8 @@ namespace Zahnrad_WPF
 
             return Math.Round(KopfkreisdurchmesserAusgabe, 3);
         }
+
+        //Berechnung Volumen
 
         internal double VolumenBerechnen()
         {
