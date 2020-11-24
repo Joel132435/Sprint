@@ -289,7 +289,7 @@
                     </StackPanel>
 
 
-                    
+
                     <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
 
 
@@ -315,7 +315,7 @@
 
             </Border>
             <!--Ende Ergebniss Ausgabe -->
-            
+
 
             <!--Eingabefeld für Geradverzahnung außen -->
             <Grid  x:Name="grd_Geradverzahnungaußen"  Grid.Column="0" Visibility="Hidden" >
@@ -353,7 +353,7 @@
 
 
 
-                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="210 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
 
                             <TextBox x:Name="txt_GeaVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
@@ -467,7 +467,7 @@
                         <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
 
                         <!-- Eingabefeld 1 -->
-                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" >
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" Margin="0,0.429,-23.857,0.429" Width="693" >
 
 
                             <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
@@ -479,7 +479,7 @@
 
 
 
-                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="210 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
 
                             <TextBox x:Name="txt_GeiVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
@@ -606,7 +606,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="210 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
                             <TextBox x:Name="txt_SrVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -728,7 +728,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="216 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
+                            <Label Margin="210 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
 
                             <TextBox x:Name="txt_PfVeBreite" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -814,7 +814,7 @@
 
             </Grid>
             <!-- Ende des Eingabefeldes Pfeilverzahnung -->
-           
+
 
             <!-- Grid Für das Bilder-->
             <Grid Grid.Column="1" Height="160" Margin="726,20,20,-20" >
