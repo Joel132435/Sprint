@@ -39,7 +39,7 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben");
+                    MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben","Zähnezahl", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             } while (n < 1);
@@ -60,7 +60,7 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Falsche Breite Eingabe bitte Zahl eingeben");
+                    MessageBox.Show("Falsche Breite Eingabe bitte Zahl eingeben","Breite", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             } while (n < 1);
@@ -81,7 +81,7 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Falsche Teilkreisdurchmessereingabe Eingabe bitte Zahl eingeben");
+                    MessageBox.Show("Falsche Teilkreisdurchmessereingabe Eingabe bitte Zahl eingeben","Teilkreisdurchmesser", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             } while (n < 1);
@@ -102,7 +102,7 @@ namespace Zahnrad_WPF
                 }
                 else
                 {
-                    MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche Eingabe");
+                    MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche/keine Eingabe","Eingriffswinkel");
                     Eingriffswinkel = 20;
                     return;
 
@@ -127,7 +127,7 @@ namespace Zahnrad_WPF
                 {
 
                     Kopfspiel = (Teilkreisdurchmesser / Zähnezahl) * 0.167;
-                    MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche Eingabe");
+                    MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe","Kopfspiel");
                     return;
                 }
 
@@ -151,7 +151,7 @@ namespace Zahnrad_WPF
                 else
                 {
 
-                    MessageBox.Show("Falsche Schrägungswinkel Eingabe bitte Zahl eingeben");
+                    MessageBox.Show("Falsche Schrägungswinkel Eingabe bitte Zahl eingeben", "Schrägungswinkel" , MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
 

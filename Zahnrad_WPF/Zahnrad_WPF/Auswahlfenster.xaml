@@ -108,7 +108,7 @@
             </Grid.RowDefinitions>
 
             <!--Anfang Ergebniss Ausgabe -->
-            <Border x:Name="grd_Ergebnisse" Visibility="Visible" BorderBrush="White" Grid.Row="1"    BorderThickness="2" CornerRadius="10" Margin="10" >
+            <Border x:Name="grd_Ergebnisse" Visibility="Hidden" BorderBrush="White" Grid.Row="1"    BorderThickness="2" CornerRadius="10" Margin="10" >
 
 
                 <Grid x:Name="grd_ErgebnisFenster" >
