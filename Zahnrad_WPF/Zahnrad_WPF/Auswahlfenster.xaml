@@ -467,7 +467,7 @@
                         <Label Foreground="White" FontWeight="Bold" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Eingabe Parameter</Label>
 
                         <!-- Eingabefeld 1 -->
-                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" Margin="0,0.429,-23.857,0.429" Width="693" >
+                        <StackPanel HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal">
 
 
                             <Label Margin="105 5 1 5" Foreground="White" Content="Zähnezahl:" FontSize="20"/>
