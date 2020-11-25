@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zahnrad_WPF"
-        mc:Ignorable="d" MaxHeight="700" MinHeight="700" Height="700" MaxWidth="1300" MinWidth="1300" Width="1300" Icon="cogwheel_icon-icons.com_70237.png">
+        mc:Ignorable="d" Title="Zahnradberechnung" MaxHeight="700" MinHeight="700" Height="700" MaxWidth="1300" MinWidth="1300" Width="1300" Icon="cogwheel_icon-icons.com_70237.png">
 
     <!--Background Farbe-->
     <Window.Background>
