@@ -348,7 +348,7 @@
 
                             <TextBox x:Name="txt_GeaVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
 
 
 
@@ -375,7 +375,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_GeaVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -474,7 +474,7 @@
 
                             <TextBox x:Name="txt_GeiVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
 
 
 
@@ -501,7 +501,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_GeiVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -603,7 +603,7 @@
 
                             <TextBox x:Name="txt_SrVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
 
 
                             <Label Margin="210 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
@@ -626,7 +626,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_SrVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -648,7 +648,7 @@
 
 
 
-                            <Label Margin="108 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <Label Margin="74 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
 
                             <TextBox x:Name="txt_SrVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -725,7 +725,7 @@
 
                             <TextBox x:Name="txt_PfVeZaehnezahl" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
-                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="" FontSize="17"/>
 
 
                             <Label Margin="210 5 1 5" Foreground="White" Content="Breite:" FontSize="20" />
@@ -748,7 +748,7 @@
                             <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
-                            <Label Margin="140 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
+                            <Label Margin="105 5 1 5" Foreground="White" Content="Eingriffswinkel:" FontSize="20" />
 
                             <TextBox x:Name="txt_PfVeEingriffswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
@@ -770,7 +770,7 @@
 
 
 
-                            <Label Margin="108 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
+                            <Label Margin="74 5 1 5" Foreground="White" Content="Schrägungswinkel:" FontSize="20"/>
 
                             <TextBox x:Name="txt_PfVeSchrägungswinkel" Height="25" Margin="0 5 1 5" Width="40" FontSize="17" />
 
