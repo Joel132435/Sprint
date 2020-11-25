@@ -244,8 +244,8 @@ namespace Zahnrad_WPF
             if (cb_GeaVeMaterial.SelectedIndex == 1)
             {
 
-                lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000785 , 2);
-                lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000785 * 1.5 , 2);
+                lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.00000785 , 2);
+                lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.00000785 * 1.5 , 2);
 
             }
             //Kunststoff
@@ -260,8 +260,8 @@ namespace Zahnrad_WPF
             if (cb_GeaVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.00083 , 2);
-                lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.00083 * 3.35 , 2);
+                lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.0000083 , 2);
+                lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.0000083 * 3.35 , 2);
 
             }
 
@@ -312,8 +312,8 @@ namespace Zahnrad_WPF
             if (cb_GeiVeMaterial.SelectedIndex == 1)
             {
 
-                lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000785 , 2);
-                lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000785 * 1.5 , 2);
+                lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.00000785 , 2);
+                lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.00000785 * 1.5 , 2);
 
             }
             //Kunststoff
@@ -328,8 +328,8 @@ namespace Zahnrad_WPF
             if (cb_GeiVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.00083 , 2);
-                lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.00083 * 3.35 , 2);
+                lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.0000083 , 2);
+                lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.0000083 * 3.35 , 2);
 
             }
 
@@ -384,8 +384,8 @@ namespace Zahnrad_WPF
             if (cb_SrVeMaterial.SelectedIndex == 1)
             {
                 
-                lbl_Gewicht.Content = Math.Round(SZahn.VolumenBerechnen() * 0.000785 , 2);
-                lbl_Preis.Content = Math.Round(SZahn.VolumenBerechnen() * 0.000785 * 1.5 , 2);
+                lbl_Gewicht.Content = Math.Round(SZahn.VolumenBerechnen() * 0.00000785 , 2);
+                lbl_Preis.Content = Math.Round(SZahn.VolumenBerechnen() * 0.00000785 * 1.5 , 2);
 
             }
             //Kunststoff
@@ -400,8 +400,8 @@ namespace Zahnrad_WPF
             if (cb_SrVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = Math.Round(SZahn.VolumenBerechnen() * 0.00083 , 2);
-                lbl_Preis.Content = Math.Round(SZahn.VolumenBerechnen() * 0.00083 * 3.35 , 2);
+                lbl_Gewicht.Content = Math.Round(SZahn.VolumenBerechnen() * 0.0000083 , 2);
+                lbl_Preis.Content = Math.Round(SZahn.VolumenBerechnen() * 0.0000083 * 3.35 , 2);
 
             }
 
@@ -454,8 +454,8 @@ namespace Zahnrad_WPF
             if (cb_PfVeMaterial.SelectedIndex == 1)
             {
 
-                lbl_Gewicht.Content = Math.Round(PZahn.VolumenBerechnen() * 0.000785 , 2);
-                lbl_Preis.Content = Math.Round(PZahn.VolumenBerechnen() * 0.000785 * 1.5 , 2);
+                lbl_Gewicht.Content = Math.Round(PZahn.VolumenBerechnen() * 0.00000785 , 2);
+                lbl_Preis.Content = Math.Round(PZahn.VolumenBerechnen() * 0.00000785 * 1.5 , 2);
 
             }
             //Kunststoff
@@ -470,8 +470,8 @@ namespace Zahnrad_WPF
             if (cb_PfVeMaterial.SelectedIndex == 3)
             {
 
-                lbl_Gewicht.Content = Math.Round(PZahn.VolumenBerechnen() * 0.00083 , 2);
-                lbl_Preis.Content = Math.Round(PZahn.VolumenBerechnen() * 0.00083 * 3.35 , 2);
+                lbl_Gewicht.Content = Math.Round(PZahn.VolumenBerechnen() * 0.0000083 , 2);
+                lbl_Preis.Content = Math.Round(PZahn.VolumenBerechnen() * 0.0000083 * 3.35 , 2);
 
             }
 
