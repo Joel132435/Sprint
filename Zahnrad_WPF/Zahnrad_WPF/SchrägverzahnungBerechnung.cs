@@ -17,11 +17,38 @@ namespace Zahnrad_WPF
         public double Eingriffswinkel { get; set; }
         public double Schrägungswinkel { get; set; }
         public double Breite { get; set; }
-
+        public double Modul { get; set; }
 
 
 
         //Methoden zur Kontrolle 
+
+        //Test der Modul Eingabe
+        internal void TestderModulEingabe(string ModulEingabe)
+        {
+           
+                double KontrollierteModul;
+                int n;
+                n = 0;
+                do
+                {
+
+                    if (double.TryParse(ModulEingabe, out KontrollierteModul))
+                    {
+                        n++;
+                        Modul = KontrollierteModul;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+                } while (n < 1);
+
+            
+
+
+        }
 
         //Test der ZähnezahlEingabe
         internal void TestderZähnezahlEingabe(string ZähnezahlEingabe)

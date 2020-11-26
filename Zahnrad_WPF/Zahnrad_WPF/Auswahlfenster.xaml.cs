@@ -211,16 +211,18 @@ namespace Zahnrad_WPF
 
 
 
-            string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, BreiteEingabe;
+            string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, BreiteEingabe, ModulEingabe;
 
             BreiteEingabe = txt_GeaVeBreite.Text;
             ZähnezahlEingabe = txt_GeaVeZaehnezahl.Text;
             TeilkreisdurchmesserEingabe = txt_GeaVeTeilkreisdurchmesser.Text;
             EingriffswinkelEingabe = txt_GeaVeEingriffswinkel.Text;
             KopfspielEingabe = txt_GeaVeKopfspiel.Text;
+            ModulEingabe = txt_GeaVeModul.Text;
 
             //Kontrollen/Tests der Eingaben
 
+            GaZahn.TestderModulEingabe(ModulEingabe);
             GaZahn.TestderBreiteEingabe(BreiteEingabe);
             GaZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
             GaZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);
@@ -252,8 +254,8 @@ namespace Zahnrad_WPF
             if (cb_GeaVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000002300 , 2);
-                lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000002300 * 0.4 , 2);
+                lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000002300 , 4);
+                lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000002300 * 0.4 , 4);
 
             }
             //Messing
@@ -279,16 +281,18 @@ namespace Zahnrad_WPF
 
 
 
-            string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, BreiteEingabe;
+            string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, BreiteEingabe, ModulEingabe;
 
             BreiteEingabe = txt_GeiVeBreite.Text;
             ZähnezahlEingabe = txt_GeiVeZaehnezahl.Text;
             TeilkreisdurchmesserEingabe = txt_GeiVeTeilkreisdurchmesser.Text;
             EingriffswinkelEingabe = txt_GeiVeEingriffswinkel.Text;
             KopfspielEingabe = txt_GeiVeKopfspiel.Text;
+            ModulEingabe = txt_GeiVeModul.Text;
 
             //Kontrollen/Tests der Eingaben
 
+            GiZahn.TestderModulEingabe(ModulEingabe);
             GiZahn.TestderBreiteEingabe(BreiteEingabe);
             GiZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
             GiZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe);
@@ -320,8 +324,8 @@ namespace Zahnrad_WPF
             if (cb_GeiVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000002300 , 2);
-                lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000002300 * 0.4 , 2);
+                lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000002300 , 4);
+                lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000002300 * 0.4 , 4);
 
             }
             //Messing
@@ -348,7 +352,7 @@ namespace Zahnrad_WPF
 
 
 
-            string  ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, Schrägungswinkeleingabe, BreiteEingabe;
+            string  ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, Schrägungswinkeleingabe, BreiteEingabe, ModulEingabe;
 
             BreiteEingabe = txt_SrVeBreite.Text;
             ZähnezahlEingabe = txt_SrVeZaehnezahl.Text;
@@ -356,9 +360,11 @@ namespace Zahnrad_WPF
             EingriffswinkelEingabe = txt_SrVeEingriffswinkel.Text;
             KopfspielEingabe = txt_SrVeKopfspiel.Text;
             Schrägungswinkeleingabe = txt_SrVeSchrägungswinkel.Text;
+            ModulEingabe = txt_SrVeModul.Text;
 
             //Kontrollen/Tests der Eingaben
 
+            SZahn.TestderModulEingabe(ModulEingabe);
             SZahn.TestderSchrägungswinkelEingabe(Schrägungswinkeleingabe);
             SZahn.TestderBreiteEingabe(BreiteEingabe);
             SZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
@@ -392,8 +398,8 @@ namespace Zahnrad_WPF
             if (cb_SrVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = Math.Round(SZahn.VolumenBerechnen() * 0.000002300 , 2);
-                lbl_Preis.Content = Math.Round(SZahn.VolumenBerechnen() * 0.000002300 * 0.4 , 2);
+                lbl_Gewicht.Content = Math.Round(SZahn.VolumenBerechnen() * 0.000002300 , 4);
+                lbl_Preis.Content = Math.Round(SZahn.VolumenBerechnen() * 0.000002300 * 0.4 , 4);
 
             }
             //Messing
@@ -417,7 +423,7 @@ namespace Zahnrad_WPF
 
 
 
-            string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, Schrägungswinkeleingabe, BreiteEingabe;
+            string ZähnezahlEingabe, TeilkreisdurchmesserEingabe, EingriffswinkelEingabe, KopfspielEingabe, Schrägungswinkeleingabe, BreiteEingabe, ModulEingabe;
 
             BreiteEingabe = txt_PfVeBreite.Text;
             ZähnezahlEingabe = txt_PfVeZaehnezahl.Text;
@@ -425,9 +431,11 @@ namespace Zahnrad_WPF
             EingriffswinkelEingabe = txt_PfVeEingriffswinkel.Text;
             KopfspielEingabe = txt_PfVeKopfspiel.Text;
             Schrägungswinkeleingabe = txt_PfVeSchrägungswinkel.Text;
+            ModulEingabe = txt_PfVeModul.Text;
 
             //Kontrollen/Tests der Eingaben
 
+            PZahn.TestderModulEingabe(ModulEingabe);
             PZahn.TestderSchrägungswinkelEingabe(Schrägungswinkeleingabe);
             PZahn.TestderBreiteEingabe(BreiteEingabe);
             PZahn.TestderZähnezahlEingabe(ZähnezahlEingabe);
@@ -462,8 +470,8 @@ namespace Zahnrad_WPF
             if (cb_PfVeMaterial.SelectedIndex == 2)
             {
 
-                lbl_Gewicht.Content = Math.Round(PZahn.VolumenBerechnen() * 0.000002300 , 2);
-                lbl_Preis.Content = Math.Round(PZahn.VolumenBerechnen() * 0.000002300 * 4 , 2);
+                lbl_Gewicht.Content = Math.Round(PZahn.VolumenBerechnen() * 0.000002300 , 4);
+                lbl_Preis.Content = Math.Round(PZahn.VolumenBerechnen() * 0.000002300 * 4 , 4);
 
             }
             //Messing

@@ -405,13 +405,19 @@
                         <StackPanel HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
 
 
+                            <!-- Modul -->
+                            <Label Margin="137 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
 
 
+                            <TextBox x:Name="txt_GeaVeModul" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
                             <!-- Material Combobox-->
 
-                            <ComboBox x:Name="cb_GeaVeMaterial"  Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_GeaVeMaterial"  Margin=" 200 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
@@ -434,7 +440,7 @@
                 <!-- Hier Endet das Eingabefenster -->
 
 
-                <Button x:Name="btn_GeaVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeaVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_GeaVe_Berechnen" Margin="344,248,254,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeaVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
@@ -530,14 +536,21 @@
                         <!-- Eingabefeld 4 -->
                         <StackPanel HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
 
+                            <!-- Modul -->
+                            <Label Margin="137 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
 
+
+                            <TextBox x:Name="txt_GeiVeModul" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
 
 
 
 
                             <!-- Material Combobox-->
 
-                            <ComboBox x:Name="cb_GeiVeMaterial"  Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_GeiVeMaterial"  Margin=" 200 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
@@ -560,7 +573,7 @@
                 <!-- Hier Endet das Eingabefenster -->
 
 
-                <Button x:Name="btn_GeiVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeiVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_GeiVe_Berechnen" Margin="344,248,254,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_GeiVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
@@ -660,12 +673,21 @@
                         <!--Eingabefeld 3 -->
                         <StackPanel HorizontalAlignment="left" Grid.Row="4" Orientation="Horizontal">
 
+                            <!-- Modul -->
+                            <Label Margin="137 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
+
+
+                            <TextBox x:Name="txt_SrVeModul" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
 
 
 
                             <!--Material Combobox -->
 
-                            <ComboBox x:Name="cb_SrVeMaterial" Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_SrVeMaterial" Margin=" 200 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
@@ -687,7 +709,7 @@
                 <!-- Hier Endet das Eingabefenster -->
 
 
-                <Button x:Name="btn_SrVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_SrVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_SrVe_Berechnen" Margin="344,248,254,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_SrVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
@@ -782,12 +804,21 @@
                         <!--Eingabefeld 3 -->
                         <StackPanel HorizontalAlignment="left" Grid.Row="4" Orientation="Horizontal">
 
+                            <!-- Modul -->
+                            <Label Margin="137 5 1 5" Foreground="White" Content="Modul:" FontSize="20" />
+
+
+                            <TextBox x:Name="txt_PfVeModul" Height="25" Margin="0 5 1 5" Width="40"  FontSize="17"/>
+
+
+                            <Label  Margin="1 5 0 5" Foreground="White" Content="mm" FontSize="17"/>
+
 
 
 
                             <!--Material Combobox -->
 
-                            <ComboBox x:Name="cb_PfVeMaterial" Margin=" 450 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <ComboBox x:Name="cb_PfVeMaterial" Margin=" 200 5 5 5 "  VerticalAlignment="Center" Width="150"  SelectedIndex="0" FontSize="17" MaxDropDownHeight="200" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
                                 <ListBoxItem Content="Materialauswahl" VerticalAlignment="Center" HorizontalAlignment="Center "/>
 
@@ -809,7 +840,7 @@
                 <!-- Hier Endet das Eingabefenster -->
 
 
-                <Button x:Name="btn_PfVe_Berechnen" Margin="300,248,298,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_PfVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
+                <Button x:Name="btn_PfVe_Berechnen" Margin="344,248,254,32" Width="94" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_PfVe_berechnung_Click" RenderTransformOrigin="0.505,-0.425">Berechnen</Button>
 
 
             </Grid>
