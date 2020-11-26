@@ -160,7 +160,7 @@ namespace Zahnrad_WPF
                 else
                 {
 
-                    Kopfspiel = (Teilkreisdurchmesser / Zähnezahl) * 0.167;
+                    Kopfspiel = Modul * 0.167;
                     MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe","Kopfspiel");
                     return;
                 }
@@ -231,14 +231,14 @@ namespace Zahnrad_WPF
             do
             {
 
-                if (Kopfspiel <= 0.3 * (Teilkreisdurchmesser / Zähnezahl) && Kopfspiel >= 0.1 * (Teilkreisdurchmesser / Zähnezahl))
+                if (Kopfspiel <= 0.3 * Modul && Kopfspiel >= 0.1 * Modul)
                 {
                     n++;
 
                 }
                 else
                 {
-                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * (Teilkreisdurchmesser / Zähnezahl) + " - " + 0.3 * (Teilkreisdurchmesser / Zähnezahl) + ") !", "Kopfspiel", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             } while (n < 1);
@@ -272,7 +272,7 @@ namespace Zahnrad_WPF
         {
             double ZahnhöheAusgabe;
 
-            ZahnhöheAusgabe = 2 * (Teilkreisdurchmesser / Zähnezahl) + Kopfspiel;
+            ZahnhöheAusgabe = 2 * Modul + Kopfspiel;
 
             return Math.Round(ZahnhöheAusgabe, 3);
         }
@@ -283,7 +283,7 @@ namespace Zahnrad_WPF
         {
             double ZahnfußhöheAusgabe;
 
-            ZahnfußhöheAusgabe = (Teilkreisdurchmesser / Zähnezahl) + Kopfspiel;
+            ZahnfußhöheAusgabe = Modul + Kopfspiel;
 
             return Math.Round(ZahnfußhöheAusgabe, 3);
         }
@@ -294,7 +294,7 @@ namespace Zahnrad_WPF
         {
             double ZahnkopfhöheAusgabe;
 
-            ZahnkopfhöheAusgabe = (Teilkreisdurchmesser / Zähnezahl);
+            ZahnkopfhöheAusgabe = Modul;
 
             return Math.Round(ZahnkopfhöheAusgabe, 3);
         }
@@ -305,7 +305,7 @@ namespace Zahnrad_WPF
         {
             double TeilungAusgabe;
 
-            TeilungAusgabe = Math.PI * (Teilkreisdurchmesser / Zähnezahl);
+            TeilungAusgabe = Math.PI * Modul;
 
             return Math.Round(TeilungAusgabe, 3);
         }
@@ -316,7 +316,7 @@ namespace Zahnrad_WPF
         {
             double FußkreisdurchmesserAusgabe;
 
-            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * ((Teilkreisdurchmesser / Zähnezahl) + Kopfspiel);
+            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * (Modul + Kopfspiel);
 
             return Math.Round(FußkreisdurchmesserAusgabe, 3);
         }
@@ -330,7 +330,7 @@ namespace Zahnrad_WPF
             degE = (Eingriffswinkel * (Math.PI)) / 180;
             degS = (Schrägungswinkel * (Math.PI)) / 180;
 
-            GrundkreisdurchmesserAusgabe = Zähnezahl * ( ( Math.Cos(degE) * (Teilkreisdurchmesser / Zähnezahl)) / Math.Cos(degS));
+            GrundkreisdurchmesserAusgabe = Zähnezahl * ( ( Math.Cos(degE) * Modul) / Math.Cos(degS));
             return Math.Round(GrundkreisdurchmesserAusgabe, 3);
         }
 
@@ -341,7 +341,7 @@ namespace Zahnrad_WPF
             double KopfkreisdurchmesserAusgabe;
 
 
-            KopfkreisdurchmesserAusgabe = Teilkreisdurchmesser + 2 * (Teilkreisdurchmesser / Zähnezahl);
+            KopfkreisdurchmesserAusgabe = Teilkreisdurchmesser + 2 * Modul;
 
 
             return Math.Round(KopfkreisdurchmesserAusgabe, 3);
@@ -353,7 +353,7 @@ namespace Zahnrad_WPF
         {
             double VolumenAusgabe;
 
-            VolumenAusgabe = Math.Pow(Teilkreisdurchmesser + 2 * (Teilkreisdurchmesser / Zähnezahl) / 2, 2) * Breite;
+            VolumenAusgabe = Math.Pow(Teilkreisdurchmesser + 2 * Modul / 2, 2) * Breite;
 
             return Math.Round(VolumenAusgabe, 2);
         }
