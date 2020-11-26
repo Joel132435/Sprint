@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zahnrad_WPF"
-        mc:Ignorable="d" Title="Zahnradberechnung" MaxHeight="700" MinHeight="700" Height="700" MaxWidth="1300" MinWidth="1300" Width="1300" Icon="cogwheel_icon-icons.com_70237.png">
+        mc:Ignorable="d" Title="Zahnradberechnung" MaxHeight="700" MinHeight="700" Height="700" MaxWidth="1300" MinWidth="1300" Width="1300" Icon="Bilder/cogwheel_icon-icons.com_70237.png">
 
     <!--Background Farbe-->
     <Window.Background>
@@ -40,7 +40,7 @@
 
 
                 <!-- Bild eingefügt in der ersten Spalte -->
-                <Image Margin="32,-12,32,32" Grid.Row="0" Source="kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" OpacityMask="#FF100E0E" Grid.RowSpan="2" RenderTransformOrigin="0.52,0.4" />
+                <Image Margin="32,-12,32,32" Grid.Row="0" Source="Bilder/kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" OpacityMask="#FF100E0E" Grid.RowSpan="2" RenderTransformOrigin="0.52,0.4" />
 
                 <Label Grid.Row="1" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center">Verzeichnis</Label>
 
@@ -821,24 +821,24 @@
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10" x:Name="brd_StirnradGeradverzahnungaußenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Source="Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
+                    <Image Source="Bilder/Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
                 </Border>
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradGeradverzahnunginnenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Margin="25,8,25,8" Source="12321312313.png" Stretch="Fill"/>
+                    <Image Margin="25,8,25,8" Source="Bilder/12321312313.png" Stretch="Fill"/>
                 </Border>
 
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"   x:Name="brd_StirnradSchrägverzahnungBild" Visibility="Hidden" Margin="-41,-41,-15,-18"  >
 
-                    <Image Source="Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
+                    <Image Source="Bilder/Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
                 </Border>
 
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradPfeilverzahnungBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Margin="8" Source="unnamed.jpg" Stretch="Fill"/>
+                    <Image Margin="8" Source="Bilder/unnamed.jpg" Stretch="Fill"/>
                 </Border>
 
 

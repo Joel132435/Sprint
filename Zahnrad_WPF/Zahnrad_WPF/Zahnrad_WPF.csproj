@@ -106,37 +106,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="original.jpg" />
+    <Resource Include="Bilder\original.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sintered-structural-components-for-gearboxes.jpg" />
+    <Resource Include="Bilder\sintered-structural-components-for-gearboxes.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cogwheel_icon-icons.com_70237.png" />
+    <Resource Include="Bilder\cogwheel_icon-icons.com_70237.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" />
+    <Resource Include="Bilder\kisspng-black-gear-vector-graphics-clip-art-wheel-home-leitner-powertrain-5c0245c40cfa44.3953300415436528040532.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Zahnrad Hintergrund.png" />
+    <Resource Include="Bilder\Zahnrad Hintergrund.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Startseite Stirnrad.jpg" />
+    <Resource Include="Bilder\Startseite Stirnrad.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Stira_schraeg_links.jpg" />
+    <Resource Include="Bilder\Stira_schraeg_links.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="unnamed.jpg" />
+    <Resource Include="Bilder\unnamed.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="22430-010140015-Kegelrad-Bevel-gear.jpg" />
+    <Resource Include="Bilder\22430-010140015-Kegelrad-Bevel-gear.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Gerdverzahnunginnen.jpg" />
+    <Resource Include="Bilder\Gerdverzahnunginnen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="12321312313.png" />
+    <Resource Include="Bilder\12321312313.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
