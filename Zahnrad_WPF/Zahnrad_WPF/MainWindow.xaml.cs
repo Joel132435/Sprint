@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,18 @@ namespace Zahnrad_WPF
         {
             Close();
         }
-       
+
+        private void btn__Catia_Starten_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+            //Starten der Catia App 
+            string Programmname = "CNEXT.exe";
+            Process.Start(Programmname);
+
+
+            
+        }
+
     }
 }

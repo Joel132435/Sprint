@@ -306,7 +306,12 @@
                     </StackPanel>
 
                     <!-- Anzeige Button Programm Schließen-->
-                    <Button x:Name="Schließen" HorizontalAlignment="Left" Margin="389,6,0,10" Click="btn_Schließen_Click" Height="35" Width="130" Content="Programm schließen" Grid.ColumnSpan="2" Grid.Row="7"/>
+                    <Button x:Name="Schließen" HorizontalAlignment="Left" Margin="422,9,0,7" Click="btn_Schließen_Click" Height="35" Width="130" Content="Programm schließen" Grid.ColumnSpan="2" Grid.Row="7"/>
+                    <Button Visibility="Hidden" x:Name="btn_GeaVeCatia" HorizontalAlignment="Left" Margin="422,20,0,47" Click="btn_GeaVeCatia_Click" Height="35" Width="130" Content="Übertragen auf Catia" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    <Button Visibility="Hidden" x:Name="btn_GeiVeCatia" HorizontalAlignment="Left" Margin="422,20,0,47" Click="btn_GeiVeCatia_Click" Height="35" Width="130" Content="Übertragen auf Catia" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    <Button Visibility="Hidden" x:Name="btn_PfVeCatia" HorizontalAlignment="Left" Margin="422,20,0,47" Click="btn_PfVeCatia_Click" Height="35" Width="130" Content="Übertragen auf Catia" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    <Button Visibility="Hidden" x:Name="btn_SrVeCatia" HorizontalAlignment="Left" Margin="422,20,0,47" Click="btn_SrVeCatia_Click" Height="35" Width="130" Content="Übertragen auf Catia" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
 
 
                 </Grid>

@@ -40,6 +40,11 @@ namespace Zahnrad_WPF
             brd_StirnradPfeilverzahnungBild.Visibility = Visibility.Hidden;
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
 
+            btn_GeaVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
+
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
             txt_GeaVeEingriffswinkel.Clear();
@@ -80,6 +85,11 @@ namespace Zahnrad_WPF
             brd_StirnradGeradverzahnunginnenBild.Visibility = Visibility.Hidden;
             brd_StirnradPfeilverzahnungBild.Visibility = Visibility.Hidden;
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
+
+            btn_GeaVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -123,6 +133,11 @@ namespace Zahnrad_WPF
             brd_StirnradPfeilverzahnungBild.Visibility = Visibility.Visible;
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
 
+            btn_GeaVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
+
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
             txt_GeaVeEingriffswinkel.Clear();
@@ -163,6 +178,11 @@ namespace Zahnrad_WPF
             brd_StirnradGeradverzahnunginnenBild.Visibility = Visibility.Hidden;
             brd_StirnradPfeilverzahnungBild.Visibility = Visibility.Hidden;
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Visible;
+
+            btn_GeaVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -269,6 +289,7 @@ namespace Zahnrad_WPF
 
 
             grd_Ergebnisse.Visibility = Visibility.Visible;
+            btn_GeaVeCatia.Visibility = Visibility.Visible;
 
         }
         //Geradverzahnung innen Berechnen
@@ -339,6 +360,8 @@ namespace Zahnrad_WPF
 
 
             grd_Ergebnisse.Visibility = Visibility.Visible;
+            btn_GeiVeCatia.Visibility = Visibility.Visible;
+
 
         }
 
@@ -412,6 +435,8 @@ namespace Zahnrad_WPF
             }
 
             grd_Ergebnisse.Visibility = Visibility.Visible;
+            btn_SrVeCatia.Visibility = Visibility.Visible;
+
         }
         //Pfeilverzahnung Berechnen
         private void btn_PfVe_berechnung_Click(object sender, RoutedEventArgs e)
@@ -484,9 +509,36 @@ namespace Zahnrad_WPF
             }
 
             grd_Ergebnisse.Visibility = Visibility.Visible;
+            btn_PfVeCatia.Visibility = Visibility.Visible;
+
         }
 
+        private void btn_GeaVeCatia_Click(object sender, RoutedEventArgs e)
+        {
 
 
+
+        }
+
+        private void btn_GeiVeCatia_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+        }
+
+        private void btn_SrVeCatia_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+        }
+
+        private void btn_PfVeCatia_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+        }
     }
 }

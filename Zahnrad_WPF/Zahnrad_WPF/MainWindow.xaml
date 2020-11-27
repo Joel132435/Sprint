@@ -81,8 +81,9 @@
                     </Grid.ColumnDefinitions>
 
                     <!-- Buttons zum Weiterführen oder Beenden des Programms -->
-                    <Button  x:Name="btn_Weiter" Grid.Column="0"   Width="100" Click="btn_Weiter_Click" >Weiter</Button>
-                    <Button  x:Name="btn_Beenden" Grid.Column="2"  Width="100" Click="btn_Beenden_Click">Beenden</Button>
+                    <Button  x:Name="btn_Weiter" Grid.Column="0"   Width="100" Click="btn_Weiter_Click" Margin="10,0,75,0" >Weiter</Button>
+                    <Button  x:Name="btn_Beenden" Grid.Column="1"  Width="100" Click="btn_Beenden_Click" Margin="85,0,0,0">Beenden</Button>
+                    <Button x:Name="btn__Catia_Starten" Width="100" Click="btn__Catia_Starten_Click" Grid.ColumnSpan="2" Margin="139,0,131,0">CatiaV5 Starten</Button>
 
 
                 </Grid>
