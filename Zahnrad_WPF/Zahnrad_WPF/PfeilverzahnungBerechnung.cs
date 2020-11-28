@@ -21,244 +21,246 @@ namespace Zahnrad_WPF
 
 
 
-        //Methoden zur Kontrolle
-        
+        //Methoden zur Kontrolle 
+
         //Test der Modul Eingabe
-        internal void TestderModulEingabe(string ModulEingabe)
+        internal int TestderModulEingabe(string ModulEingabe)
         {
-            
-                double KontrollierteModul;
-                int n;
-                n = 0;
-                do
-                {
-
-                    if (double.TryParse(ModulEingabe, out KontrollierteModul))
-                    {
-                        n++;
-                        Modul = KontrollierteModul;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
-                    }
-                } while (n < 1);
-
-            
-            
-            
-        }
 
 
-        //Test der ZähnezahlEingabe
-        internal void TestderZähnezahlEingabe(string ZähnezahlEingabe)
-        {
-            double KontrollierteZähnezahl;
-            int n;
-            n = 0;
-            do
+            double KontrollierteModul;
+
+            if (double.TryParse(ModulEingabe, out KontrollierteModul))
             {
 
-                if (double.TryParse(ZähnezahlEingabe, out KontrollierteZähnezahl))
-                {
-                    n++;
-                    Zähnezahl = KontrollierteZähnezahl;
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben","Zähnezahl", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+                Modul = KontrollierteModul;
+
+                return 1;
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                return 0;
+
+            }
+
         }
 
-        //Test der BreitenEingabe
-        internal void TestderBreiteEingabe(string BreiteEingabe)
+        internal int TestderZähnezahlEingabe(string ZähnezahlEingabe)
+        {
+
+            double KontrollierteZähnezahl;
+
+            if (double.TryParse(ZähnezahlEingabe, out KontrollierteZähnezahl))
+            {
+
+                Zähnezahl = KontrollierteZähnezahl;
+                return 1;
+
+            }
+
+            else
+            {
+                MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Zähnezahl", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                return 0;
+
+            }
+
+        }
+
+        //Test der Breiteneingabe
+        internal int TestderBreiteEingabe(string BreiteEingabe)
         {
             double KontrollierteBreite;
-            int n;
-            n = 0;
-            do
+
+            if (double.TryParse(BreiteEingabe, out KontrollierteBreite))
             {
 
-                if (double.TryParse(BreiteEingabe, out KontrollierteBreite))
-                {
-                    n++;
-                    Breite = KontrollierteBreite;
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Breite Eingabe bitte Zahl eingeben","Breite", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
-        }
+                Breite = KontrollierteBreite;
+                return 1;
 
-        //Test der TeilkreisdurchmesserEingabe
-        internal void TestdesTeilkreisdurchmessersEingabe(string TeilkreisdurchmesserEingabe)
+            }
+            else
+            {
+                MessageBox.Show("Falsche Breite Eingabe bitte Zahl eingeben", "Breite", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                return 0;
+
+            }
+
+        }
+        //Test der Teilkreisdurchmessereingabe
+
+        internal int TestdesTeilkreisdurchmessersEingabe(string TeilkreisdurchmesserEingabe)
         {
             double KontrollierterTeilkreisdurchmesser;
-            int n;
-            n = 0;
-            do
+
+            if (double.TryParse(TeilkreisdurchmesserEingabe, out KontrollierterTeilkreisdurchmesser))
             {
 
-                if (double.TryParse(TeilkreisdurchmesserEingabe, out KontrollierterTeilkreisdurchmesser))
-                {
-                    n++;
-                    Teilkreisdurchmesser = KontrollierterTeilkreisdurchmesser;
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Teilkreisdurchmessereingabe Eingabe bitte Zahl eingeben","Teilkreisdurchmesser", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
-        }
+                Teilkreisdurchmesser = KontrollierterTeilkreisdurchmesser;
+                return 1;
 
-        //Test der EingriffswinkelEingabe
-        internal void TestderEingriffswinkelEingabe(string EingriffswinkelEingabe)
+            }
+            else
+            {
+
+                MessageBox.Show("Falsche Teilkreisdurchmessereingabe Eingabe bitte Zahl eingeben", "Teilkreisdurchmesser", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+
+            }
+
+        }
+        //Test der Eingriffswinkeleingabe
+
+        internal int TestderEingriffswinkelEingabe(string EingriffswinkelEingabe)
         {
             double KontrollierterEigriffswinkel;
-            int n;
-            n = 0;
-            do
+
+
+
+            if (double.TryParse(EingriffswinkelEingabe, out KontrollierterEigriffswinkel))
             {
+                Eingriffswinkel = KontrollierterEigriffswinkel;
+                return 1;
+            }
+            else
+            {
+                MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche/keine Eingabe", "Eingriffswinkel");
 
-                if (double.TryParse(EingriffswinkelEingabe, out KontrollierterEigriffswinkel))
-                {
-                    Eingriffswinkel = KontrollierterEigriffswinkel;
-                    n++;
-                }
-                else
-                {
-                    MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche/keine Eingabe","Eingriffswinkel");
-                    Eingriffswinkel = 20;
-                    return;
+                Eingriffswinkel = 20;
 
-                }
-            } while (n < 1);
+                return 1;
+
+            }
+
         }
+        //Test der Kopfspieleingabe
 
-        //Test der KopfspielEingabe
-        internal void TestderKopfspielEingabe(string KopfspielEingabe)
+        internal int TestderKopfspielEingabe(string KopfspielEingabe)
         {
             double KontrolliertesKopfspiel;
-            int n;
-            n = 0;
-            do
+
+
+            if (double.TryParse(KopfspielEingabe, out KontrolliertesKopfspiel))
             {
 
-                if (double.TryParse(KopfspielEingabe, out KontrolliertesKopfspiel))
-                {
-                    n++;
-                    Kopfspiel = KontrolliertesKopfspiel;
-                }
-                else
-                {
+                Kopfspiel = KontrolliertesKopfspiel;
 
-                    Kopfspiel = Modul * 0.167;
-                    MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe","Kopfspiel");
-                    return;
-                }
+                return 1;
 
-
-            } while (n < 1);
-        }
-
-        // Test der SchrägungswinkelEingabe
-
-        internal void TestderSchrägungswinkelEingabe(string SchrägungswinkelEingabe)
-        {
-            double KontrollierterSchrägungswinkel;
-            int n;
-            n = 0;
-            do
+            }
+            else
             {
 
-                if (double.TryParse(SchrägungswinkelEingabe, out KontrollierterSchrägungswinkel))
-                {
-                    n++;
-                    Schrägungswinkel = KontrollierterSchrägungswinkel;
-                }
-                else
-                {
+                Kopfspiel = Modul * 0.167;
 
-                    MessageBox.Show("Falsche Schrägungswinkel Eingabe bitte Zahl eingeben","Schrägungswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
+                MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe", "Kopfspiel");
 
+                return 1;
 
-            } while (n < 1);
+            }
+
 
 
         }
 
         //Kontrolle des Wertebereiches für Eingriffswinkel
 
-        internal void KontrolleWertebereichEingriffswinkel()
+        internal int KontrolleWertebereichEingriffswinkel()
         {
 
-            int n;
-            n = 0;
-            do
+            if (Eingriffswinkel <= 90 && Eingriffswinkel > 0)
+            {
+                return 1;
+            }
+            else
             {
 
-                if (Eingriffswinkel <= 90 && Eingriffswinkel > 0)
-                {
-                    n++;
+                MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Eingriffswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                }
-                else
-                {
+                return 0;
 
-                    MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Eingriffswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+            }
+
         }
-
         //Kontrolle des Wertebereiches für Kopfspiel
-        internal void KontrolleWertebereichKopfspiel()
+
+        internal int KontrolleWertebereichKopfspiel()
         {
-            int n;
-            n = 0;
-            do
+
+
+
+            if (Kopfspiel <= 0.3 * Modul && Kopfspiel >= 0.1 * Modul)
+            {
+                return 1;
+            }
+            else
             {
 
-                if (Kopfspiel <= 0.3 * Modul && Kopfspiel >= 0.1 * Modul)
-                {
-                    n++;
+                MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                }
-                else
-                {
-                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+                return 0;
+
+            }
+
         }
+
+        // Test der SchrägungswinkelEingabe
+
+        internal int TestderSchrägungswinkelEingabe(string SchrägungswinkelEingabe)
+        {
+            double KontrollierterSchrägungswinkel;
+
+
+
+            if (double.TryParse(SchrägungswinkelEingabe, out KontrollierterSchrägungswinkel))
+            {
+
+                Schrägungswinkel = KontrollierterSchrägungswinkel;
+
+                return 1;
+
+            }
+
+            else
+            {
+
+
+                MessageBox.Show("Falsche Schrägungswinkel Eingabe bitte Zahl eingeben", "Schrägungswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                return 0;
+
+            }
+
+
+        }
+
 
         // Kolltrolle des WertebereichSchrägungswinkel
-        internal void KontrolleWertebereichSchrägungswinkel()
+        internal int KontrolleWertebereichSchrägungswinkel()
         {
-            int n;
-            n = 0;
-            do
+
+            if (Schrägungswinkel > 0 && Schrägungswinkel <= 90)
+            {
+                return 1;
+
+            }
+
+            else
             {
 
-                if (Schrägungswinkel > 0 && Schrägungswinkel <= 90)
-                {
-                    n++;
+                MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Schrägungswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                }
-                else
-                {
-                    MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Schrägungswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+                return 0;
+
+            }
+
         }
 
         //Methoden zur Berechnung

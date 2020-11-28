@@ -18,193 +18,196 @@ namespace Zahnrad_WPF
         public double Modul { get; set; }
 
 
+        
+
         //Methoden zur Kontrolle 
 
         //Test der Modul Eingabe
-        internal void TestderModulEingabe(string ModulEingabe)
+        internal int TestderModulEingabe(string ModulEingabe)
         {
            
-                double KontrollierteModul;
-                int n;
-                n = 0;
-                do
-                {
+                   
+            double KontrollierteModul;               
+                    
+            if (double.TryParse(ModulEingabe, out KontrollierteModul))                  
+            {
+                        
+                Modul = KontrollierteModul;
 
-                    if (double.TryParse(ModulEingabe, out KontrollierteModul))
-                    {
-                        n++;
-                        Modul = KontrollierteModul;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
-                    }
-                } while (n < 1);
-
-            
-
-
+                return 1;
+                    
+            }
+                   
+            else                 
+            {
+                        
+                MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
+                        
+                return 0 ;
+                    
+            }
+                       
         }
 
-        internal void TestderZähnezahlEingabe(string ZähnezahlEingabe)
+        internal int TestderZähnezahlEingabe(string ZähnezahlEingabe)
         {
+            
             double KontrollierteZähnezahl;
-            int n;
-            n = 0;
-            do
+                
+            if (double.TryParse(ZähnezahlEingabe, out KontrollierteZähnezahl))               
             {
-
-                if (double.TryParse(ZähnezahlEingabe, out KontrollierteZähnezahl))
-                {
-                    n++;
-                    Zähnezahl = KontrollierteZähnezahl;
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben","Zähnezahl", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+                   
+                Zähnezahl = KontrollierteZähnezahl;
+                return 1;
+                
+            }
+                
+            else                
+            {               
+                MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben","Zähnezahl", MessageBoxButton.OK, MessageBoxImage.Error);
+                    
+                return 0;
+                
+            }
+           
         }
 
         //Test der Breiteneingabe
-        internal void TestderBreiteEingabe(string BreiteEingabe)
+        internal int TestderBreiteEingabe(string BreiteEingabe)
         {
             double KontrollierteBreite;
-            int n;
-            n = 0;
-            do
-            {
+                
+            if (double.TryParse(BreiteEingabe, out KontrollierteBreite))               
+            {                 
+                    
+                Breite = KontrollierteBreite;
+                return 1;
 
-                if (double.TryParse(BreiteEingabe, out KontrollierteBreite))
-                {
-                    n++;
-                    Breite = KontrollierteBreite;
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Breite Eingabe bitte Zahl eingeben","Breite", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+            }               
+            else               
+            {
+                MessageBox.Show("Falsche Breite Eingabe bitte Zahl eingeben","Breite", MessageBoxButton.OK, MessageBoxImage.Error);
+                    
+                return 0;
+               
+            }
+            
         }
         //Test der Teilkreisdurchmessereingabe
 
-        internal void TestdesTeilkreisdurchmessersEingabe(string TeilkreisdurchmesserEingabe)
+        internal int TestdesTeilkreisdurchmessersEingabe(string TeilkreisdurchmesserEingabe)
         {
             double KontrollierterTeilkreisdurchmesser;
-            int n;
-            n = 0;
-            do
-            {
+                            
+            if (double.TryParse(TeilkreisdurchmesserEingabe, out KontrollierterTeilkreisdurchmesser))              
+            {                    
+                    
+                Teilkreisdurchmesser = KontrollierterTeilkreisdurchmesser;
+                return 1;
 
-                if (double.TryParse(TeilkreisdurchmesserEingabe, out KontrollierterTeilkreisdurchmesser))
-                {
-                    n++;
-                    Teilkreisdurchmesser = KontrollierterTeilkreisdurchmesser;
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Teilkreisdurchmessereingabe Eingabe bitte Zahl eingeben","Teilkreisdurchmesser", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+            }                
+            else           
+            {
+                   
+                MessageBox.Show("Falsche Teilkreisdurchmessereingabe Eingabe bitte Zahl eingeben","Teilkreisdurchmesser", MessageBoxButton.OK, MessageBoxImage.Error);                 
+                return 0;   
+                
+            }
+          
         }
         //Test der Eingriffswinkeleingabe
 
-        internal void TestderEingriffswinkelEingabe(string EingriffswinkelEingabe)
+        internal int TestderEingriffswinkelEingabe(string EingriffswinkelEingabe)
         {
             double KontrollierterEigriffswinkel;
-            int n;
-            n = 0;
-            do
+            
+
+               
+            if (double.TryParse(EingriffswinkelEingabe, out KontrollierterEigriffswinkel))     
+            {               
+                Eingriffswinkel = KontrollierterEigriffswinkel;
+                return 1;
+            }
+            else
             {
-
-                if (double.TryParse(EingriffswinkelEingabe, out KontrollierterEigriffswinkel))
-                {
-                    Eingriffswinkel = KontrollierterEigriffswinkel;
-                    n++;
-                }
-                else
-                {
-                    MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche/keine Eingabe","Eingriffswinkel");
-                    Eingriffswinkel = 20;
-                    return;
-
-                }
-            } while (n < 1);
+                MessageBox.Show("Ihr Eingriffswinkel wurde auf 20 gesetzt da falsche/keine Eingabe","Eingriffswinkel");
+                    
+                Eingriffswinkel = 20;
+                   
+                return 1;
+                
+            }
+          
         }
         //Test der Kopfspieleingabe
 
-        internal void TestderKopfspielEingabe(string KopfspielEingabe)
+        internal int TestderKopfspielEingabe(string KopfspielEingabe)
         {
             double KontrolliertesKopfspiel;
-            int n;
-            n = 0;
-            do
+            
+               
+            if (double.TryParse(KopfspielEingabe, out KontrolliertesKopfspiel))                
             {
+                                
+                Kopfspiel = KontrolliertesKopfspiel;
 
-                if (double.TryParse(KopfspielEingabe, out KontrolliertesKopfspiel))
-                {
-                    n++;
-                    Kopfspiel = KontrolliertesKopfspiel;
-                }
-                else
-                {
+                return 1;
+              
+            }           
+            else               
+            {                    
+                   
+                Kopfspiel = Modul * 0.167;
                     
-                    Kopfspiel = Modul * 0.167;
-                    MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe","Kopfspiel");
-                    return;
-                }
+                MessageBox.Show("Ihr Kopfspiel wurde auf " + Kopfspiel + " gesetzt da falsche/keine Eingabe","Kopfspiel");
+                    
+                return 1;   
+                
+            }
 
                
-            } while (n < 1);
+            
         }
 
         //Kontrolle des Wertebereiches für Eingriffswinkel
 
-        internal void KontrolleWertebereichEingriffswinkel()
-        {
-
-            int n;
-            n = 0;
-            do
+        internal int KontrolleWertebereichEingriffswinkel()
+        {                    
+                
+            if (Eingriffswinkel <= 90 && Eingriffswinkel > 0)                
             {
-
-                if (Eingriffswinkel <= 90 && Eingriffswinkel > 0)
-                {
-                    n++;
-
-                }
-                else
-                {
-
-                    MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Eingriffswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+                return 1;            
+            }              
+            else               
+            {
+                    
+                MessageBox.Show("Bitte geben sie Winkel im Wertebereich an (0 - 90) !", "Eingriffswinkel", MessageBoxButton.OK, MessageBoxImage.Error);
+                  
+                return 0; 
+                
+            }
+           
         }
         //Kontrolle des Wertebereiches für Kopfspiel
 
-        internal void KontrolleWertebereichKopfspiel()
+        internal int KontrolleWertebereichKopfspiel()
         {
-            int n;
-            n = 0;
-            do
+           
+
+                
+            if (Kopfspiel <= 0.3 * Modul && Kopfspiel >= 0.1 * Modul)            
             {
-
-                if (Kopfspiel <= 0.3 * Modul && Kopfspiel >= 0.1 * Modul)
-                {
-                    n++;
-
-                }
-                else
-                {
-                    MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel" , MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } while (n < 1);
+                return 1;     
+            }               
+            else             
+            {
+                    
+                MessageBox.Show("Bitte geben sie Zahlen im Wertebereich an (" + 0.1 * Modul + " - " + 0.3 * Modul + ") !", "Kopfspiel" , MessageBoxButton.OK, MessageBoxImage.Error);
+                    
+                return 0;
+      
+            }
+         
         }
 
 
