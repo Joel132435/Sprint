@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sprint3_WPF_Catia"
         mc:Ignorable="d"
-        Title="Zahnradberechnung" MaxHeight="450" MinHeight="450" Height="450" MaxWidth="800" MinWidth="800" Width="800" SizeToContent="WidthAndHeight" Icon="cogwheel_icon-icons.com_70237.png">
+        Title="Zahnradberechnung" MaxHeight="450" MinHeight="450" Height="450" MaxWidth="800" MinWidth="800" Width="800" SizeToContent="WidthAndHeight" Icon="Bilder/cogwheel_icon-icons.com_70237.png">
 
 
     <!--Background Farbe-->
@@ -30,8 +30,8 @@
 
             <!-- Stackpanel für Bilder -->
             <StackPanel Grid.Column="0" Margin="0,0,0,0" HorizontalAlignment="Right" Width="338">
-                <Image Height="199" Source="original.jpg" Margin="-9,0,9.6,0"/>
-                <Image Height="195" Source="sintered-structural-components-for-gearboxes.jpg" Margin="0,0,9.6,0" />
+                <Image Height="199" Source="Bilder/original.jpg" Margin="-9,0,9.6,0"/>
+                <Image Height="195" Source="Bilder/sintered-structural-components-for-gearboxes.jpg" Margin="0,0,9.6,0" />
 
             </StackPanel>
 

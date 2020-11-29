@@ -39,7 +39,7 @@
 
 
                 <!-- Bild eingefügt in der ersten Spalte -->
-                <Image Margin="32,-12,32,32" Grid.Row="0" Source="Zahnrad Hintergrund.png" OpacityMask="#FF100E0E" Grid.RowSpan="2" RenderTransformOrigin="0.52,0.4" />
+                <Image Margin="32,-12,32,32" Grid.Row="0" Source="Bilder/Zahnrad Hintergrund.png" OpacityMask="#FF100E0E" Grid.RowSpan="2" RenderTransformOrigin="0.52,0.4" />
 
                 <Label Grid.Row="1" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center">Verzeichnis</Label>
 
@@ -856,24 +856,24 @@
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10" x:Name="brd_StirnradGeradverzahnungaußenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Source="Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
+                    <Image Source="Bilder/Startseite Stirnrad.jpg" Margin="5" Grid.Column="1"/>
                 </Border>
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradGeradverzahnunginnenBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Margin="25,8,25,8" Source="12321312313.png" Stretch="Fill"/>
+                    <Image Margin="25,8,25,8" Source="Bilder/12321312313.png" Stretch="Fill"/>
                 </Border>
 
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"   x:Name="brd_StirnradSchrägverzahnungBild" Visibility="Hidden" Margin="-41,-41,-15,-18"  >
 
-                    <Image Source="Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
+                    <Image Source="Bilder/Stira_schraeg_links.jpg" Margin="5" Grid.Column="1"/>
                 </Border>
 
 
                 <Border BorderBrush="White" BorderThickness="2"  CornerRadius="10"  x:Name="brd_StirnradPfeilverzahnungBild" Visibility="Hidden" Margin="-41,-41,-15,-18" >
 
-                    <Image Margin="8" Source="unnamed.jpg" Stretch="Fill"/>
+                    <Image Margin="8" Source="Bilder/unnamed.jpg" Stretch="Fill"/>
                 </Border>
 
 
