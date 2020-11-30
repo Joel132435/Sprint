@@ -71,8 +71,8 @@
     <Compile Include="Auswahlfenster.xaml.cs">
       <DependentUpon>Auswahlfenster.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GradverzahnungaußenBerechnung.cs" />
-    <Compile Include="GradverzahnunginnenBerechnung.cs" />
+    <Compile Include="GeradverzahnungaußenBerechnung.cs" />
+    <Compile Include="GeradverzahnunginnenBerechnung.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

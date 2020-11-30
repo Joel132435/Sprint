@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Zahnrad_WPF
+namespace Sprint3_WPF_Catia
 {
     class GeradverzahnungaußenBerechnung
     {
