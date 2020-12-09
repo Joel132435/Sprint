@@ -16,6 +16,16 @@ namespace Sprint3_WPF_Catia
         public double Eingriffswinkel { get; set; }
         public double Breite { get; set; }
         public double Modul { get; set; }
+        public double Kopfkreisdurchmesser { get; set; }
+        public double Fußkreisdurchmesser { get; set; }
+        public double Zahnhöhe { get; set; }
+        public double Volumen { get; set; }
+        public double Zahnfußhöhe { get; set; }
+        public double Zahnkopfhöhe { get; set; }     
+        public double TeilkreisRadius { get; set; }
+        public double Grundkreisdurchmesser { get; set; }
+        public double Teilung { get; set; }
+
 
 
 
@@ -216,82 +226,79 @@ namespace Sprint3_WPF_Catia
         //Berechnung Zahnhöhe
         internal double ZahnhöheBerechen()
         {
-            double ZahnhöheAusgabe;
+            
 
-            ZahnhöheAusgabe = 2 * Modul + Kopfspiel;
+            Zahnhöhe = 2 * Modul + Kopfspiel;
 
-            return Math.Round(ZahnhöheAusgabe, 3);
+            return Math.Round(Zahnhöhe, 3);
         }
         //Berechnung Zahnfußhöhe
 
         internal double ZahnfußhöheBerechnen()
         {
-            double ZahnfußhöheAusgabe;
+            
 
-            ZahnfußhöheAusgabe = Modul + Kopfspiel;
+            Zahnfußhöhe = Modul + Kopfspiel;
 
-            return Math.Round(ZahnfußhöheAusgabe, 3);
+            return Math.Round(Zahnfußhöhe, 3);
         }
         //Berechnung Zahnkopfhöhe
 
         internal double ZahnkopfhöheBerechnen()
         {
-            double ZahnkopfhöheAusgabe;
+            
 
-            ZahnkopfhöheAusgabe = Modul;
+            Zahnkopfhöhe = Modul;
 
-            return Math.Round(ZahnkopfhöheAusgabe, 3);
+            return Math.Round(Zahnkopfhöhe, 3);
         }
         //Berechnung Teilung
 
         internal double TeilungBerechnen()
         {
-            double TeilungAusgabe;
+            
 
-            TeilungAusgabe = Math.PI * Modul;
+            Teilung = Math.PI * Modul;
 
-            return Math.Round(TeilungAusgabe, 3);
+            return Math.Round(Teilung, 3);
         }
         //Berechnung Fußkreisdurchmesser
 
         internal double FußkreisdurchmesserBerechnen()
         {
-            double FußkreisdurchmesserAusgabe;
+           
 
-            FußkreisdurchmesserAusgabe = Teilkreisdurchmesser - 2 * (Modul + Kopfspiel);
+            Fußkreisdurchmesser = Teilkreisdurchmesser - 2 * (Modul + Kopfspiel);
 
-            return Math.Round(FußkreisdurchmesserAusgabe, 3);
+            return Math.Round(Fußkreisdurchmesser, 3);
         }
         //Berechnung Grundkreisdurchmesser
 
         internal double GrundkreisdurchmesserBerechnen()
         {
-            double deg, GrundkreisdurchmesserAusgabe;
+            double deg;
             deg = (Eingriffswinkel * (Math.PI)) / 180;
-            GrundkreisdurchmesserAusgabe = Modul * Zähnezahl * (Math.Cos(deg));
-            return Math.Round(GrundkreisdurchmesserAusgabe, 3);
+            Grundkreisdurchmesser = Modul * Zähnezahl * (Math.Cos(deg));
+            return Math.Round(Grundkreisdurchmesser, 3);
         }
         //Berechnung Kopfkreisdurchmesser
 
         internal double KopfkreisdurchmesserBerechnen()
         {
-            double KopfkreisdurchmesserAusgabe;
+
+            Kopfkreisdurchmesser = Teilkreisdurchmesser + 2 * Modul;
 
 
-            KopfkreisdurchmesserAusgabe = Teilkreisdurchmesser + 2 * Modul;
-
-
-            return Math.Round(KopfkreisdurchmesserAusgabe, 3);
+            return Math.Round(Kopfkreisdurchmesser, 3);
         }
         //Berechnung Volumen
 
         internal double VolumenBerechnen()
-        {
-            double VolumenAusgabe;
+        {           
 
-            VolumenAusgabe = Math.Pow(Teilkreisdurchmesser + 2 * Modul / 2, 2) * Breite;
+            Volumen = Math.Pow(Teilkreisdurchmesser + 2 * Modul / 2, 2) * Breite;
 
-            return Math.Round(VolumenAusgabe, 2);
+            return Math.Round(Volumen, 2);
         }
 
 

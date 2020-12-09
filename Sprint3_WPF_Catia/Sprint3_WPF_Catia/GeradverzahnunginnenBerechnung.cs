@@ -17,7 +17,7 @@ namespace Sprint3_WPF_Catia
         public double Kopfspiel { get; set; }
         public double Eingriffswinkel { get; set; }
         public double Breite { get; set; }
-
+        
 
 
         //Methoden zur Kontrolle 

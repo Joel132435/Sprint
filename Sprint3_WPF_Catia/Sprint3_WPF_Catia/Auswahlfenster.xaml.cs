@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,9 @@ namespace Sprint3_WPF_Catia
             InitializeComponent();
         }
 
+        GeradverzahnungaußenBerechnung GeaZahn;
+        
+
         //Geradverzahnung innen Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
         internal void trv_GeradverzahnunginnenStirnraeder_Selected(object sender, RoutedEventArgs e)
         {
@@ -42,6 +46,8 @@ namespace Sprint3_WPF_Catia
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
             btn_SrVeCatia.Visibility = Visibility.Hidden;
             btn_PfVeCatia.Visibility = Visibility.Hidden;
+
+            btn_GeaVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -92,6 +98,8 @@ namespace Sprint3_WPF_Catia
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
             btn_SrVeCatia.Visibility = Visibility.Hidden;
             btn_PfVeCatia.Visibility = Visibility.Hidden;
+
+            btn_GeaVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -144,6 +152,8 @@ namespace Sprint3_WPF_Catia
             btn_SrVeCatia.Visibility = Visibility.Hidden;
             btn_PfVeCatia.Visibility = Visibility.Hidden;
 
+            btn_GeaVeExcel.Visibility = Visibility.Hidden;
+
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
             txt_GeaVeEingriffswinkel.Clear();
@@ -194,6 +204,8 @@ namespace Sprint3_WPF_Catia
             btn_SrVeCatia.Visibility = Visibility.Hidden;
             btn_PfVeCatia.Visibility = Visibility.Hidden;
 
+            btn_GeaVeExcel.Visibility = Visibility.Hidden;
+
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
             txt_GeaVeEingriffswinkel.Clear();
@@ -229,17 +241,17 @@ namespace Sprint3_WPF_Catia
 
 
         //Programm beenden
-        private void btn_Schließen_Click(object sender, RoutedEventArgs e)
+        public void btn_Schließen_Click(object sender, RoutedEventArgs e)
         {
 
             if (MessageBox.Show("Soll das Programm beendet werden?", "Programmende", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
                 System.Environment.Exit(0);
         }
         //Geradverzahnung außen Berechnen
-        private void btn_GeaVe_berechnung_Click(object sender, RoutedEventArgs e)
+        public void btn_GeaVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
-            GeradverzahnungaußenBerechnung GaZahn = new GeradverzahnungaußenBerechnung();
+            GeaZahn = new GeradverzahnungaußenBerechnung();
 
 
 
@@ -258,63 +270,64 @@ namespace Sprint3_WPF_Catia
 
 
 
-            if (GaZahn.TestderModulEingabe(ModulEingabe) == 1 && GaZahn.TestderBreiteEingabe(BreiteEingabe) == 1 && GaZahn.TestderZähnezahlEingabe(ZähnezahlEingabe) == 1 && GaZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe) == 1 && GaZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe) == 1 && GaZahn.TestderKopfspielEingabe(KopfspielEingabe) == 1 && GaZahn.KontrolleWertebereichEingriffswinkel() == 1 && GaZahn.KontrolleWertebereichKopfspiel() == 1)
+            if (GeaZahn.TestderModulEingabe(ModulEingabe) == 1 && GeaZahn.TestderBreiteEingabe(BreiteEingabe) == 1 && GeaZahn.TestderZähnezahlEingabe(ZähnezahlEingabe) == 1 && GeaZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe) == 1 && GeaZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe) == 1 && GeaZahn.TestderKopfspielEingabe(KopfspielEingabe) == 1 && GeaZahn.KontrolleWertebereichEingriffswinkel() == 1 && GeaZahn.KontrolleWertebereichKopfspiel() == 1)
             {
                 //Ergebnis Ausgabe
 
-                lbl_Zahnhöhe.Content = GaZahn.ZahnhöheBerechen();
-                lbl_Zahnfußhöhe.Content = GaZahn.ZahnfußhöheBerechnen();
-                lbl_Zahnkopfhöhe.Content = GaZahn.ZahnkopfhöheBerechnen();
-                lbl_Teilung.Content = GaZahn.TeilungBerechnen();
-                lbl_Fußkreisdurchmesser.Content = GaZahn.FußkreisdurchmesserBerechnen();
-                lbl_Grundkreisdurchmesser.Content = GaZahn.GrundkreisdurchmesserBerechnen();
-                lbl_Kopfkreisdurchmesser.Content = GaZahn.KopfkreisdurchmesserBerechnen();
-                lbl_Volumen.Content = GaZahn.VolumenBerechnen();
+                lbl_Zahnhöhe.Content = GeaZahn.ZahnhöheBerechen();
+                lbl_Zahnfußhöhe.Content = GeaZahn.ZahnfußhöheBerechnen();
+                lbl_Zahnkopfhöhe.Content = GeaZahn.ZahnkopfhöheBerechnen();
+                lbl_Teilung.Content = GeaZahn.TeilungBerechnen();
+                lbl_Fußkreisdurchmesser.Content = GeaZahn.FußkreisdurchmesserBerechnen();
+                lbl_Grundkreisdurchmesser.Content = GeaZahn.GrundkreisdurchmesserBerechnen();
+                lbl_Kopfkreisdurchmesser.Content = GeaZahn.KopfkreisdurchmesserBerechnen();
+                lbl_Volumen.Content = GeaZahn.VolumenBerechnen();
 
                 //Stahl
                 if (cb_GeaVeMaterial.SelectedIndex == 1)
                 {
 
-                    lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.00000785, 2);
-                    lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.00000785 * 1.5, 2);
+                    lbl_Gewicht.Content = Math.Round(GeaZahn.VolumenBerechnen() * 0.00000785, 2);
+                    lbl_Preis.Content = Math.Round(GeaZahn.VolumenBerechnen() * 0.00000785 * 1.5, 2);
 
                 }
                 //Kunststoff
                 if (cb_GeaVeMaterial.SelectedIndex == 2)
                 {
 
-                    lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000002300, 4);
-                    lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.000002300 * 0.4, 4);
+                    lbl_Gewicht.Content = Math.Round(GeaZahn.VolumenBerechnen() * 0.000002300, 4);
+                    lbl_Preis.Content = Math.Round(GeaZahn.VolumenBerechnen() * 0.000002300 * 0.4, 4);
 
                 }
                 //Messing
                 if (cb_GeaVeMaterial.SelectedIndex == 3)
                 {
 
-                    lbl_Gewicht.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.0000083, 2);
-                    lbl_Preis.Content = Math.Round(GaZahn.VolumenBerechnen() * 0.0000083 * 3.35, 2);
+                    lbl_Gewicht.Content = Math.Round(GeaZahn.VolumenBerechnen() * 0.0000083, 2);
+                    lbl_Preis.Content = Math.Round(GeaZahn.VolumenBerechnen() * 0.0000083 * 3.35, 2);
 
                 }
 
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
                 btn_GeaVeCatia.Visibility = Visibility.Visible;
-
+                btn_GeaVeExcel.Visibility = Visibility.Visible;
 
             }
             else
             {
                 btn_GeaVeCatia.Visibility = Visibility.Hidden;
+                btn_GeaVeExcel.Visibility = Visibility.Hidden;
                 return;
             }
 
 
         }
         //Geradverzahnung innen Berechnen
-        private void btn_GeiVe_berechnung_Click(object sender, RoutedEventArgs e)
+        public void btn_GeiVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
-            GeradverzahnunginnenBerechnung GiZahn = new GeradverzahnunginnenBerechnung();
+            GeradverzahnunginnenBerechnung GeiZahn = new GeradverzahnunginnenBerechnung();
 
 
 
@@ -332,41 +345,41 @@ namespace Sprint3_WPF_Catia
 
             //Kontrollen/Tests der Eingaben
 
-            if (GiZahn.TestderModulEingabe(ModulEingabe) == 1 && GiZahn.TestderBreiteEingabe(BreiteEingabe) == 1 && GiZahn.TestderZähnezahlEingabe(ZähnezahlEingabe) == 1 && GiZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe) == 1 && GiZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe) == 1 && GiZahn.TestderKopfspielEingabe(KopfspielEingabe) == 1 && GiZahn.KontrolleWertebereichEingriffswinkel() == 1 && GiZahn.KontrolleWertebereichKopfspiel() == 1)
+            if (GeiZahn.TestderModulEingabe(ModulEingabe) == 1 && GeiZahn.TestderBreiteEingabe(BreiteEingabe) == 1 && GeiZahn.TestderZähnezahlEingabe(ZähnezahlEingabe) == 1 && GeiZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe) == 1 && GeiZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe) == 1 && GeiZahn.TestderKopfspielEingabe(KopfspielEingabe) == 1 && GeiZahn.KontrolleWertebereichEingriffswinkel() == 1 && GeiZahn.KontrolleWertebereichKopfspiel() == 1)
             {
                 //Ergebnis Ausgabe
 
-                lbl_Zahnhöhe.Content = GiZahn.ZahnhöheBerechen();
-                lbl_Zahnfußhöhe.Content = GiZahn.ZahnfußhöheBerechnen();
-                lbl_Zahnkopfhöhe.Content = GiZahn.ZahnkopfhöheBerechnen();
-                lbl_Teilung.Content = GiZahn.TeilungBerechnen();
-                lbl_Fußkreisdurchmesser.Content = GiZahn.FußkreisdurchmesserBerechnen();
-                lbl_Grundkreisdurchmesser.Content = GiZahn.GrundkreisdurchmesserBerechnen();
-                lbl_Kopfkreisdurchmesser.Content = GiZahn.KopfkreisdurchmesserBerechnen();
-                lbl_Volumen.Content = GiZahn.VolumenBerechnen();
+                lbl_Zahnhöhe.Content = GeiZahn.ZahnhöheBerechen();
+                lbl_Zahnfußhöhe.Content = GeiZahn.ZahnfußhöheBerechnen();
+                lbl_Zahnkopfhöhe.Content = GeiZahn.ZahnkopfhöheBerechnen();
+                lbl_Teilung.Content = GeiZahn.TeilungBerechnen();
+                lbl_Fußkreisdurchmesser.Content = GeiZahn.FußkreisdurchmesserBerechnen();
+                lbl_Grundkreisdurchmesser.Content = GeiZahn.GrundkreisdurchmesserBerechnen();
+                lbl_Kopfkreisdurchmesser.Content = GeiZahn.KopfkreisdurchmesserBerechnen();
+                lbl_Volumen.Content = GeiZahn.VolumenBerechnen();
 
                 //Stahl
                 if (cb_GeiVeMaterial.SelectedIndex == 1)
                 {
 
-                    lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.00000785, 2);
-                    lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.00000785 * 1.5, 2);
+                    lbl_Gewicht.Content = Math.Round(GeiZahn.VolumenBerechnen() * 0.00000785, 2);
+                    lbl_Preis.Content = Math.Round(GeiZahn.VolumenBerechnen() * 0.00000785 * 1.5, 2);
 
                 }
                 //Kunststoff
                 if (cb_GeiVeMaterial.SelectedIndex == 2)
                 {
 
-                    lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000002300, 4);
-                    lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.000002300 * 0.4, 4);
+                    lbl_Gewicht.Content = Math.Round(GeiZahn.VolumenBerechnen() * 0.000002300, 4);
+                    lbl_Preis.Content = Math.Round(GeiZahn.VolumenBerechnen() * 0.000002300 * 0.4, 4);
 
                 }
                 //Messing
                 if (cb_GeiVeMaterial.SelectedIndex == 3)
                 {
 
-                    lbl_Gewicht.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.0000083, 2);
-                    lbl_Preis.Content = Math.Round(GiZahn.VolumenBerechnen() * 0.0000083 * 3.35, 2);
+                    lbl_Gewicht.Content = Math.Round(GeiZahn.VolumenBerechnen() * 0.0000083, 2);
+                    lbl_Preis.Content = Math.Round(GeiZahn.VolumenBerechnen() * 0.0000083 * 3.35, 2);
 
                 }
 
@@ -386,7 +399,7 @@ namespace Sprint3_WPF_Catia
         }
 
         //Schrägverzahnung Berechnen
-        private void btn_SrVe_berechnung_Click(object sender, RoutedEventArgs e)
+        public void btn_SrVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
             SchrägverzahnungBerechnung SZahn = new SchrägverzahnungBerechnung();
@@ -459,7 +472,7 @@ namespace Sprint3_WPF_Catia
 
         }
         //Pfeilverzahnung Berechnen
-        private void btn_PfVe_berechnung_Click(object sender, RoutedEventArgs e)
+        public void btn_PfVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
             PfeilverzahnungBerechnung PZahn = new PfeilverzahnungBerechnung();
@@ -532,14 +545,49 @@ namespace Sprint3_WPF_Catia
             }
 
         }
-
+        
         private void btn_GeaVeCatia_Click(object sender, RoutedEventArgs e)
         {
+            CatiaGeradverzahnungaußenStirnräder GeaCatia = new CatiaGeradverzahnungaußenStirnräder();
 
 
+            //Catiabedingung
+            if (GeaCatia.CatiaLaeuft())
+            {
+                
+                GeaCatia.CatiaLaeuft();
 
+           
+                GeaCatia.ErzeugePart();
+
+            
+                GeaCatia.ErzeugeSkizze();
+
+            
+                GeaCatia.StirnradGeradverzahnung(GeaZahn);
+           
+            }
+            
+            else           
+            {
+                    
+                MessageBox.Show("Laufende Catia Application nicht gefunden");
+
+                
+
+                if(MessageBox.Show("Soll Catia gestartet werden ?", "Catia", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    //Starten der Catia App 
+                    string Programmname = "CNEXT.exe";
+                    Process.Start(Programmname);
+                }
+                
+               
+            }
+        
         }
 
+        //Catia Buttons 
         private void btn_GeiVeCatia_Click(object sender, RoutedEventArgs e)
         {
 
@@ -560,5 +608,18 @@ namespace Sprint3_WPF_Catia
 
 
         }
+
+        private void btn_GeaVeExcel_Click(object sender, RoutedEventArgs e)
+        {
+            ExcelGeradverzahnungaußen GeaExcel = new ExcelGeradverzahnungaußen();
+
+            GeaExcel.ExcelEinstellungen();
+            GeaExcel.Geradverzahnungaußen(GeaZahn);
+        }
+
+        //Excel Buttons
+
+
+
     }
 }
