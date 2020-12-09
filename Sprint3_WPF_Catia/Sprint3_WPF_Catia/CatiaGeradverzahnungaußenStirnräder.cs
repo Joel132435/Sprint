@@ -172,16 +172,20 @@ namespace Sprint3_WPF_Catia
 
             myPart.Update();
 
+            //hspge_catiaPart.Part.Update();
+
             Bodies bodies = myPart.Bodies;
             Body myBody = bodies.Add();
             myBody.set_Name("Zahnrad");
             myBody.InsertHybridShape(Verbindung);
 
             myPart.Update();
+            //hspge_catiaPart.Part.Update();
 
 
             myPart.InWorkObject = myBody;
             Pad myPad = SF.AddNewPadFromRef(Ref_Verbindung, gaBerechnung.Breite);
+
             myPart.Update();
 
 
