@@ -9,12 +9,7 @@ using PARTITF;
 using HybridShapeTypeLib;
 using KnowledgewareTypeLib;
 using ProductStructureTypeLib;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows;
-using System.Runtime.CompilerServices;
-//Zum Starten über Anwendung
-using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 namespace Sprint3_WPF_Catia
 {
@@ -105,35 +100,124 @@ namespace Sprint3_WPF_Catia
 
         internal void StirnradGeradverzahnung(GeradverzahnungaußenBerechnung gaBerechnung)
         {
-            //Bennennung
-            HSPGE_catia_Profil.set_Name("Stirnrad Geradverzahnung außen");
-            Factory2D catFactory2D = HSPGE_catia_Profil.OpenEdition();
+            //HilfsRadien
+            double d_r = (gaBerechnung.Modul * gaBerechnung.Zähnezahl) / 2;
+            double hk_r = d_r * 0.94;
+            double df_r = d_r - (1.25 * gaBerechnung.Modul);
+            double da_r = d_r + gaBerechnung.Modul;
+            double vd_r = 0.35 * gaBerechnung.Modul;
+
+            //HilfsWinkel
+            double alpha = 20;
+            double beta = 90 / gaBerechnung.Zähnezahl;
+            double beta_r = Math.PI * beta / 180;
+            double gamma = 90 - (alpha - beta);
+            double gamma_r = Math.PI * gamma / 180;
+            double ta = 360.0 / gaBerechnung.Zähnezahl;
+            double ta_r = Math.PI * ta / 180;
+
+            //Nullpunkte
+            double x0 = 0;
+            double y0 = 0;
+
+            //MittelPunkt EvolventenKreis
+            double MP_EvolventenKreis_x = hk_r * Math.Cos(gamma_r);
+            double MP_EvolventenKreis_y = hk_r * Math.Sin(gamma_r);
+
+            // SchnittPunkt Evolventenkreis & Teilkreisradius
+            double SP_EvolventenTeilKreis_x = -d_r * Math.Sin(beta_r);
+            double SP_EvolventenTeilKreis_y = d_r * Math.Cos(beta_r);
+
+            //Evolventenkreis Radius
+            double Evolventenkreis_r = Math.Sqrt(Math.Pow((MP_EvolventenKreis_x - SP_EvolventenTeilKreis_x), 2) + Math.Pow((MP_EvolventenKreis_y - SP_EvolventenTeilKreis_y), 2));
+
+            //SchnittPunkt Evolventenkreis & Kopfkreisradius
+            double SP_EvolventenKopfKreis_x = Schnittpunkt_x(x0, y0, da_r, MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r);
+            double SP_EvolventenKopfKreis_y = Schnittpunkt_y(x0, y0, da_r, MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r);
+
+            //MittelPunkt VerrundungsRadius
+            double MP_Verrundung_x = Schnittpunkt_x(x0, y0, df_r + vd_r, MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r + vd_r);
+            double MP_Verrundung_y = Schnittpunkt_y(x0, y0, df_r + vd_r, MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r + vd_r);
+
+            //SchnittPunkt Evolventenkreis & Verrundungsradius
+            double SP_EvolventeVerrundung_x = Schnittpunkt_x(MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r, MP_Verrundung_x, MP_Verrundung_y, vd_r);
+            double SP_EvolventeVerrundung_y = Schnittpunkt_y(MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r, MP_Verrundung_x, MP_Verrundung_y, vd_r);
+
+            //SchnittPunkt Fußkreis & Verrundungs Radius
+            double SP_FußkreisVerrundungsRadius_x = Schnittpunkt_x(x0, y0, df_r, MP_Verrundung_x, MP_Verrundung_y, vd_r);
+            double SP_FußkreisVerrundungsRadius_y = Schnittpunkt_y(x0, y0, df_r, MP_Verrundung_x, MP_Verrundung_y, vd_r);
+
+            //StartPunkt Fußkreis Radius
+            double phi = ta_r - Math.Atan(Math.Abs(SP_FußkreisVerrundungsRadius_x) / Math.Abs(SP_FußkreisVerrundungsRadius_y));
+            double StartPkt_Fußkreis_x = -df_r * Math.Sin(phi);
+            double StartPkt_Fußkreis_y = df_r * Math.Cos(phi);
+
+            //Skizze umbenennen und öffnen
+            HSPGE_catia_Profil.set_Name("Geradverzahnung Außen");
+            Factory2D catFactory2D1 = HSPGE_catia_Profil.OpenEdition();
+
+            //Punkte 
+            Point2D catP2D_Ursprung = catFactory2D1.CreatePoint(x0, y0);
+
+            Point2D catP2D_StartPkt_Fußkreis = catFactory2D1.CreatePoint(StartPkt_Fußkreis_x, StartPkt_Fußkreis_y);
+            Point2D catP2D_SP_FußkreisVerrundungsRadius1 = catFactory2D1.CreatePoint(SP_FußkreisVerrundungsRadius_x, SP_FußkreisVerrundungsRadius_y);
+            Point2D catP2D_SP_FußkreisVerrundungsRadius2 = catFactory2D1.CreatePoint(-SP_FußkreisVerrundungsRadius_x, SP_FußkreisVerrundungsRadius_y);
+
+            Point2D catP2D_MP_EvolventenKreis1 = catFactory2D1.CreatePoint(MP_EvolventenKreis_x, MP_EvolventenKreis_y);
+            Point2D catP2D_MP_EvolventenKreis2 = catFactory2D1.CreatePoint(-MP_EvolventenKreis_x, MP_EvolventenKreis_y);
+
+            Point2D catP2D_SP_EvolventenKopfKreis1 = catFactory2D1.CreatePoint(SP_EvolventenKopfKreis_x, SP_EvolventenKopfKreis_y);
+            Point2D catP2D_SP_EvolventenKopfKreis2 = catFactory2D1.CreatePoint(-SP_EvolventenKopfKreis_x, SP_EvolventenKopfKreis_y);
+
+            Point2D catP2D_MP_Verrundung1 = catFactory2D1.CreatePoint(MP_Verrundung_x, MP_Verrundung_y);
+            Point2D catP2D_MP_Verrundung2 = catFactory2D1.CreatePoint(-MP_Verrundung_x, MP_Verrundung_y);
+
+            Point2D catP2D_SP_EvolventeVerrundung1 = catFactory2D1.CreatePoint(SP_EvolventeVerrundung_x, SP_EvolventeVerrundung_y);
+            Point2D catP2D_SP_EvolventeVerrundung2 = catFactory2D1.CreatePoint(-SP_EvolventeVerrundung_x, SP_EvolventeVerrundung_y);
 
 
-            Point2D catP2D_1 = catFactory2D.CreatePoint(0, (gaBerechnung.Fußkreisdurchmesser / 2));
-            Point2D catP2D_2 = catFactory2D.CreatePoint(0, (gaBerechnung.Fußkreisdurchmesser / 2) + gaBerechnung.Zahnhöhe);
-            Point2D catP2D_3 = catFactory2D.CreatePoint((gaBerechnung.Teilung / 2), (gaBerechnung.Fußkreisdurchmesser / 2) + gaBerechnung.Zahnhöhe);
-            Point2D catP2D_4 = catFactory2D.CreatePoint((gaBerechnung.Teilung / 2), (gaBerechnung.Fußkreisdurchmesser / 2));
-            Point2D catP2D_5 = catFactory2D.CreatePoint((gaBerechnung.Teilung / 2) + gaBerechnung.Modul, (gaBerechnung.Fußkreisdurchmesser / 2));
+            //Kreise
+            Circle2D catC2D_Frußkreis = catFactory2D1.CreateCircle(x0, y0, df_r, 0, 0);
+            catC2D_Frußkreis.CenterPoint = catP2D_Ursprung;
+            catC2D_Frußkreis.StartPoint = catP2D_SP_FußkreisVerrundungsRadius1;
+            catC2D_Frußkreis.EndPoint = catP2D_StartPkt_Fußkreis;
 
-            Line2D catL2D_1 = catFactory2D.CreateLine(0, (gaBerechnung.Fußkreisdurchmesser / 2), 0, (gaBerechnung.Fußkreisdurchmesser / 2) + gaBerechnung.Zahnhöhe);
-            catL2D_1.StartPoint = catP2D_1;
-            catL2D_1.EndPoint = catP2D_2;
+            Circle2D catC2D_Kopfkreis = catFactory2D1.CreateCircle(x0, y0, da_r, 0, 0);
+            catC2D_Kopfkreis.CenterPoint = catP2D_Ursprung;
+            catC2D_Kopfkreis.StartPoint = catP2D_SP_EvolventenKopfKreis2;
+            catC2D_Kopfkreis.EndPoint = catP2D_SP_EvolventenKopfKreis1;
 
-            Line2D catL2D_2 = catFactory2D.CreateLine(0, (gaBerechnung.Fußkreisdurchmesser / 2) + gaBerechnung.Zahnhöhe, (gaBerechnung.Teilung / 2), (gaBerechnung.Fußkreisdurchmesser / 2) + gaBerechnung.Zahnhöhe);
-            catL2D_2.StartPoint = catP2D_2;
-            catL2D_2.EndPoint = catP2D_3;
+            Circle2D catC2D_EvolventenKreis1 = catFactory2D1.CreateCircle(MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r, 0, 0);
+            catC2D_EvolventenKreis1.CenterPoint = catP2D_MP_EvolventenKreis1;
+            catC2D_EvolventenKreis1.StartPoint = catP2D_SP_EvolventenKopfKreis1;
+            catC2D_EvolventenKreis1.EndPoint = catP2D_SP_EvolventeVerrundung1;
 
-            Line2D catL2D_3 = catFactory2D.CreateLine((gaBerechnung.Teilung / 2), (gaBerechnung.Fußkreisdurchmesser / 2) + gaBerechnung.Zahnhöhe, (gaBerechnung.Teilung / 2), (gaBerechnung.Fußkreisdurchmesser / 2));
-            catL2D_3.StartPoint = catP2D_3;
-            catL2D_3.EndPoint = catP2D_4;
+            Circle2D catC2D_Evolventenkreis2 = catFactory2D1.CreateCircle(-MP_EvolventenKreis_x, MP_EvolventenKreis_y, Evolventenkreis_r, 0, 0);
+            catC2D_Evolventenkreis2.CenterPoint = catP2D_MP_EvolventenKreis2;
+            catC2D_Evolventenkreis2.StartPoint = catP2D_SP_EvolventeVerrundung2;
+            catC2D_Evolventenkreis2.EndPoint = catP2D_SP_EvolventenKopfKreis2;
 
-            Circle2D catC2D_1 = catFactory2D.CreateCircle(0, 0, (gaBerechnung.Fußkreisdurchmesser / 2), 0, 0);
-            catC2D_1.StartPoint = catP2D_5;
-            catC2D_1.EndPoint = catP2D_4;
+            Circle2D catC2D_VerrundungsKreis1 = catFactory2D1.CreateCircle(MP_Verrundung_x, MP_Verrundung_y, vd_r, 0, 0);
+            catC2D_VerrundungsKreis1.CenterPoint = catP2D_MP_Verrundung1;
+            catC2D_VerrundungsKreis1.StartPoint = catP2D_SP_FußkreisVerrundungsRadius1;
+            catC2D_VerrundungsKreis1.EndPoint = catP2D_SP_EvolventeVerrundung1;
+
+            Circle2D catC2D_VerrundungsKreis2 = catFactory2D1.CreateCircle(-MP_Verrundung_x, MP_Verrundung_y, vd_r, 0, 0);
+            catC2D_VerrundungsKreis2.CenterPoint = catP2D_MP_Verrundung2;
+            catC2D_VerrundungsKreis2.StartPoint = catP2D_SP_EvolventeVerrundung2;
+            catC2D_VerrundungsKreis2.EndPoint = catP2D_SP_FußkreisVerrundungsRadius2;
 
 
 
+            HSPGE_catia_Profil.CloseEdition();
+
+            HSPGE_CatiaPart.Part.Update();
+        }
+
+        
+
+        public void ErzeugeKreismuster(GeradverzahnungaußenBerechnung gaBerechnung)
+        {
 
 
             //Kreismuster
@@ -152,12 +236,11 @@ namespace Sprint3_WPF_Catia
 
 
             //Kreismuster mit daten füllen
-            CircPattern Kreismuster = SF.AddNewSurfacicCircPattern(Factory2D1, 1, 2, 0, 0, 1, 1, RefUrsprung, RefXDir,
-            false, 0, true, false);
+            CircPattern Kreismuster = SF.AddNewSurfacicCircPattern(Factory2D1, 1, 2, 0, 0, 1, 1, RefUrsprung, RefXDir, false, 0, true, false);           
             Kreismuster.CircularPatternParameters = CatCircularPatternParameters.catInstancesandAngularSpacing;
             AngularRepartition angularRepartition1 = Kreismuster.AngularRepartition;
             Angle angle1 = angularRepartition1.AngularSpacing;
-            angle1.Value = Convert.ToDouble(360 / Convert.ToDouble(gaBerechnung.Zähnezahl));
+            angle1.Value = Convert.ToDouble(360 / gaBerechnung.Zähnezahl);
             AngularRepartition angularRepartition2 = Kreismuster.AngularRepartition;
             IntParam intParam1 = angularRepartition2.InstancesCount;
             intParam1.Value = Convert.ToInt32(gaBerechnung.Zähnezahl) + 1;
@@ -169,7 +252,7 @@ namespace Sprint3_WPF_Catia
             Reference Ref_Verbindung = myPart.CreateReferenceFromObject(Verbindung);
 
             HSF.GSMVisibility(Ref_Verbindung, 0);
-
+  
             myPart.Update();
 
             //hspge_catiaPart.Part.Update();
@@ -192,6 +275,51 @@ namespace Sprint3_WPF_Catia
 
         }
 
+        //Berechnungen der SchnittPunkte
+        private double Schnittpunkt_x(double MP1_x, double MP1_y, double r1, double MP2_x, double MP2_y, double r2)
+        {
+            double d = Math.Sqrt(Math.Pow((MP1_x - MP2_x), 2) + Math.Pow((MP1_y - MP2_y), 2));
+            double l = (Math.Pow(r1, 2) - Math.Pow(r2, 2) + Math.Pow(d, 2)) / (d * 2);
+            double h;
+            double ii = 0.00001;
+
+            if (r1 - l < -ii)
+            {
+                MessageBox.Show("Fehler!\nBitte überprüfen Sie die Eingangsparameter.");
+            }
+            if (Math.Abs(r1 - l) < ii)
+            {
+                h = 0;
+            }
+            else
+            {
+                h = Math.Sqrt(Math.Pow(r1, 2) - Math.Pow(l, 2));
+            }
+
+            return l * (MP2_x - MP1_x) / d - h * (MP2_y - MP1_y) / d + MP1_x;
+        }
+        private double Schnittpunkt_y(double MP1_x, double MP1_y, double r1, double MP2_x, double MP2_y, double r2)
+        {
+            double d = Math.Sqrt(Math.Pow((MP1_x - MP2_x), 2) + Math.Pow((MP1_y - MP2_y), 2));
+            double l = (Math.Pow(r1, 2) - Math.Pow(r2, 2) + Math.Pow(d, 2)) / (d * 2);
+            double h;
+            double ii = 0.00001;
+
+            if (r1 - l < -ii)
+            {
+                MessageBox.Show("Fehler!\nBitte überprüfen Sie die Eingangsparameter.");
+            }
+            if (Math.Abs(r1 - l) < ii)
+            {
+                h = 0;
+            }
+            else
+            {
+                h = Math.Sqrt(Math.Pow(r1, 2) - Math.Pow(l, 2));
+            }
+
+            return l * (MP2_y - MP1_y) / d + h * (MP2_x - MP1_x) / d + MP1_y;
+        }
 
 
     }

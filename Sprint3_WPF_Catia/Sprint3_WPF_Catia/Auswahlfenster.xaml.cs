@@ -272,6 +272,8 @@ namespace Sprint3_WPF_Catia
 
             if (GeaZahn.TestderModulEingabe(ModulEingabe) == 1 && GeaZahn.TestderBreiteEingabe(BreiteEingabe) == 1 && GeaZahn.TestderZähnezahlEingabe(ZähnezahlEingabe) == 1 && GeaZahn.TestdesTeilkreisdurchmessersEingabe(TeilkreisdurchmesserEingabe) == 1 && GeaZahn.TestderEingriffswinkelEingabe(EingriffswinkelEingabe) == 1 && GeaZahn.TestderKopfspielEingabe(KopfspielEingabe) == 1 && GeaZahn.KontrolleWertebereichEingriffswinkel() == 1 && GeaZahn.KontrolleWertebereichKopfspiel() == 1)
             {
+                
+
                 //Ergebnis Ausgabe
 
                 lbl_Zahnhöhe.Content = GeaZahn.ZahnhöheBerechen();
@@ -555,7 +557,7 @@ namespace Sprint3_WPF_Catia
             if (GeaCatia.CatiaLaeuft())
             {
                 
-                GeaCatia.CatiaLaeuft();
+                
 
            
                 GeaCatia.ErzeugePart();
@@ -565,7 +567,12 @@ namespace Sprint3_WPF_Catia
 
             
                 GeaCatia.StirnradGeradverzahnung(GeaZahn);
-           
+
+
+                GeaCatia.ErzeugeKreismuster(GeaZahn);
+
+
+
             }
             
             else           

@@ -301,8 +301,5 @@ namespace Sprint3_WPF_Catia
             return Math.Round(Volumen, 2);
         }
 
-
-
-
     }
 }
