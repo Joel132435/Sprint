@@ -90,6 +90,8 @@
     <Compile Include="CatiaSchrägverzahnungStirnräder.cs" />
     <Compile Include="ExcelGeradverzahnungaußen.cs" />
     <Compile Include="ExcelGeradverzahnunginnen.cs" />
+    <Compile Include="ExcelPfeilverzahnung.cs" />
+    <Compile Include="ExcelSchrägverzahnung.cs" />
     <Compile Include="SchrägverzahnungBerechnung.cs" />
     <Page Include="Auswahlfenster.xaml">
       <SubType>Designer</SubType>

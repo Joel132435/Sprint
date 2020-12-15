@@ -716,11 +716,29 @@ namespace Sprint3_WPF_Catia
         {
             ExcelGeradverzahnunginnen GeiExcel = new ExcelGeradverzahnunginnen();
 
-
+            GeiExcel.ExcelEinstellungen();
+            GeiExcel.Geradverzahnungaußen(GeiZahn);
 
 
         }
 
-       
+        private void btn_SrVeExcel_Click(object sender, RoutedEventArgs e)
+        {
+            ExcelSchrägverzahnung SExcel = new ExcelSchrägverzahnung();
+
+            SExcel.ExcelEinstellungen();
+            SExcel.Geradverzahnungaußen(SZahn);
+
+
+        }
+
+        private void btn_PfVeExcel_Click(object sender, RoutedEventArgs e)
+        {
+            ExcelPfeilverzahnung PExcel = new ExcelPfeilverzahnung();
+
+            PExcel.ExcelEinstellungen();
+            PExcel.Geradverzahnungaußen(PZahn);
+
+        }
     }
 }
