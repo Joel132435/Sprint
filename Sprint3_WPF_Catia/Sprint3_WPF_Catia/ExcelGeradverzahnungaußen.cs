@@ -36,121 +36,112 @@ namespace Sprint3_WPF_Catia
 
          
 
-            mySheet.Cells[14, "A"] = "Stirnrad Geradverzahnung";
-            mySheet.Cells[15, "A"] = "Modul : ";
-            mySheet.Cells[16, "A"] = "Zähnezahl :";
-            mySheet.Cells[17, "A"] = "Teilkreisdurchmesser :";
-            mySheet.Cells[18, "A"] = "Breite :";
-            mySheet.Cells[19, "A"] = "Eingriffswinkel :";
-            mySheet.Cells[20, "A"] = "Kopfspiel :";  
+            mySheet.Cells[4, "A"] = "Stirnrad Geradverzahnung";
+            mySheet.Cells[5, "A"] = "Modul : ";
+            mySheet.Cells[6, "A"] = "Zähnezahl :";
+            mySheet.Cells[7, "A"] = "Teilkreisdurchmesser :";
+            mySheet.Cells[8, "A"] = "Breite :";
+            mySheet.Cells[9, "A"] = "Eingriffswinkel :";
+            mySheet.Cells[10, "A"] = "Kopfspiel :";  
             
-            mySheet.Cells[26, "a"] = "Zahnhöhe :";
-            mySheet.Cells[27, "a"] = "Zahnfußhöhe :";
-            mySheet.Cells[28, "a"] = "Zahnkopfhöhe :";
-            mySheet.Cells[29, "a"] = "Teilung :";
-            mySheet.Cells[30, "a"] = "Fußkreisdurchmesser :";
-            mySheet.Cells[31, "a"] = "Grundkreisdurchmesser :";
-            mySheet.Cells[32, "a"] = "Kopfkreisdurchmesser :";
+            mySheet.Cells[13, "a"] = "Zahnhöhe :";
+            mySheet.Cells[14, "a"] = "Zahnfußhöhe :";
+            mySheet.Cells[15, "a"] = "Zahnkopfhöhe :";
+            mySheet.Cells[16, "a"] = "Teilung :";
+            mySheet.Cells[17, "a"] = "Fußkreisdurchmesser :";
+            mySheet.Cells[18, "a"] = "Grundkreisdurchmesser :";
+            mySheet.Cells[19, "a"] = "Kopfkreisdurchmesser :";
      
 
 
+            mySheet.Cells[5, "b"] = "mm";
+            mySheet.Cells[6, "b"] = "Anzahl";
+            mySheet.Cells[7, "b"] = "mm";
+            mySheet.Cells[8, "b"] = "mm";
+            mySheet.Cells[9, "b"] = "Grad";
+            mySheet.Cells[10, "b"] = "mm";
+
+            mySheet.Cells[13, "b"] = "mm";
+            mySheet.Cells[14, "b"] = "mm";
             mySheet.Cells[15, "b"] = "mm";
-            mySheet.Cells[16, "b"] = "Anzahl";
+            mySheet.Cells[16, "b"] = "mm";
             mySheet.Cells[17, "b"] = "mm";
             mySheet.Cells[18, "b"] = "mm";
-            mySheet.Cells[19, "b"] = "Grad";
-            mySheet.Cells[20, "b"] = "mm";
-
-            mySheet.Cells[26, "b"] = "mm";
-            mySheet.Cells[27, "b"] = "mm";
-            mySheet.Cells[28, "b"] = "mm";
-            mySheet.Cells[29, "b"] = "mm";
-            mySheet.Cells[30, "b"] = "mm";
-            mySheet.Cells[31, "b"] = "mm";
-            mySheet.Cells[32, "b"] = "mm";
+            mySheet.Cells[19, "b"] = "mm";
          
 
            
            
 
             //Eingaben Zentrieren
-            mySheet.Range["A5", "A11"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
-            mySheet.Range["A15", "A20"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
-            mySheet.Range["A26", "A32"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
-            mySheet.Range["b15", "b21"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            mySheet.Range["b26", "b32"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            mySheet.Range["A5", "A10"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
+            mySheet.Range["A13", "A19"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
-            mySheet.Range["c15", "c20"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
-            mySheet.Range["c26", "c32"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
+            mySheet.Range["b5", "b10"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            mySheet.Range["b13", "b19"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
 
-            //EInstellungen der Schriftgröße
-            mySheet.Range["A5", "A11"].Font.Size = 9;
+            mySheet.Range["c5", "c10"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
+            mySheet.Range["c13", "c19"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
 
-            mySheet.Range["A15", "A21"].Font.Size = 11;
-            mySheet.Range["b15", "b21"].Font.Size = 11;
-            mySheet.Range["c15", "c21"].Font.Size = 11;
+            //Einstellungen der Schriftgröße
 
-            mySheet.Range["A26", "A32"].Font.Size = 11;
-            mySheet.Range["b26", "b32"].Font.Size = 11;
-            mySheet.Range["c26", "c32"].Font.Size = 11;
+            mySheet.Range["A5", "A10"].Font.Size = 11;
+            mySheet.Range["b5", "b10"].Font.Size = 11;
+            mySheet.Range["c5", "c10"].Font.Size = 11;
+
+            mySheet.Range["A13", "A19"].Font.Size = 11;
+            mySheet.Range["b13", "b19"].Font.Size = 11;
+            mySheet.Range["c13", "c19"].Font.Size = 11;
 
 
             //Schriftzug fettwerden lassen
+
             mySheet.Range["A2"].Font.Bold = true;
-            mySheet.Range["A14"].Font.Bold = true;
+            mySheet.Range["A4"].Font.Bold = true;
 
             //Schriftgröße anpassen
+
             mySheet.Range["A2"].Font.Size = 24;
-            mySheet.Range["A14"].Font.Size = 16;
+            mySheet.Range["A4"].Font.Size = 16;
            
 
 
             //Zellen zusammenfassen
+
             mySheet.Range["a2:D2"].Merge();
-            mySheet.Range["a14:c14"].Merge();
-            ;
+            mySheet.Range["a4:c3"].Merge();
 
 
             //zellen Zentrieren
+
             mySheet.Range["A2", "D2"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            mySheet.Range["A14", "c14"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            mySheet.Range["A4", "c4"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             
             
 
             //Unterstrich "Produktdatenblatt"
+
             mySheet.Range["a2:D2"].Font.Underline = XlUnderlineStyle.xlUnderlineStyleSingle;
 
 
             //Zellen rahmen eingabeparameter
-            Xrange = mySheet.get_Range("A15:c20");
+
+            Xrange = mySheet.get_Range("A5:c10");
             myBorders = Xrange.Borders;
             myBorders.Weight = XlBorderWeight.xlThick;
             myBorders.Weight = 2d;
 
             // Zellen rahmen ergebnisse
-            Xrange = mySheet.get_Range("A26:c32");
+
+            Xrange = mySheet.get_Range("A13:c19");
             myBorders = Xrange.Borders;
             myBorders.Weight = XlBorderWeight.xlThick;
             myBorders.Weight = 2d;
 
-            //zellen rahmen preis
-            Xrange = mySheet.get_Range("A32:c32");
-            myBorders = Xrange.Borders;
-            myBorders.Weight = XlBorderWeight.xlThick;
-            myBorders.Weight = 2d;
-             
+           //autofit
 
-
-            //autofit
-            mySheet.Range["A1", "c32"].EntireColumn.AutoFit();
-
-
-            //Kommazahlen
-            //Hinzufügen
-
-
-
+            mySheet.Range["A1", "c19"].EntireColumn.AutoFit();
 
         }
 
@@ -159,27 +150,20 @@ namespace Sprint3_WPF_Catia
             //übertragung in excel der ein und ausgabeparameter
             //Material hinzufügen
 
-            mySheet.Cells[15, "c"] = GeaZahn.Modul;
-            mySheet.Cells[16, "c"] = GeaZahn.Zähnezahl;
-            mySheet.Cells[17, "c"] = GeaZahn.Teilkreisdurchmesser;
-            mySheet.Cells[18, "c"] = GeaZahn.Breite;
-            mySheet.Cells[19, "c"] = GeaZahn.Eingriffswinkel;
-            mySheet.Cells[20, "c"] = GeaZahn.Kopfspiel;
+            mySheet.Cells[5, "c"] = GeaZahn.Modul;
+            mySheet.Cells[6, "c"] = GeaZahn.Zähnezahl;
+            mySheet.Cells[7, "c"] = GeaZahn.Teilkreisdurchmesser;
+            mySheet.Cells[8, "c"] = GeaZahn.Breite;
+            mySheet.Cells[9, "c"] = GeaZahn.Eingriffswinkel;
+            mySheet.Cells[10, "c"] = GeaZahn.Kopfspiel;
             
-            mySheet.Cells[26, "c"] = GeaZahn.Zahnhöhe;
-            mySheet.Cells[27, "c"] = GeaZahn.Zahnfußhöhe;
-            mySheet.Cells[28, "c"] = GeaZahn.Zahnkopfhöhe;
-            mySheet.Cells[29, "c"] = GeaZahn.Teilung;
-            mySheet.Cells[30, "c"] = GeaZahn.Fußkreisdurchmesser;
-            mySheet.Cells[31, "c"] = GeaZahn.Grundkreisdurchmesser;
-            mySheet.Cells[32, "c"] = GeaZahn.Kopfkreisdurchmesser;
-            
-
-
-
-
-
-
+            mySheet.Cells[13, "c"] = GeaZahn.Zahnhöhe;
+            mySheet.Cells[14, "c"] = GeaZahn.Zahnfußhöhe;
+            mySheet.Cells[15, "c"] = GeaZahn.Zahnkopfhöhe;
+            mySheet.Cells[16, "c"] = GeaZahn.Teilung;
+            mySheet.Cells[17, "c"] = GeaZahn.Fußkreisdurchmesser;
+            mySheet.Cells[18, "c"] = GeaZahn.Grundkreisdurchmesser;
+            mySheet.Cells[19, "c"] = GeaZahn.Kopfkreisdurchmesser;
 
 
 
