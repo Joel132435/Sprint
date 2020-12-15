@@ -672,7 +672,7 @@ namespace Sprint3_WPF_Catia
 
         private void btn_PfVeCatia_Click(object sender, RoutedEventArgs e)
         {
-            CatiaPfeilverzahnung PfCatia = new CatiaPfeilverzahnung();
+            CatiaPfeilverzahnungStirnräder PfCatia = new CatiaPfeilverzahnungStirnräder();
 
             //Catiabedingung
             if (PfCatia.CatiaLaeuft())
