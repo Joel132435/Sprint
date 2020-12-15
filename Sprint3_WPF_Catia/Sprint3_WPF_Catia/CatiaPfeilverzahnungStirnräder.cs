@@ -297,7 +297,7 @@ namespace Sprint3_WPF_Catia
             myPart.Update();
 
 
-            //Loft mit Helix Führung
+            //Loft 
             Loft myLoft = (Loft)SF.AddNewLoft();
             HybridShapeLoft LoftH = (HybridShapeLoft)myLoft.HybridShape;
             LoftH.AddSectionToLoft(Ref_Verbindung, 1, (Reference)default(Type));
@@ -342,7 +342,7 @@ namespace Sprint3_WPF_Catia
             myPart.Update();
 
 
-            //Loft mit Helix Führung
+            //Loft 
             Loft myLoft_2 = (Loft)SF.AddNewLoft();
             HybridShapeLoft LoftH_2 = (HybridShapeLoft)myLoft_2.HybridShape;
             LoftH_2.AddSectionToLoft(Ref_Verbindung, 1, (Reference)default(Type));
