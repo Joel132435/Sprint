@@ -26,8 +26,10 @@ namespace Sprint3_WPF_Catia
         }
 
         GeradverzahnungaußenBerechnung GeaZahn;
+        GeradverzahnunginnenBerechnung GeiZahn;
         SchrägverzahnungBerechnung SZahn;
-        
+        PfeilverzahnungBerechnung PZahn;
+ 
 
         //Geradverzahnung innen Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
         internal void trv_GeradverzahnunginnenStirnraeder_Selected(object sender, RoutedEventArgs e)
@@ -46,6 +48,7 @@ namespace Sprint3_WPF_Catia
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
             btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -98,6 +101,7 @@ namespace Sprint3_WPF_Catia
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
             btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -151,6 +155,7 @@ namespace Sprint3_WPF_Catia
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
             btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -203,6 +208,7 @@ namespace Sprint3_WPF_Catia
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
             btn_SrVeCatia.Visibility = Visibility.Hidden;
+            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -330,7 +336,7 @@ namespace Sprint3_WPF_Catia
         public void btn_GeiVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
-            GeradverzahnunginnenBerechnung GeiZahn = new GeradverzahnunginnenBerechnung();
+            GeiZahn = new GeradverzahnunginnenBerechnung();
 
 
 
@@ -480,7 +486,7 @@ namespace Sprint3_WPF_Catia
         public void btn_PfVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
-            PfeilverzahnungBerechnung PZahn = new PfeilverzahnungBerechnung();
+            PZahn = new PfeilverzahnungBerechnung();
 
 
 
@@ -537,14 +543,15 @@ namespace Sprint3_WPF_Catia
 
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
-                
+                btn_PfVeCatia.Visibility = Visibility.Visible;
+
 
 
             }
             else
             {
 
-               
+                btn_PfVeCatia.Visibility = Visibility.Hidden;
                 return;
 
             }
@@ -652,7 +659,49 @@ namespace Sprint3_WPF_Catia
 
         }
 
+        private void btn_PfVeCatia_Click(object sender, RoutedEventArgs e)
+        {
+            CatiaPfeilverzahnungStirnräder PfCatia = new CatiaPfeilverzahnungStirnräder();
 
+            //Catiabedingung
+            if (PfCatia.CatiaLaeuft())
+            {
+
+
+
+
+                PfCatia.ErzeugePart();
+
+
+                PfCatia.ErzeugeSkizze();
+
+
+                PfCatia.StirnradGeradverzahnung(PZahn);
+
+
+                PfCatia.ErzeugeKreismuster(PZahn);
+
+
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Laufende Catia Application nicht gefunden");
+
+
+
+                if (MessageBox.Show("Soll Catia gestartet werden ?", "Catia", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    //Starten der Catia App 
+                    string Programmname = "CNEXT.exe";
+                    Process.Start(Programmname);
+                }
+
+
+            }
+        }
 
         //Excel Buttons
         private void btn_GeaVeExcel_Click(object sender, RoutedEventArgs e)
@@ -672,6 +721,6 @@ namespace Sprint3_WPF_Catia
 
         }
 
-        
+       
     }
 }
