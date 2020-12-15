@@ -26,6 +26,7 @@ namespace Sprint3_WPF_Catia
         }
 
         GeradverzahnungaußenBerechnung GeaZahn;
+        SchrägverzahnungBerechnung SZahn;
         
 
         //Geradverzahnung innen Fenster öffnen und andere Fenster schließen und letzte eingaben löschen
@@ -43,7 +44,8 @@ namespace Sprint3_WPF_Catia
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
-            btn_GeiVeCatia.Visibility = Visibility.Hidden;            
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -95,6 +97,7 @@ namespace Sprint3_WPF_Catia
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -146,7 +149,8 @@ namespace Sprint3_WPF_Catia
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
-            btn_GeiVeCatia.Visibility = Visibility.Hidden;           
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -197,7 +201,8 @@ namespace Sprint3_WPF_Catia
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Visible;
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
-            btn_GeiVeCatia.Visibility = Visibility.Hidden;            
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;
+            btn_SrVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
@@ -402,7 +407,7 @@ namespace Sprint3_WPF_Catia
         public void btn_SrVe_berechnung_Click(object sender, RoutedEventArgs e)
         {
 
-            SchrägverzahnungBerechnung SZahn = new SchrägverzahnungBerechnung();
+            SZahn = new SchrägverzahnungBerechnung();
 
 
 
@@ -460,13 +465,13 @@ namespace Sprint3_WPF_Catia
 
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
-                
+                btn_SrVeCatia.Visibility = Visibility.Visible;
 
 
             }
             else
             {
-                
+                btn_SrVeCatia.Visibility = Visibility.Hidden;
                 return;
             }
 
@@ -602,6 +607,51 @@ namespace Sprint3_WPF_Catia
 
         }
 
+        private void btn_SrVeCatia_Click(object sender, RoutedEventArgs e)
+        {
+            CatiaSchrägverzahnungStirnräder SrCatia = new CatiaSchrägverzahnungStirnräder();
+
+            //Catiabedingung
+            if (SrCatia.CatiaLaeuft())
+            {
+
+
+
+
+                SrCatia.ErzeugePart();
+
+
+                SrCatia.ErzeugeSkizze();
+
+
+                SrCatia.StirnradGeradverzahnung(SZahn);
+              
+
+                SrCatia.ErzeugeKreismuster(SZahn);
+
+                
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Laufende Catia Application nicht gefunden");
+
+
+
+                if (MessageBox.Show("Soll Catia gestartet werden ?", "Catia", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    //Starten der Catia App 
+                    string Programmname = "CNEXT.exe";
+                    Process.Start(Programmname);
+                }
+
+
+            }
+
+        }
+
 
 
         //Excel Buttons
@@ -621,5 +671,7 @@ namespace Sprint3_WPF_Catia
 
 
         }
+
+        
     }
 }
