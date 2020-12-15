@@ -43,11 +43,10 @@ namespace Sprint3_WPF_Catia
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
-            btn_GeiVeCatia.Visibility = Visibility.Hidden;
-            btn_SrVeCatia.Visibility = Visibility.Hidden;
-            btn_PfVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;            
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
+            btn_GeiVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -96,10 +95,9 @@ namespace Sprint3_WPF_Catia
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
             btn_GeiVeCatia.Visibility = Visibility.Hidden;
-            btn_SrVeCatia.Visibility = Visibility.Hidden;
-            btn_PfVeCatia.Visibility = Visibility.Hidden;
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
+            btn_GeiVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -148,11 +146,10 @@ namespace Sprint3_WPF_Catia
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Hidden;
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
-            btn_GeiVeCatia.Visibility = Visibility.Hidden;
-            btn_SrVeCatia.Visibility = Visibility.Hidden;
-            btn_PfVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;           
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
+            btn_GeiVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -200,11 +197,10 @@ namespace Sprint3_WPF_Catia
             brd_StirnradSchrägverzahnungBild.Visibility = Visibility.Visible;
 
             btn_GeaVeCatia.Visibility = Visibility.Hidden;
-            btn_GeiVeCatia.Visibility = Visibility.Hidden;
-            btn_SrVeCatia.Visibility = Visibility.Hidden;
-            btn_PfVeCatia.Visibility = Visibility.Hidden;
+            btn_GeiVeCatia.Visibility = Visibility.Hidden;            
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
+            btn_GeiVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -388,12 +384,14 @@ namespace Sprint3_WPF_Catia
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
                 btn_GeiVeCatia.Visibility = Visibility.Visible;
+                btn_GeiVeExcel.Visibility = Visibility.Visible;
 
 
             }
             else
             {
                 btn_GeiVeCatia.Visibility = Visibility.Hidden;
+                btn_GeiVeExcel.Visibility = Visibility.Hidden;
                 return;
             }
 
@@ -462,13 +460,13 @@ namespace Sprint3_WPF_Catia
 
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
-                btn_SrVeCatia.Visibility = Visibility.Visible;
+                
 
 
             }
             else
             {
-                btn_SrVeCatia.Visibility = Visibility.Hidden;
+                
                 return;
             }
 
@@ -534,20 +532,20 @@ namespace Sprint3_WPF_Catia
 
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
-                btn_PfVeCatia.Visibility = Visibility.Visible;
+                
 
 
             }
             else
             {
 
-                btn_PfVeCatia.Visibility = Visibility.Hidden;
+               
                 return;
 
             }
 
         }
-        
+        //Catia Buttons 
         private void btn_GeaVeCatia_Click(object sender, RoutedEventArgs e)
         {
             CatiaGeradverzahnungaußenStirnräder GeaCatia = new CatiaGeradverzahnungaußenStirnräder();
@@ -594,28 +592,19 @@ namespace Sprint3_WPF_Catia
         
         }
 
-        //Catia Buttons 
         private void btn_GeiVeCatia_Click(object sender, RoutedEventArgs e)
         {
+            CatiaGeradverzahnunginnenStirnräder GeiCatia = new CatiaGeradverzahnunginnenStirnräder();
 
 
-
-        }
-
-        private void btn_SrVeCatia_Click(object sender, RoutedEventArgs e)
-        {
-
+            
 
 
         }
 
-        private void btn_PfVeCatia_Click(object sender, RoutedEventArgs e)
-        {
 
 
-
-        }
-
+        //Excel Buttons
         private void btn_GeaVeExcel_Click(object sender, RoutedEventArgs e)
         {
             ExcelGeradverzahnungaußen GeaExcel = new ExcelGeradverzahnungaußen();
@@ -624,9 +613,13 @@ namespace Sprint3_WPF_Catia
             GeaExcel.Geradverzahnungaußen(GeaZahn);
         }
 
-        //Excel Buttons
+        private void btn_GeiVeExcel_Click(object sender, RoutedEventArgs e)
+        {
+            ExcelGeradverzahnunginnen GeiExcel = new ExcelGeradverzahnunginnen();
 
 
 
+
+        }
     }
 }

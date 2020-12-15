@@ -85,7 +85,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CatiaGeradverzahnungaußenStirnräder.cs" />
+    <Compile Include="CatiaGeradverzahnunginnenStirnräder.cs" />
     <Compile Include="ExcelGeradverzahnungaußen.cs" />
+    <Compile Include="ExcelGeradverzahnunginnen.cs" />
     <Compile Include="SchrägverzahnungBerechnung.cs" />
     <Page Include="Auswahlfenster.xaml">
       <SubType>Designer</SubType>
