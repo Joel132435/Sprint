@@ -41,7 +41,8 @@ namespace Sprint3_WPF_Catia
             mySheet.Cells[7, "A"] = "Teilkreisdurchmesser :";
             mySheet.Cells[8, "A"] = "Breite :";
             mySheet.Cells[9, "A"] = "Eingriffswinkel :";
-            mySheet.Cells[10, "A"] = "Kopfspiel :";
+            mySheet.Cells[10, "A"] = "Schrägungswinkel :";
+            mySheet.Cells[11, "A"] = "Kopfspiel :";
 
             mySheet.Cells[13, "a"] = "Zahnhöhe :";
             mySheet.Cells[14, "a"] = "Zahnfußhöhe :";
@@ -58,7 +59,8 @@ namespace Sprint3_WPF_Catia
             mySheet.Cells[7, "b"] = "mm";
             mySheet.Cells[8, "b"] = "mm";
             mySheet.Cells[9, "b"] = "Grad";
-            mySheet.Cells[10, "b"] = "mm";
+            mySheet.Cells[10, "b"] = "Grad";
+            mySheet.Cells[11, "b"] = "mm";
 
             mySheet.Cells[13, "b"] = "mm";
             mySheet.Cells[14, "b"] = "mm";
@@ -74,20 +76,20 @@ namespace Sprint3_WPF_Catia
 
             //Eingaben Zentrieren
 
-            mySheet.Range["A5", "A10"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
+            mySheet.Range["A5", "A11"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
             mySheet.Range["A13", "A19"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
-            mySheet.Range["b5", "b10"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            mySheet.Range["b5", "b11"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             mySheet.Range["b13", "b19"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
 
-            mySheet.Range["c5", "c10"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
+            mySheet.Range["c5", "c11"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
             mySheet.Range["c13", "c19"].EntireColumn.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
 
             //Einstellungen der Schriftgröße
 
-            mySheet.Range["A5", "A10"].Font.Size = 11;
-            mySheet.Range["b5", "b10"].Font.Size = 11;
-            mySheet.Range["c5", "c10"].Font.Size = 11;
+            mySheet.Range["A5", "A11"].Font.Size = 11;
+            mySheet.Range["b5", "b11"].Font.Size = 11;
+            mySheet.Range["c5", "c11"].Font.Size = 11;
 
             mySheet.Range["A13", "A19"].Font.Size = 11;
             mySheet.Range["b13", "b19"].Font.Size = 11;
@@ -126,7 +128,7 @@ namespace Sprint3_WPF_Catia
 
             //Zellen rahmen eingabeparameter
 
-            Xrange = mySheet.get_Range("A5:c10");
+            Xrange = mySheet.get_Range("A5:c11");
             myBorders = Xrange.Borders;
             myBorders.Weight = XlBorderWeight.xlThick;
             myBorders.Weight = 2d;
@@ -154,7 +156,8 @@ namespace Sprint3_WPF_Catia
             mySheet.Cells[7, "c"] = PfZahn.Teilkreisdurchmesser;
             mySheet.Cells[8, "c"] = PfZahn.Breite;
             mySheet.Cells[9, "c"] = PfZahn.Eingriffswinkel;
-            mySheet.Cells[10, "c"] = PfZahn.Kopfspiel;
+            mySheet.Cells[10, "c"] = PfZahn.Schrägungswinkel;
+            mySheet.Cells[11, "c"] = PfZahn.Kopfspiel;
 
             mySheet.Cells[13, "c"] = PfZahn.Zahnhöhe;
             mySheet.Cells[14, "c"] = PfZahn.Zahnfußhöhe;
