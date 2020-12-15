@@ -86,7 +86,7 @@
     </ApplicationDefinition>
     <Compile Include="CatiaGeradverzahnungaußenStirnräder.cs" />
     <Compile Include="CatiaGeradverzahnunginnenStirnräder.cs" />
-    <Compile Include="CatiaPfeilverzahnung.cs" />
+    <Compile Include="CatiaPfeilverzahnungStirnräder.cs" />
     <Compile Include="CatiaSchrägverzahnungStirnräder.cs" />
     <Compile Include="ExcelGeradverzahnungaußen.cs" />
     <Compile Include="ExcelGeradverzahnunginnen.cs" />
