@@ -737,7 +737,8 @@ namespace Sprint3_WPF_Catia
         {
             ExcelSchrägverzahnung SExcel = new ExcelSchrägverzahnung();
 
-            
+            SExcel.ExcelEinstellungen();
+            SExcel.Schrägverzahnung(SZahn);
 
         }
 
