@@ -727,7 +727,8 @@ namespace Sprint3_WPF_Catia
         {
             ExcelGeradverzahnunginnen GeiExcel = new ExcelGeradverzahnunginnen();
 
-            
+            GeiExcel.ExcelEinstellungen();
+            GeiExcel.Geradverzahnunginnen(GeiZahn);
 
 
         }
