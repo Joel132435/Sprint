@@ -17,9 +17,6 @@ namespace Sprint3_WPF_Catia
     {
 
 
-
-
-
-
     }
 }
+
