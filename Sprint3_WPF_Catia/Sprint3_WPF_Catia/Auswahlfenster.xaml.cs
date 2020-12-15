@@ -745,7 +745,9 @@ namespace Sprint3_WPF_Catia
         {
             ExcelPfeilverzahnung PExcel = new ExcelPfeilverzahnung();
 
-           
+            PExcel.ExcelEinstellungen();
+            PExcel.Pfeilverzahnung(PZahn);
+
 
         }
     }

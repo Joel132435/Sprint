@@ -144,7 +144,7 @@ namespace Sprint3_WPF_Catia
 
         }
 
-        internal void Geradverzahnunginnen(GeradverzahnunginnenBerechnung PfZahn)
+        internal void Pfeilverzahnung(PfeilverzahnungBerechnung PfZahn)
         {
             //übertragung in excel der ein und ausgabeparameter
             //Material hinzufügen
