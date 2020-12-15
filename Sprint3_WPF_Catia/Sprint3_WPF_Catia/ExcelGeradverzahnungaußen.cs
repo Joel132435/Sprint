@@ -169,9 +169,9 @@ namespace Sprint3_WPF_Catia
             mySheet.Cells[26, "c"] = GeaZahn.Zahnhöhe;
             mySheet.Cells[27, "c"] = GeaZahn.Zahnfußhöhe;
             mySheet.Cells[28, "c"] = GeaZahn.Zahnkopfhöhe;
-            mySheet.Cells[29, "c"] = GeaZahn.TeilungBerechnen();
+            mySheet.Cells[29, "c"] = GeaZahn.Teilung;
             mySheet.Cells[30, "c"] = GeaZahn.Fußkreisdurchmesser;
-            mySheet.Cells[31, "c"] = GeaZahn.GrundkreisdurchmesserBerechnen();
+            mySheet.Cells[31, "c"] = GeaZahn.Grundkreisdurchmesser;
             mySheet.Cells[32, "c"] = GeaZahn.Kopfkreisdurchmesser;
             
 
