@@ -13,7 +13,7 @@ using System.Windows;
 
 namespace Sprint3_WPF_Catia
 {
-    class CatiaPfeilverzahnungStirnräder
+    class CatiaPfeilverzahnung
     {
         INFITF.Application HSPGE_CatiaApp;
         MECMOD.PartDocument HSPGE_CatiaPart;
