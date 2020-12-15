@@ -52,6 +52,8 @@ namespace Sprint3_WPF_Catia
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
+            btn_SrVeExcel.Visibility = Visibility.Hidden;
+            btn_PfVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -105,6 +107,8 @@ namespace Sprint3_WPF_Catia
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
+            btn_SrVeExcel.Visibility = Visibility.Hidden;
+            btn_PfVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -159,6 +163,8 @@ namespace Sprint3_WPF_Catia
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
+            btn_SrVeExcel.Visibility = Visibility.Hidden;
+            btn_PfVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -212,6 +218,8 @@ namespace Sprint3_WPF_Catia
 
             btn_GeaVeExcel.Visibility = Visibility.Hidden;
             btn_GeiVeExcel.Visibility = Visibility.Hidden;
+            btn_SrVeExcel.Visibility = Visibility.Hidden;
+            btn_PfVeExcel.Visibility = Visibility.Hidden;
 
             txt_GeaVeBreite.Clear();
             txt_GeaVeZaehnezahl.Clear();
@@ -472,12 +480,14 @@ namespace Sprint3_WPF_Catia
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
                 btn_SrVeCatia.Visibility = Visibility.Visible;
+                btn_SrVeExcel.Visibility = Visibility.Visible;
 
 
             }
             else
             {
                 btn_SrVeCatia.Visibility = Visibility.Hidden;
+                btn_SrVeExcel.Visibility = Visibility.Hidden;
                 return;
             }
 
@@ -544,7 +554,7 @@ namespace Sprint3_WPF_Catia
 
                 grd_Ergebnisse.Visibility = Visibility.Visible;
                 btn_PfVeCatia.Visibility = Visibility.Visible;
-
+                btn_PfVeExcel.Visibility = Visibility.Visible;
 
 
             }
@@ -552,6 +562,7 @@ namespace Sprint3_WPF_Catia
             {
 
                 btn_PfVeCatia.Visibility = Visibility.Hidden;
+                btn_PfVeExcel.Visibility = Visibility.Hidden;
                 return;
 
             }
