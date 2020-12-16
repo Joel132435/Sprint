@@ -50,7 +50,7 @@ namespace Sprint3_WPF_Catia
             else
             {
 
-                MessageBox.Show("Falsche Zähnezahl Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Falsche Modul Eingabe bitte Zahl eingeben", "Modul", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 return 0;
 
