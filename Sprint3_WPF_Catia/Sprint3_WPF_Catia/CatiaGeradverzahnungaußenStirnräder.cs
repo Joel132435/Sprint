@@ -94,7 +94,7 @@ namespace Sprint3_WPF_Catia
 
 
 
-        internal void StirnradGeradverzahnung(GeradverzahnungaußenBerechnung gaBerechnung)
+        internal void StirnradGeradverzahnungaußen(GeradverzahnungaußenBerechnung gaBerechnung)
         {
             //HilfsRadien
             double TeilkreisRadius = (gaBerechnung.Modul * gaBerechnung.Zähnezahl) / 2;

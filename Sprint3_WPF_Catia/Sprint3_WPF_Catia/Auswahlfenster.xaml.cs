@@ -587,7 +587,7 @@ namespace Sprint3_WPF_Catia
                 GeaCatia.ErzeugeSkizze();
 
             
-                GeaCatia.StirnradGeradverzahnung(GeaZahn);
+                GeaCatia.StirnradGeradverzahnungaußen(GeaZahn);
 
 
                 GeaCatia.ErzeugeKreismuster(GeaZahn);
@@ -619,8 +619,40 @@ namespace Sprint3_WPF_Catia
         {
             CatiaGeradverzahnunginnenStirnräder GeiCatia = new CatiaGeradverzahnunginnenStirnräder();
 
+            //Catiabedingung
+            if (GeiCatia.CatiaLaeuft())
+            {
 
-            
+
+                GeiCatia.ErzeugePart();
+
+
+                GeiCatia.StirnradGeradverzahnunginnen(GeiZahn);
+
+
+                
+
+
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Laufende Catia Application nicht gefunden");
+
+
+
+                if (MessageBox.Show("Soll Catia gestartet werden ?", "Catia", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    //Starten der Catia App 
+                    string Programmname = "CNEXT.exe";
+                    Process.Start(Programmname);
+                }
+
+
+            }
+
 
 
         }
