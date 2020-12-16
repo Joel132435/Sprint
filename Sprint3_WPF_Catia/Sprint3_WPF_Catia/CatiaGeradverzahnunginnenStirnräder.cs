@@ -173,7 +173,7 @@ namespace Sprint3_WPF_Catia
             double StartPkt_Fußkreis_y = FußkreisRadius * Math.Cos(phi);
 
             //Skizze umbenennen und öffnen
-            HSPGE_catia_Profil.set_Name("Innenverzahnung");
+            HSPGE_catia_Profil.set_Name("Geradverzahnung Innen");
             Factory2D catFactory2D = HSPGE_catia_Profil.OpenEdition();
             ShapeFactory SF = (ShapeFactory)HSPGE_CatiaPart.Part.ShapeFactory;
 
