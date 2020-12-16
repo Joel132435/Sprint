@@ -35,7 +35,7 @@ namespace Sprint3_WPF_Catia
 
 
 
-            mySheet.Cells[4, "A"] = "Stirnrad Geradverzahnung";
+            mySheet.Cells[4, "A"] = "Stirnrad Pfeilverzahnung";
             mySheet.Cells[5, "A"] = "Modul : ";
             mySheet.Cells[6, "A"] = "Zähnezahl :";
             mySheet.Cells[7, "A"] = "Teilkreisdurchmesser :";
